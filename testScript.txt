@@ -1,0 +1,6 @@
+#alksjdlkasjdlkajsdlksajdalkjsd
+set_joystick 15 90
+delay 10
+centre_joystick			#testing comments
+throttle 23
+end

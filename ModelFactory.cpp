@@ -22,3 +22,13 @@ ModelFactory* ModelFactory::getInstance() {
 	
 	return instance;
 }
+
+
+void ModelFactory::addModel(const std::string name, Model *m) {
+	ModelFactory::getInstance()->models[name] = m;
+}
+
+
+Model* ModelFactory::getModel(const std::string name) {
+	return ModelFactory::getInstance()->models[name];
+}

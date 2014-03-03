@@ -9,6 +9,7 @@
 #define __HelicopterProject__ModelFactory__
 
 #include <map>
+#include <string>
 #include "Model.h"
 
 #endif /* defined(__HelicopterProject__ModelFactory__) */
@@ -17,9 +18,13 @@
 class ModelFactory {
 public:
 	static ModelFactory* getInstance();
+
+	static void addModel(const std::string name, Model *m);
+	static Model* getModel(const std::string name);
 	
-	int i;
 private:
+	std::map<std::string, Model*> models;
+	
 	ModelFactory();
 	ModelFactory(const ModelFactory&);
 	void operator=(const ModelFactory&);

@@ -9,6 +9,8 @@
 #include <osg/Node>
 #include <osgDB/ReadFile>
 #include "Helicopter.h"
+#include "Terrain.h"
+#include "Sky.h"
 #include "ModelFactory.h"
 
 
@@ -28,11 +30,25 @@ void testModel() {
 }
 
 void testModelFactory() {
-	ModelFactory::getInstance()->i = 10;
-
-	ModelFactory::getInstance()->i = 13;
+	osg::ref_ptr<Helicopter> h = new Helicopter();
+	osg::ref_ptr<Terrain> t = new Terrain();
+	osg::ref_ptr<Sky> s = new Sky();
+	osg::ref_ptr<Model> m1;
+	osg::ref_ptr<Model> m2;
+	osg::ref_ptr<Model> m3;
 	
-	std::cout << ModelFactory::getInstance()->i << std::endl;
+	ModelFactory::addModel("h", h);
+	ModelFactory::addModel("t", t);
+	ModelFactory::getInstance()->addModel("s", s);
+	
+	m1 = ModelFactory::getInstance()->getModel("h");
+	m2 = ModelFactory::getInstance()->getModel("t");
+	m3 = ModelFactory::getInstance()->getModel("s");
+	
+	
+	
+	std::cout << "";
+	
 }
 
 int main() {

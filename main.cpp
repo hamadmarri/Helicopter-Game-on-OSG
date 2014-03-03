@@ -27,7 +27,7 @@ void testModel() {
 
 	// set node tracker
 	nodeTracker->setHomePosition(osg::Vec3f(0.0f, 7.0f, -35.0f),	//homeEye
-								 osg::Vec3f(),		//homeCenter
+								 osg::Vec3f(),						//homeCenter
 								 osg::Y_AXIS);						//homeUp
 	nodeTracker->setTrackerMode( osgGA::NodeTrackerManipulator::NODE_CENTER_AND_ROTATION );
     nodeTracker->setRotationMode( osgGA::NodeTrackerManipulator::TRACKBALL );
@@ -45,7 +45,7 @@ void testModel() {
 	root->addChild(t.get());
 	root->addChild(s.get());
 	viewer.setSceneData(root.get());
-	viewer.setCameraManipulator(nodeTracker.get());
+//	viewer.setCameraManipulator(nodeTracker.get());
 	viewer.run();
 }
 

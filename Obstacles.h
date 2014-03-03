@@ -15,7 +15,6 @@
 class Obstacles : public Model{
 public:
     Obstacles();
-    osg::Group* get();
 };
 
 

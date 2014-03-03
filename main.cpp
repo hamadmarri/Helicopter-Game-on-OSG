@@ -14,7 +14,7 @@
 #include "Sky.h"
 #include "ModelFactory.h"
 #include "Obstacle.h"
-
+#include "Game.h"
 
 void testModel() {
 	osgViewer::Viewer viewer;
@@ -75,10 +75,11 @@ void testModelFactory() {
 
 int main() {
 	
-	testModel();
+	//testModel();
 	
 //	testModelFactory();
-	
+	Game test;
+    test.initialize();
 	
 	return 0;
 }

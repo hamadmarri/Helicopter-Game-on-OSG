@@ -21,5 +21,6 @@ Terrain::Terrain():Model(){
                                      * osg::Matrix::scale(100, 100, 100)
                                      );
     
+    
 
 }

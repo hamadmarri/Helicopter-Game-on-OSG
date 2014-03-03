@@ -8,14 +8,14 @@
 #include <osgViewer/Viewer>
 #include <osg/Node>
 #include <osgDB/ReadFile>
-#include "Model.h"
+#include "Helicopter.h"
 
 
 
 void testModel() {
 	osgViewer::Viewer viewer;
 	osg::ref_ptr<osg::Group> root = new osg::Group();
-//	osg::ref_ptr<Model> m = new Model();
+	osg::ref_ptr<Helicopter> h = new Helicopter();
 	osg::ref_ptr<osg::Node> t = new osg::Node();
 
 	t = osgDB::readNodeFile("lz.osg");

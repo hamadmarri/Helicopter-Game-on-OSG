@@ -20,7 +20,6 @@ public:
 	Model(const Model &B);
 	
 protected:
-//	osg::ref_ptr<osg::Node> node;
 	osg::ref_ptr<osg::PositionAttitudeTransform> PAT;
 	
 private:

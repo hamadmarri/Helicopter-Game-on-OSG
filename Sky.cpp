@@ -19,3 +19,8 @@ Sky::Sky():Model(){
 				   );
 
 }
+
+
+osg::Group* Sky:: get(){
+    return this->matrixTransform;
+}

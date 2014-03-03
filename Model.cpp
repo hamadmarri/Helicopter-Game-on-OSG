@@ -27,13 +27,11 @@ void Model::setPosistion(osg::Vec3f newPos) {
 void Model::initializer() {
 	this->PAT = new osg::PositionAttitudeTransform();
 	this->matrixTransform = new osg::MatrixTransform();
-	this->PAT->addChild(this);
-	this->matrixTransform->addChild(this);
-}
-
-
-osg::Group* Model::operator()() {
-	return get();
+	this->node = new osg::Group();
+	
+	this->matrixTransform->addChild(this->node.get());
+	this->PAT->addChild(this->matrixTransform.get());
+	this->addChild(this->PAT.get());
 }
 
 

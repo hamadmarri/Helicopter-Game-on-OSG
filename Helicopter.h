@@ -13,13 +13,12 @@
 #include "Rotor.h"
 #include "Model.h"
 
-class Helicopter:public Model {
+class Helicopter : public Model {
 public:
     Helicopter();
-    osg::Group* get();
 private:
-    Joystick* joyStick1;
-    Rotor*  rotor1;
+    Joystick *joyStick1;
+    Rotor *rotor1;
 };
 
 

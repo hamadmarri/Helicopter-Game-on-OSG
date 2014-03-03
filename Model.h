@@ -22,13 +22,11 @@ public:
 	Model(const Model &B);
 	
 	void setPosistion(osg::Vec3f newPos);
-	
-	virtual osg::Group* get() = 0;
-	osg::Group* operator()();
 	osg::PositionAttitudeTransform* getPAT();
 	osg::MatrixTransform* getMatrixTransform();
 	
 protected:
+	osg::ref_ptr<osg::Group> node;
 	osg::ref_ptr<osg::PositionAttitudeTransform> PAT;
 	osg::ref_ptr<osg::MatrixTransform> matrixTransform;
 	

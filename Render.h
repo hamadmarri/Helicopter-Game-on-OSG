@@ -25,6 +25,8 @@
 #include <iostream>
 #include "Constants.h"
 #include <osg/ShapeDrawable>
+#include <math.h>
+
 class Render{
   private:
 	  osg::ref_ptr<osg::PositionAttitudeTransform> helicopterTransform;

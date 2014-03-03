@@ -187,7 +187,7 @@ void Render::setJoystick(float theta, float phi)
 }
 
 osg::Vec3f Render::calculateForceDirections(float force, osg::Vec2f direction){
-	Vector2 vector = Vector2::Vector2(direction.x(), direction.y());
+	Vector2 vector = Vector2(direction.x(), direction.y());
 	float viewHeight = viewer.getCamera()->getViewport()->height();
 	float viewWidth = viewer.getCamera()->getViewport()->width();
 	

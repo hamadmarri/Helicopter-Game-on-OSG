@@ -22,6 +22,7 @@ public:
 	Model(const Model &B);
 	
 	void setPosistion(osg::Vec3f newPos);
+	void setScale(osg::Matrix scale);
 	osg::PositionAttitudeTransform* getPAT();
 	osg::MatrixTransform* getMatrixTransform();
 	

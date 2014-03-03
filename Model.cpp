@@ -24,6 +24,12 @@ void Model::setPosistion(osg::Vec3f newPos) {
 }
 
 
+
+void Model::setScale(osg::Matrix scale) {
+	this->matrixTransform->setMatrix(scale);
+}
+
+
 void Model::initializer() {
 	this->PAT = new osg::PositionAttitudeTransform();
 	this->matrixTransform = new osg::MatrixTransform();

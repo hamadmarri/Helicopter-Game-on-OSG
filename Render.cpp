@@ -239,7 +239,7 @@ void Render::setGravity(float gravity)
 	aGrav = gravity;
 }
 
-bool Render::detectCollision(osg::BoundingSphere& bs1, osg::BoundingSphere& bs2)
+bool Render::detectCollision(const osg::BoundingSphere& bs1, const osg::BoundingSphere& bs2)
 {
 	if (bs1.intersects(bs2))
 		return true;
@@ -249,7 +249,7 @@ bool Render::detectCollision(osg::BoundingSphere& bs1, osg::BoundingSphere& bs2)
 
 void Render::updateGamePlay()
 {
-	if (Render::detectCollision(osg::BoundingSphere(helicopterTransform->getBound()), osg::BoundingSphere(tor1Tr->getBound())))
+	if (detectCollision(osg::BoundingSphere(helicopterTransform->getBound()), osg::BoundingSphere(tor1Tr->getBound())))
 	{
 		ball1->setColor(osg::Vec4(1.0f,0.0f,0.0f,0.0f));
 		Logger::getInstance()->log("Collision with ball #1");

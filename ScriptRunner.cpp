@@ -97,7 +97,7 @@ vector<Command> ScriptRunner::parseScript(ifstream & script)
 
 void ScriptRunner::runScripts()
 {
-	for each(Command c in actions)
+	for (Command c : actions)
 	{
 		cactions.push_back(c);
 	}

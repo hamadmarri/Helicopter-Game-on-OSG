@@ -57,7 +57,7 @@ class Render{
   	  void updateGamePlay();
 	  void startMoving();
 	  osg::Vec3f calculateForceDirections(float force, osg::Vec2f direction);
-	  bool detectCollision(osg::BoundingSphere& bs1, osg::BoundingSphere& bs2);
+	  bool detectCollision(const osg::BoundingSphere& bs1, const osg::BoundingSphere& bs2);
 	  void changeBallColour(osg::ref_ptr<osg::PositionAttitudeTransform>& ball);
 	  std::string f2s(float num);
 };

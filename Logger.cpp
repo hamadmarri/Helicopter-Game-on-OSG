@@ -16,10 +16,10 @@ using namespace std;
 
 void Logger::log(string data){
 	if(loggingOn){
-		SYSTEMTIME time;
-		GetLocalTime(&time);
-		fprintf(logFile,"%04d-%02d-%02d %02d:%02d:%02d.%04d: %s \n",
-			time.wYear,time.wMonth,time.wDay,time.wHour,time.wMinute,time.wSecond,time.wMilliseconds, data.c_str());
+//		SYSTEMTIME time;
+//		GetLocalTime(&time);
+//		fprintf(logFile,"%04d-%02d-%02d %02d:%02d:%02d.%04d: %s \n",
+//			time.wYear,time.wMonth,time.wDay,time.wHour,time.wMinute,time.wSecond,time.wMilliseconds, data.c_str());
 	}
 }
 void Logger::openLog()

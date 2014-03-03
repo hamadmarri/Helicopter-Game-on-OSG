@@ -18,6 +18,12 @@ Model::Model(const Model &B) {
 }
 
 
+
+void Model::setPosistion(osg::Vec3f newPos) {
+	this->PAT->setPosition(newPos);
+}
+
+
 void Model::initializer() {
 	this->PAT = new osg::PositionAttitudeTransform();
 	this->matrixTransform = new osg::MatrixTransform();

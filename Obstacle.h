@@ -15,6 +15,7 @@
 class Obstacle : public Model{
 public:
     Obstacle();
+    Obstacle(osg::Node* o);
     void set(osg::Node* a);
 };
 

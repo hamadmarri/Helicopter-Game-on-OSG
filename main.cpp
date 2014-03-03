@@ -13,7 +13,7 @@
 #include "Terrain.h"
 #include "Sky.h"
 #include "ModelFactory.h"
-
+#include "Obstacle.h"
 
 
 void testModel() {
@@ -23,7 +23,7 @@ void testModel() {
 	osg::ref_ptr<Helicopter> h = new Helicopter();
 	osg::ref_ptr<Terrain> t = new Terrain();
 	osg::ref_ptr<Sky> s = new Sky();
-
+    osg::ref_ptr<Obstacle> o1 = new Obstacle();
 
 	// set node tracker
 	nodeTracker->setHomePosition(osg::Vec3f(0.0f, 7.0f, -35.0f),	//homeEye

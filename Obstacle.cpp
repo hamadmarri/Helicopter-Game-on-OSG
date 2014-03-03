@@ -13,10 +13,7 @@ Obstacle::Obstacle():Model(){
     
 }
 
-osg::Group* Obstacle:: get(){
-    return this->PAT;
-}
 void Obstacle::set(osg::Node* a){
-   // return this->addChild(a->get());
+	this->node->addChild(a);
 }
 

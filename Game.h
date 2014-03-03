@@ -12,6 +12,11 @@
 #include <osg/Node>
 #include <osgDB/ReadFile>
 #include <osgGA/NodeTrackerManipulator>
+#include "Helicopter.h"
+#include "Terrain.h"
+#include "Sky.h"
+#include "ModelFactory.h"
+#include "Obstacle.h"
 // game class created 
 class Game {
 public:

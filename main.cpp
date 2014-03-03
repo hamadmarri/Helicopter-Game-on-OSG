@@ -9,6 +9,7 @@
 #include <osg/Node>
 #include <osgDB/ReadFile>
 #include "Helicopter.h"
+#include "ModelFactory.h"
 
 
 
@@ -26,10 +27,20 @@ void testModel() {
 	viewer.run();
 }
 
+void testModelFactory() {
+	ModelFactory::getInstance()->i = 10;
+
+	ModelFactory::getInstance()->i = 13;
+	
+	std::cout << ModelFactory::getInstance()->i << std::endl;
+}
 
 int main() {
 	
-	testModel();
+//	testModel();
+	
+	testModelFactory();
+	
 	
 	return 0;
 }

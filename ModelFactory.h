@@ -8,6 +8,19 @@
 #ifndef __HelicopterProject__ModelFactory__
 #define __HelicopterProject__ModelFactory__
 
-#include <iostream>
+#include <map>
+#include "Model.h"
 
 #endif /* defined(__HelicopterProject__ModelFactory__) */
+
+
+class ModelFactory {
+public:
+	static ModelFactory* getInstance();
+	
+	int i;
+private:
+	ModelFactory();
+	ModelFactory(const ModelFactory&);
+	void operator=(const ModelFactory&);
+};

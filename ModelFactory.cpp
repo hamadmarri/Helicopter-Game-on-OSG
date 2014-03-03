@@ -6,3 +6,19 @@
 //
 
 #include "ModelFactory.h"
+
+
+ModelFactory::ModelFactory() {
+	
+}
+
+
+ModelFactory* ModelFactory::getInstance() {
+	
+	static ModelFactory *instance = nullptr;
+	
+	if (instance == nullptr)
+		instance = new ModelFactory();
+	
+	return instance;
+}

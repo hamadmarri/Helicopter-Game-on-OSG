@@ -7,8 +7,10 @@
 //
 
 #include "Helicopter.h"
+#include "Model.h"
+// constructor of the helicopter from the model class
 
-
-Helicopter::Helicopter(){
+Helicopter::Helicopter():Model(){
     
+    this->addChild(osgDB::readNodeFile("3124/EC-135_Douane.ac"));
 }

@@ -13,4 +13,13 @@
 Terrain::Terrain():Model(){
     
     this->addChild(osgDB::readNodeFile("lz.osg"));
+    this->matrixTransform->setMatrix(osg::Matrix::translate(0.0f, 300.0f, -400.0f)
+                                     *  osg::Matrix::rotate(osg::DegreesToRadians(90.0f),osg::Vec3f(1,0,0),
+                                                            osg::DegreesToRadians(0.0f),osg::Vec3f(0,1,0),
+                                                            osg::DegreesToRadians(180.0f),osg::Vec3f(0,0,1)
+                                                            )
+                                     * osg::Matrix::scale(100, 100, 100)
+                                     );
+    
+
 }

@@ -13,4 +13,6 @@
 Helicopter::Helicopter():Model(){
     
     this->addChild(osgDB::readNodeFile("3124/EC-135_Douane.ac"));
-}
+    this->PAT->setPosition(osg::Vec3f(100.0, 0.0, 100.0));
+    
+    }

@@ -19,6 +19,7 @@ Model::Model(const Model &B) {
 
 
 void Model::initializer() {
+    
 	this->addChild(osgDB::readNodeFile("3124/EC-135_Douane.ac"));
 	this->PAT = new osg::PositionAttitudeTransform();
 	this->PAT->addChild(this);

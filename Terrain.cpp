@@ -18,6 +18,6 @@ Terrain::Terrain():Model(){
                                                             osg::DegreesToRadians(0.0f),osg::Vec3f(0,1,0),
                                                             osg::DegreesToRadians(180.0f),osg::Vec3f(0,0,1)
                                                             )
-                                     * osg::Matrix::scale(100, 100, 100)
+                                     * osg::Matrix::scale(10, 10, 10)
                                      );
 }

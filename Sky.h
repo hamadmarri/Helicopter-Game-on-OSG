@@ -13,6 +13,7 @@
 class Sky : public Model {
 public:
     Sky();
+    osg::Group* get();
 };
 
 

@@ -12,3 +12,7 @@
 Obstacles::Obstacles():Model(){
     
 }
+
+osg::Group* Obstacles:: get(){
+    return this->PAT;
+}

@@ -24,3 +24,7 @@ Terrain::Terrain():Model(){
     
 
 }
+
+osg::Group* Terrain::get(){
+    return this->matrixTransform;
+}

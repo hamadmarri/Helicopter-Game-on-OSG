@@ -8,11 +8,14 @@
 
 #ifndef testOsg_Obstacles_h
 #define testOsg_Obstacles_h
-#include "Model.h"
 
+
+#include "Model.h"
+// constructing the obstacles class
 class Obstacles : public Model{
 public:
     Obstacles();
+    osg::Group* get();
 };
 
 

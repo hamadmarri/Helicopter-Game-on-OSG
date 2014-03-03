@@ -9,7 +9,7 @@
 #ifndef SLEEPTHREAD_H
 #define SLEEPTHREAD_H
 
-#include <OpenThreads\Thread>
+#include <OpenThreads/Thread>
 
 class SleepThread : public OpenThreads::Thread
 {

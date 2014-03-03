@@ -7,7 +7,7 @@
 */
 #include "SleepThread.h"
 #include <Windows.h>
-#include <OpenThreads\Thread>
+#include <OpenThreads/Thread>
 
 SleepThread::SleepThread(int time)
 {

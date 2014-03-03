@@ -17,7 +17,7 @@
 #include <fstream>
 #include "Constants.h"
 #include "ScriptRunner.h"
-#include <OpenThreads\Thread>
+#include <OpenThreads/Thread>
 
 int main(int argc, char** argv)
 {

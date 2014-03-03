@@ -9,8 +9,16 @@
 #ifndef testOsg_Helicopter_h
 #define testOsg_Helicopter_h
 
+#include "Joystick.h"
+#include "Rotor.h"
+
+
 class Helicopter {
-    
+public:
+    Helicopter();
+private:
+    Joystick* joyStick1;
+    Rotor*  rotor1;
 };
 
 

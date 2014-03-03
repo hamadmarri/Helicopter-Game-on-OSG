@@ -10,7 +10,8 @@
 #define testOsg_Joystick_h
 
 class Joystick {
-    
+public:
+    Joystick();
 };
 
 #endif

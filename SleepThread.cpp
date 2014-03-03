@@ -6,7 +6,7 @@
 
 */
 #include "SleepThread.h"
-#include <Windows.h>
+#include <unistd.h>
 #include <OpenThreads/Thread>
 
 SleepThread::SleepThread(int time)
@@ -16,5 +16,5 @@ SleepThread::SleepThread(int time)
 
 void SleepThread::run()
 {
-	Sleep(sleepTime * 1000);
+	sleep(sleepTime * 1000 * 1000);
 }

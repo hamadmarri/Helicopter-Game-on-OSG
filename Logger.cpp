@@ -9,7 +9,6 @@
 #include "Logger.h"
 #include "Render.h"
 #include <fstream>
-#include <windows.h>
 #include <stdio.h>
 
 using namespace std;

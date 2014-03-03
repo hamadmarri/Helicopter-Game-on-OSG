@@ -25,7 +25,7 @@
 #include <iostream>
 #include "Constants.h"
 #include <osg/ShapeDrawable>
-#include <math.h>
+//#include <math.h>
 
 class Render{
   private:

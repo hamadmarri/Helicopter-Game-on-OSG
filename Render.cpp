@@ -187,7 +187,12 @@ void Render::setJoystick(float theta, float phi)
 }
 
 osg::Vec3f Render::calculateForceDirections(float force, osg::Vec2f direction){
-	Vector2 vector = Vector2(direction.x(), direction.y());
+//	Vector2 vector = Vector2(direction.x(), direction.y());
+//	Vector2 *vector = new Vector2();
+//	vector->X = direction.x();
+//	vector->Y = direction.y();
+	float vectorLength = 0.0;
+	
 	float viewHeight = viewer.getCamera()->getViewport()->height();
 	float viewWidth = viewer.getCamera()->getViewport()->width();
 	
@@ -195,7 +200,7 @@ osg::Vec3f Render::calculateForceDirections(float force, osg::Vec2f direction){
 
 	//std::cout << "Relationship: " << relationship << std::endl;
 	
-	float theta = osg::DegreesToRadians(vector.Length()*relationship);
+	float theta = osg::DegreesToRadians(vectorLength * relationship);
 	float phi = atan2(direction.y(), direction.x());
 
 	//std::cout << "Theta: " << theta << std::endl;

@@ -8,8 +8,9 @@
 
 #ifndef testOsg_Obstacles_h
 #define testOsg_Obstacles_h
+#include "Model.h"
 
-class Obstacles{
+class Obstacles : public Model{
 public:
     Obstacles();
 };

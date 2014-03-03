@@ -9,7 +9,8 @@
 #ifndef testOsg_Terrain_h
 #define testOsg_Terrain_h
 
-class Terrain{
+#include "Model.h"
+class Terrain : public Model{
 public:
     Terrain();
 };

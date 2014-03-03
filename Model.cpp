@@ -21,7 +21,33 @@ Model::Model(const Model &B) {
 void Model::initializer() {
 	this->addChild(osgDB::readNodeFile("3124/EC-135_Douane.ac"));
 	this->PAT = new osg::PositionAttitudeTransform();
-	this->addChild(this->PAT.get());
 	this->PAT->addChild(this);
-	this->PAT->setPosition(osg::Vec3f(0.0, 0.0, 100.0));
+	this->PAT->setPosition(osg::Vec3f(100.0, 0.0, 100.0));
 }
+
+
+osg::Group* Model::get() {
+	return this->PAT;
+}
+
+
+osg::Group* Model::operator()() {
+	return get();
+}
+
+
+osg::PositionAttitudeTransform* Model::getPAT() {
+	return this->PAT;
+}
+
+
+osg::MatrixTransform* Model::getMatrixTransform() {
+	return this->matrixTransform;
+}
+
+
+
+
+
+
+

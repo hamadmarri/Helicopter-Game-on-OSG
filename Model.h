@@ -10,6 +10,8 @@
 
 #include <osgDB/ReadFile>
 #include <osg/PositionAttitudeTransform>
+#include <osg/MatrixTransform>
+
 
 class Model : public osg::Group {
 public:
@@ -19,8 +21,15 @@ public:
 	// copy constructor
 	Model(const Model &B);
 	
+	
+	osg::Group* get();
+	osg::Group* operator()();
+	osg::PositionAttitudeTransform* getPAT();
+	osg::MatrixTransform* getMatrixTransform();
+	
 protected:
 	osg::ref_ptr<osg::PositionAttitudeTransform> PAT;
+	osg::ref_ptr<osg::MatrixTransform> matrixTransform;
 	
 private:
 	void initializer();

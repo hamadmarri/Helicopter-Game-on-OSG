@@ -20,7 +20,7 @@ void testModel() {
 
 	t = osgDB::readNodeFile("lz.osg");
 
-//	root->addChild(m->get());
+	root->addChild(h->get());
 	root->addChild(t.get());
 	viewer.setSceneData(root);
 	viewer.run();

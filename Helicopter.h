@@ -11,9 +11,9 @@
 
 #include "Joystick.h"
 #include "Rotor.h"
+#include "Model.h"
 
-
-class Helicopter {
+class Helicopter:public Model {
 public:
     Helicopter();
 private:

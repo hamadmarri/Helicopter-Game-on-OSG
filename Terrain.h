@@ -13,7 +13,6 @@
 class Terrain : public Model{
 public:
     Terrain();
-    osg::Group* get();
 };
 
 #endif

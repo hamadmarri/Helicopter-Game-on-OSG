@@ -8,6 +8,7 @@
 #include <osgViewer/Viewer>
 #include <osg/Node>
 #include <osgDB/ReadFile>
+#include <osgGA/NodeTrackerManipulator>
 #include "Helicopter.h"
 #include "Terrain.h"
 #include "Sky.h"
@@ -17,15 +18,34 @@
 
 void testModel() {
 	osgViewer::Viewer viewer;
+	osg::ref_ptr<osgGA::NodeTrackerManipulator> nodeTracker = new osgGA::NodeTrackerManipulator;;
 	osg::ref_ptr<osg::Group> root = new osg::Group();
 	osg::ref_ptr<Helicopter> h = new Helicopter();
-	osg::ref_ptr<osg::Node> t = new osg::Node();
+	osg::ref_ptr<Terrain> t = new Terrain();
+	osg::ref_ptr<Sky> s = new Sky();
 
-	t = osgDB::readNodeFile("lz.osg");
 
-	root->addChild(h->get());
+	// set node tracker
+	nodeTracker->setHomePosition(osg::Vec3f(0.0f, 7.0f, -35.0f),	//homeEye
+								 osg::Vec3f(),		//homeCenter
+								 osg::Y_AXIS);						//homeUp
+	nodeTracker->setTrackerMode( osgGA::NodeTrackerManipulator::NODE_CENTER_AND_ROTATION );
+    nodeTracker->setRotationMode( osgGA::NodeTrackerManipulator::TRACKBALL );
+	nodeTracker->setTrackNode(h.get());
+	
+
+	// setup viewer
+	osg::DisplaySettings::instance()->setNumMultiSamples(4);
+	//	viewer.setUpViewInWindow(50, 50, 800, 600);
+	
+	
+	
+	
+	root->addChild(h.get());
 	root->addChild(t.get());
-	viewer.setSceneData(root);
+	root->addChild(s.get());
+	viewer.setSceneData(root.get());
+	viewer.setCameraManipulator(nodeTracker.get());
 	viewer.run();
 }
 
@@ -53,9 +73,9 @@ void testModelFactory() {
 
 int main() {
 	
-//	testModel();
+	testModel();
 	
-	testModelFactory();
+//	testModelFactory();
 	
 	
 	return 0;

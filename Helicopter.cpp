@@ -16,3 +16,7 @@ Helicopter::Helicopter():Model(){
     this->PAT->setPosition(osg::Vec3f(100.0, 0.0, 100.0));
     
 }
+
+osg::Group* Helicopter:: get(){
+    return this->PAT;
+}

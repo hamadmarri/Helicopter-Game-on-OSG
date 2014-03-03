@@ -16,6 +16,7 @@
 class Helicopter:public Model {
 public:
     Helicopter();
+    osg::Group* get();
 private:
     Joystick* joyStick1;
     Rotor*  rotor1;

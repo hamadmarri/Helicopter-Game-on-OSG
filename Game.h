@@ -8,6 +8,10 @@
 
 #ifndef testOsg_Game_h
 #define testOsg_Game_h
+#include <osgViewer/Viewer>
+#include <osg/Node>
+#include <osgDB/ReadFile>
+#include <osgGA/NodeTrackerManipulator>
 // game class created 
 class Game {
 public:

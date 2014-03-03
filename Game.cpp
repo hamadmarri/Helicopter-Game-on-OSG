@@ -7,10 +7,7 @@
 //
 
 #include "Game.h"
-#include <osgViewer/Viewer>
-#include <osg/Node>
-#include <osgDB/ReadFile>
-#include <osgGA/NodeTrackerManipulator>
+
 #include "Helicopter.h"
 #include "Terrain.h"
 #include "Sky.h"

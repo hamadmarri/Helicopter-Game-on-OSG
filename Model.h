@@ -22,7 +22,7 @@ public:
 	Model(const Model &B);
 	
 	
-	osg::Group* get();
+	virtual osg::Group* get() = 0;
 	osg::Group* operator()();
 	osg::PositionAttitudeTransform* getPAT();
 	osg::MatrixTransform* getMatrixTransform();

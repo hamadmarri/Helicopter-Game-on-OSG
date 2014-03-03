@@ -27,11 +27,6 @@ void Model::initializer() {
 }
 
 
-osg::Group* Model::get() {
-	return this->PAT;
-}
-
-
 osg::Group* Model::operator()() {
 	return get();
 }

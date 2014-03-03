@@ -23,7 +23,7 @@ void testModel() {
 	osg::ref_ptr<Helicopter> h = new Helicopter();
 	osg::ref_ptr<Terrain> t = new Terrain();
 	osg::ref_ptr<Sky> s = new Sky();
-    osg::ref_ptr<Obstacle> o1 = new Obstacle();
+    osg::ref_ptr<Obstacle> o1 = new Obstacle(osgDB::readNodeFile("cow.osg"));
 
 	// set node tracker
 	nodeTracker->setHomePosition(osg::Vec3f(0.0f, 7.0f, -35.0f),	//homeEye
@@ -44,6 +44,7 @@ void testModel() {
 	root->addChild(h.get());
 	root->addChild(t.get());
 	root->addChild(s.get());
+    root->addChild(o1.get());
 	viewer.setSceneData(root.get());
 //	viewer.setCameraManipulator(nodeTracker.get());
 	viewer.run();

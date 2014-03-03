@@ -15,9 +15,13 @@
 void testModel() {
 	osgViewer::Viewer viewer;
 	
+	osg::ref_ptr<osg::Group> root = new osg::Group();
+	
 	osg::ref_ptr<Model> m = new Model();
 	
-	viewer.setSceneData(m);
+	root->addChild(m);
+	
+	viewer.setSceneData(root);
 	viewer.run();
 }
 

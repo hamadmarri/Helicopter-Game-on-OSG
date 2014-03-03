@@ -19,15 +19,22 @@ void Game::initialize(){
 	osg::ref_ptr<Terrain> t = new Terrain();
 	osg::ref_ptr<Sky> s = new Sky();
     osg::ref_ptr<Obstacle> o1 = new Obstacle(osgDB::readNodeFile("320/large-residential-highrise-orange.ac"));
+    osg::ref_ptr<Obstacle> o2 = new Obstacle(osgDB::readNodeFile("320/large-residential-highrise.ac"));
+    osg::ref_ptr<Obstacle> o3 = new Obstacle(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
     
     ModelFactory::getInstance()->add(HELICOPTER_NAME,h.get());
     ModelFactory::getInstance()->add(TERRAIN_NAME,t.get());
     ModelFactory::getInstance()->add(SKY_NAME,s.get());
-    ModelFactory::getInstance()->add("building",o1.get());
+    ModelFactory::getInstance()->add("building1",o1.get());
+    ModelFactory::getInstance()->add("building2",o2.get());
+    ModelFactory::getInstance()->add("building3",o3.get());
+    
     
     
     
     o1->setPosistion(osg::Vec3 (0.0f, -3080.0f, -400.0f));
+    o2->setPosistion(osg::Vec3f (500.0f, -3080.0f, -200.0f));
+    o3->setPosistion(osg::Vec3f (200.0f, -3080.0f, -600.0f));
 	// set node tracker
 	nodeTracker->setHomePosition(osg::Vec3f(0.0f, 7.0f, -35.0f),	//homeEye
 								 osg::Vec3f(),						//homeCenter
@@ -44,11 +51,14 @@ void Game::initialize(){
 	
 	
 	
-	root->addChild(h.get());
+	//root->addChild(h.get());
 	root->addChild(t.get());
-	root->addChild(s.get());
+	//root->addChild(s.get());
     root->addChild(o1.get());
+    root->addChild(o2.get());
+    root->addChild(o3.get());
+    
 	viewer.setSceneData(root.get());
     //	viewer.setCameraManipulator(nodeTracker.get());
-	
+	viewer.run();
 }

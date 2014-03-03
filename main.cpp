@@ -23,7 +23,7 @@ void testModel() {
 	osg::ref_ptr<Helicopter> h = new Helicopter();
 	osg::ref_ptr<Terrain> t = new Terrain();
 	osg::ref_ptr<Sky> s = new Sky();
-    osg::ref_ptr<Obstacle> o1 = new Obstacle(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
+    osg::ref_ptr<Obstacle> o1 = new Obstacle(osgDB::readNodeFile("320/large-residential-highrise-orange.ac"));
     
     o1->setPosistion(osg::Vec3 (0.0f, -3080.0f, -400.0f));
 	// set node tracker

@@ -22,7 +22,7 @@ private:
 	string logFileName;
 	bool loggingOn;
 public:
-	static Logger* Logger::getInstance(){
+	static Logger* getInstance(){
 		static Logger *instance = NULL;
 		if(instance == NULL){
 			instance = new Logger();

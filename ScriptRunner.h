@@ -28,7 +28,7 @@ private:
 protected:
 	Render * gameRender;
 public:
-	static ScriptRunner* ScriptRunner::getInstance(){
+	static ScriptRunner* getInstance(){
 		static ScriptRunner *instance = 0;
 		if(instance == 0){
 			instance = new ScriptRunner();

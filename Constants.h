@@ -30,14 +30,14 @@ public:
 	float frictionConstant;
 	float baseThrottle;
 	HelicopterConfig* helicopter;
-	static Constants* Constants::getInstance(){
+	static Constants* getInstance(){
 		static Constants *instance = 0;
 		if(instance == 0){
 			instance = new Constants();
 		}
 		return instance;
 	}
-	static void Constants::setConstantsFromFile(std::ifstream & infile);
+	static void setConstantsFromFile(std::ifstream & infile);
 	Constants(void);
 	float calculateFrictionConstant(float theta);
 	void setFrictionConstant(float theta);

@@ -8,9 +8,10 @@
 #ifndef __HelicopterProject__Model__
 #define __HelicopterProject__Model__
 
+#include <osgDB/ReadFile>
 #include <osg/PositionAttitudeTransform>
 
-class Model : public osg::ref_ptr<osg::Node> {
+class Model : public osg::Group {
 public:
 	// default constructor
 	Model();
@@ -18,8 +19,8 @@ public:
 	// copy constructor
 	Model(const Model &B);
 	
-	
 protected:
+//	osg::ref_ptr<osg::Node> node;
 	osg::ref_ptr<osg::PositionAttitudeTransform> PAT;
 	
 private:

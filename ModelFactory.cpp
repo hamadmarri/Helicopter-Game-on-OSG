@@ -24,11 +24,46 @@ ModelFactory* ModelFactory::getInstance() {
 }
 
 
-void ModelFactory::addModel(const std::string name, Model *m) {
+void ModelFactory::add(const std::string name, Model *m) {
 	ModelFactory::getInstance()->models[name] = m;
 }
 
 
-Model* ModelFactory::getModel(const std::string name) {
+Model* ModelFactory::get(const std::string name) {
+	if (ModelFactory::getInstance()->models.find(name) == ModelFactory::getInstance()->models.end()) {
+		create(name);
+	}
+	
 	return ModelFactory::getInstance()->models[name];
 }
+
+
+Model* ModelFactory::create(const std::string name) {
+	
+	Model *model;
+	
+	if (name == "helicopter") {
+		model = new Helicopter();
+		ModelFactory::getInstance()->models[HELICOPTER_NAME] = model;
+	} else if (name == "terrain") {
+		model = new Terrain();
+		ModelFactory::getInstance()->models[TERRAIN_NAME] = model;
+	}  else if (name == "sky") {
+		model = new Sky();
+		ModelFactory::getInstance()->models[SKY_NAME] = model;
+	} else {
+		return nullptr;
+	}
+	
+	return model;
+}
+
+
+
+
+
+
+
+
+
+

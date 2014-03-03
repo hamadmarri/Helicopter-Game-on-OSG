@@ -30,20 +30,20 @@ void testModel() {
 }
 
 void testModelFactory() {
-	osg::ref_ptr<Helicopter> h = new Helicopter();
-	osg::ref_ptr<Terrain> t = new Terrain();
-	osg::ref_ptr<Sky> s = new Sky();
+//	osg::ref_ptr<Helicopter> h = new Helicopter();
+//	osg::ref_ptr<Terrain> t = new Terrain();
+//	osg::ref_ptr<Sky> s = new Sky();
 	osg::ref_ptr<Model> m1;
 	osg::ref_ptr<Model> m2;
 	osg::ref_ptr<Model> m3;
 	
-	ModelFactory::addModel("h", h);
-	ModelFactory::addModel("t", t);
-	ModelFactory::getInstance()->addModel("s", s);
+//	ModelFactory::add("h", h);
+//	ModelFactory::add("t", t);
+//	ModelFactory::getInstance()->add("s", s);
 	
-	m1 = ModelFactory::getInstance()->getModel("h");
-	m2 = ModelFactory::getInstance()->getModel("t");
-	m3 = ModelFactory::getInstance()->getModel("s");
+	m1 = ModelFactory::getInstance()->get(HELICOPTER_NAME);
+	m2 = ModelFactory::getInstance()->get(TERRAIN_NAME);
+	m3 = ModelFactory::getInstance()->get(SKY_NAME);
 	
 	
 	

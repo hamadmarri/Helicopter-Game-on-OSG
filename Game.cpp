@@ -55,7 +55,7 @@ void Game::initialize(){
 	
     
 	// setup viewer
-	osg::DisplaySettings::instance()->setNumMultiSamples(4);	
+//	osg::DisplaySettings::instance()->setNumMultiSamples(4);	
 	
     viewer.addEventHandler(controller);
 	viewer.addEventHandler(timhandler);

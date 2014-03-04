@@ -13,14 +13,11 @@
 #include <algorithm> // find
 #include <osgGA/GUIEventHandler>
 #include "JoyStick.h"
-#include "Game.h"
 #include "Observable.h"
 
 class Controller : public osgGA::GUIEventHandler, public Observable {
 public:
-	Controller(Game *g) : game(g) {
-		joyStick.set_theta(0.0);
-		joyStick.set_phi(0.0);
+	Controller() {
 	}
 	
 	virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*);
@@ -31,8 +28,6 @@ public:
 	void NotifyAll(char event);
 	
 private:
-	Joystick joyStick;
-	Game *game;
 	std::vector<Observer*> observers;
 };
 

@@ -16,7 +16,7 @@
 
 class TimeHandler : public osgGA::GUIEventHandler, public Observable {
 public:
-	TimeHandler(Game *g) : game(g) {}
+	TimeHandler() {}
 	
 	virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*);
 	
@@ -25,7 +25,6 @@ public:
 	void NotifyAll(char event);
 	
 private:
-	Game *game;
 	std::vector<Observer*> observers;
 };
 

@@ -78,8 +78,8 @@ int main() {
 	//testModel();
 	
 //	testModelFactory();
-	Game test;
-    test.initialize();
+	//Game test;
+    //test.initialize();
 	
 	return 0;
 }

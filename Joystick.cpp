@@ -48,3 +48,30 @@ double Joystick::toRadian(double degree) {
     return (degree * 3.14159265) / 180;
 }
 
+
+// observe function basic implementation 
+void Joystick:: Observe(char event){
+    
+    
+    switch(event) {
+        case 'a': case 'A':
+            this->set_theta(45.0);
+            this->set_phi(90.0);
+            break;
+        case 'w': case 'W':
+            this->set_theta(45.0);
+            this->set_phi(0.0);
+            break;
+        case 'd': case 'D':
+            this->set_theta(45.0);
+            this->set_phi(270);
+            break;
+        case 's': case 'S':
+            this->set_theta(45.0);
+            this->set_phi(180.0);
+            break;
+    }
+    
+
+}
+

@@ -16,37 +16,18 @@ class Joystick {
 public:
 	Joystick() {}
 	
-	Joystick(Joystick &B) {
-		this->theta = B.theta;
-		this->phi = B.phi;
-	}
+	Joystick(Joystick &B);
 	
-	Joystick(double theta, double phi) {
-		this->theta = theta;
-		this->phi = phi;
-	}
+	Joystick(double theta, double phi);
 	
-	void set_theta(double theta) { this->theta = theta; }
-	void set_phi(double phi) { this->phi = phi; }
+	void set_theta(double theta);
+	void set_phi(double phi);
 	
-	double get_theta() const { return this->theta; }
-	double get_phi() const { return this->phi; }
-	
-	/*
-	 calculate the unit vector from the two angles(theta and phi)
-	 */
-	osg::Vec3f getForce() {
-		osg::Vec3f F;
-		F.x() = sin(toRadian(get_theta())) * cos(toRadian(get_phi()));
-		F.y() = sin(toRadian(get_theta())) * sin(toRadian(get_phi()));
-		F.z() = cos(toRadian(get_theta()));
-		return F;
-	}
-	
-	double toRadian(double degree) {
-		return (degree * 3.14159265) / 180;
-	}
-	
+	double get_theta() const;
+	double get_phi() const;
+	double toRadian(double degree);
+	osg::Vec3f getForce();
+    
 private:
 	double theta;
 	double phi;

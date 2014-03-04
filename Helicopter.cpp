@@ -35,9 +35,7 @@ void Helicopter:: Observe(char event){
 	osg::Vec3f nextPosition = this->motion.calculate_position_at(t);
 	
 	
-	this->PAT->setPosition(osg::Vec3f(this->setPosistion.x() + nextPosition.y() * cosf(y),
-										   this->getPosition().y() + nextPosition.z(),
-										   this->getPosition().z() + nextPosition.x() * cosf(y)));
+	
     
     this->PAT->setPosition(osg::Vec3f(this->PAT->getPosition().x() + nextPosition.y() * cosf(y),
 										   this->PAT->getPosition().y() + nextPosition.z(),

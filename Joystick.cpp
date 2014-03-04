@@ -49,7 +49,8 @@ double Joystick::toRadian(double degree) {
 }
 
 
-// observe function basic implementation 
+// observe function basic implementation
+
 void Joystick:: Observe(char event){
     
     

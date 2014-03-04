@@ -15,30 +15,20 @@ bool Controller::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapte
 			switch(ea.getKey()) {
 				case 'a': case 'A':
 					NotifyAll('a');
-//					this->joyStick.set_theta(45.0);
-//					this->joyStick.set_phi(90.0);
 					break;
 				case 'w': case 'W':
 					NotifyAll('w');
-//					this->joyStick.set_theta(45.0);
-//					this->joyStick.set_phi(0.0);
 					break;
 				case 'd': case 'D':
 					NotifyAll('d');
-//					this->joyStick.set_theta(45.0);
-//					this->joyStick.set_phi(270);
 					break;
 				case 's': case 'S':
 					NotifyAll('s');
-//					this->joyStick.set_theta(45.0);
-//					this->joyStick.set_phi(180.0);
 					break;
 			}
 			break;
 		case osgGA::GUIEventAdapter::KEYUP:
 			NotifyAll('0');
-//			this->joyStick.set_theta(0.0);
-//			this->joyStick.set_phi(0.0);
 			break;
 	}
 	return false;

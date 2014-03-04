@@ -74,6 +74,9 @@ void Joystick:: Observe(char event){
             this->set_theta(0.0);
             this->set_phi(0.0);
             break;
+        default:
+            break;
+            
     }
     
 

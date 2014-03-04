@@ -22,7 +22,7 @@ public:
 
 
     Joystick *joystick;
-    Rotor *rotor;
+    //Rotor *rotor;
     Motion motion;
 };
 

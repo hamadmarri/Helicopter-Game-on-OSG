@@ -9,11 +9,13 @@
 #ifndef testOsg_Observable_h
 #define testOsg_Observable_h
 
+#include "Observer.h"
+
 class Observable {
 public:
-	virtual void AddObserver(Observer observer) = 0;
-    virtual void RemoveObserver(Observer observer) = 0;
-    virtual void NotifyAll(Observer.EventTypes event) = 0;
-}
+	virtual void AddObserver(Observer *observer) = 0;
+    virtual void RemoveObserver(Observer *observer) = 0;
+    virtual void NotifyAll() = 0;
+};
 
 #endif

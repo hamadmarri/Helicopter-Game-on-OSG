@@ -37,10 +37,31 @@ bool Controller::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapte
 			break;
 	}
 	
-	game->joyStick = this->joyStick;
+//	game->joyStick = this->joyStick;
 
 	return false;
 }
+
+
+void Controller::AddObserver(Observer *observer) {
+//	if (!this->observers.)
+		this->observers.push_back(observer);
+}
+
+
+void Controller::RemoveObserver(Observer *observer) {
+	auto it = std::find(this->observers.begin(), this->observers.end(), observer);
+	if (it != this->observers.end())
+		this->observers.erase(it);
+}
+
+
+void Controller::NotifyAll() {
+	for (auto observer = this->observers.begin(); observer != this->observers.end(); observer++) {
+		(*observer)->Observe();
+	}
+}
+
 
 
 

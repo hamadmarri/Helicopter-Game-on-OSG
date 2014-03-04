@@ -12,7 +12,7 @@
 bool TimeHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*) {
 	switch (ea.getEventType()) {
 		case osgGA::GUIEventAdapter::FRAME:
-			game->render();
+//			game->render();
 			break;
 	}
 	

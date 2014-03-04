@@ -12,6 +12,6 @@
 class Observer {
 public:
     virtual void Observe() = 0;
-}
+};
 
 #endif

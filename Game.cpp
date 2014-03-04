@@ -37,6 +37,14 @@ void Game::initialize(){
     o1->setPosistion(osg::Vec3 (0.0f, -3080.0f, -400.0f));
     o2->setPosistion(osg::Vec3f (500.0f, -3080.0f, -200.0f));
     o3->setPosistion(osg::Vec3f (200.0f, -3080.0f, -600.0f));
+    
+    // add obeservers
+    controller->AddObserver(h.get()->joystick);
+    timhandler->AddObserver(h.get());
+    
+    
+    
+    
 	// set node tracker
 	nodeTracker->setHomePosition(osg::Vec3f(0.0f, 7.0f, -35.0f),	//homeEye
 								 osg::Vec3f(),						//homeCenter

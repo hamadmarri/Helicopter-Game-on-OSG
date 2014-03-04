@@ -20,7 +20,7 @@ public:
     Helicopter();
     void Observe(char event);
 
-private:
+
     Joystick *joystick;
     Rotor *rotor;
     Motion motion;

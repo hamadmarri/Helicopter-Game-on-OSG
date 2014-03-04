@@ -26,9 +26,9 @@ public:
 	virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*);
 	
 	
-	virtual void AddObserver(Observer *observer);
-    virtual void RemoveObserver(Observer *observer);
-    virtual void NotifyAll(char event);
+	void AddObserver(Observer *observer);
+	void RemoveObserver(Observer *observer);
+	void NotifyAll(char event);
 	
 private:
 	Joystick joyStick;

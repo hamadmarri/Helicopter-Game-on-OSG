@@ -11,15 +11,22 @@
 
 #include <osgGA/GUIEventHandler>
 #include "Game.h"
+#include "Observable.h"
 
-class TimeHandler : public osgGA::GUIEventHandler {
+
+class TimeHandler : public osgGA::GUIEventHandler, public Observable {
 public:
 	TimeHandler(Game *g) : game(g) {}
 	
 	virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*);
 	
+	void AddObserver(Observer *observer);
+	void RemoveObserver(Observer *observer);
+	void NotifyAll(char event);
+	
 private:
 	Game *game;
+	std::vector<Observer*> observers;
 };
 
 

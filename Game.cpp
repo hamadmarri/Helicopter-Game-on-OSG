@@ -45,20 +45,18 @@ void Game::initialize(){
 	
     
 	// setup viewer
-	osg::DisplaySettings::instance()->setNumMultiSamples(4);
-	//	viewer.setUpViewInWindow(50, 50, 800, 600);
+	osg::DisplaySettings::instance()->setNumMultiSamples(4);	
 	
 	
 	
-	
-	//root->addChild(h.get());
+	root->addChild(h.get());
 	root->addChild(t.get());
-	//root->addChild(s.get());
+	root->addChild(s.get());
     root->addChild(o1.get());
     root->addChild(o2.get());
     root->addChild(o3.get());
     
 	viewer.setSceneData(root.get());
-    //	viewer.setCameraManipulator(nodeTracker.get());
+    viewer.setCameraManipulator(nodeTracker.get());
 	viewer.run();
 }

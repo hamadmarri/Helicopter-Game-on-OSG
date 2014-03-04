@@ -17,7 +17,9 @@
 #include "Sky.h"
 #include "ModelFactory.h"
 #include "Obstacle.h"
-// game class created 
+
+// game class created
+
 class Game {
 public:
     void initialize();

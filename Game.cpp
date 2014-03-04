@@ -18,8 +18,8 @@ void Game::initialize(){
 	osg::ref_ptr<Helicopter> h = new Helicopter();
 	osg::ref_ptr<Terrain> t = new Terrain();
 	osg::ref_ptr<Sky> s = new Sky();
-    osg::ref_ptr<Obstacle> o1 = new Obstacle(osgDB::readNodeFile("320/large-residential-highrise-orange.ac"));
-    osg::ref_ptr<Obstacle> o2 = new Obstacle(osgDB::readNodeFile("320/large-residential-highrise.ac"));
+    osg::ref_ptr<Obstacle> o1 = new Obstacle(osgDB::readNodeFile("2706/large-residential-highrise-orange.ac"));
+    osg::ref_ptr<Obstacle> o2 = new Obstacle(osgDB::readNodeFile("2705/large-residential-highrise.ac"));
     osg::ref_ptr<Obstacle> o3 = new Obstacle(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
     
     ModelFactory::getInstance()->add(HELICOPTER_NAME,h.get());

@@ -15,7 +15,7 @@
 
 class Joystick :public Observer {
 public:
-	Joystick() {}
+	Joystick();
 	
 	Joystick(Joystick &B);
 	

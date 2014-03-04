@@ -13,7 +13,6 @@ bool TimeHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapt
 	switch (ea.getEventType()) {
 		case osgGA::GUIEventAdapter::FRAME:
 			NotifyAll('\0');
-//			game->render();
 			break;
 	}
 	

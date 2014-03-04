@@ -8,6 +8,13 @@
 
 #include "Joystick.h"
 
+
+Joystick::Joystick() {
+    this->theta = 0;
+    this->phi = 0;
+}
+
+
 Joystick::Joystick(Joystick &B) {
     this->theta = B.theta;
     this->phi = B.phi;

@@ -47,6 +47,8 @@ void Game::initialize(){
 	// setup viewer
 	osg::DisplaySettings::instance()->setNumMultiSamples(4);	
 	
+    viewer.addEventHandler(new Controller(this));
+	viewer.addEventHandler(new TimeHandler(this));
 	
 	
 	root->addChild(h.get());

@@ -17,13 +17,14 @@
 #include "Sky.h"
 #include "ModelFactory.h"
 #include "Obstacle.h"
-
+#include "TimeHandler.h"
+#include "Controller.h"
 // game class created
 
-class Game {
+class Game  {
 public:
     void initialize();
-
+    
     osgViewer::Viewer viewer;
 };
 

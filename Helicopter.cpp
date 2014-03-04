@@ -16,3 +16,32 @@ Helicopter::Helicopter() : Model() {
 	this->PAT->setPosition(osg::Vec3f(100.0, 0.0, 100.0));
 	   
 }
+
+void Helicopter:: Observe(char event){
+    static float y = 0;
+	static double t = 0;
+	
+	
+    
+	this->motion.netForce.set(this->joystick->getForce().operator*(9.8)
+							  + osg::Vec3f(0.0, 0.0, -1).operator*(9.8)
+							  - osg::Vec3f(0.99 * this->motion.lastVelocity.x(),
+										   0.99 * this->motion.lastVelocity.y(),
+										   2.99 * this->motion.lastVelocity.z())
+							  );
+	
+	
+	t += 0.0166;
+	osg::Vec3f nextPosition = this->motion.calculate_position_at(t);
+	
+	
+	this->PAT->setPosition(osg::Vec3f(this->setPosistion.x() + nextPosition.y() * cosf(y),
+										   this->getPosition().y() + nextPosition.z(),
+										   this->getPosition().z() + nextPosition.x() * cosf(y)));
+    
+    this->PAT->setPosition(osg::Vec3f(this->PAT->getPosition().x() + nextPosition.y() * cosf(y),
+										   this->PAT->getPosition().y() + nextPosition.z(),
+										   this->PAT->getPosition().z() + nextPosition.x() * cosf(y)));
+    
+    
+}

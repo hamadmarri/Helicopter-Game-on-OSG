@@ -51,11 +51,5 @@ osg::MatrixTransform* Model::getMatrixTransform() {
 }
 
 
-void Model::Observe(char event){
-    
-
-}
-
-
 
 

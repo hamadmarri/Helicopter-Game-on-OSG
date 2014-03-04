@@ -20,6 +20,7 @@
 
 
 class Motion {
+    
 public:
 	Motion();
 	

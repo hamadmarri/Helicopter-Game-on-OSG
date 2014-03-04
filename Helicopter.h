@@ -12,13 +12,18 @@
 #include "Joystick.h"
 #include "Rotor.h"
 #include "Model.h"
+#include "Observer.h"
+#include "Motion.h"
 
-class Helicopter : public Model {
+class Helicopter : public Model , public Observer {
 public:
     Helicopter();
+    void Observe(char event);
+
 private:
-    Joystick *joyStick1;
-    Rotor *rotor1;
+    Joystick *joystick;
+    Rotor *rotor;
+    Motion motion;
 };
 
 

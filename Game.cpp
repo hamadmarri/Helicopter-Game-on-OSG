@@ -21,8 +21,8 @@ void Game::initialize(){
     osg::ref_ptr<Obstacle> o1 = new Obstacle(osgDB::readNodeFile("2706/large-residential-highrise-orange.ac"));
     osg::ref_ptr<Obstacle> o2 = new Obstacle(osgDB::readNodeFile("2705/large-residential-highrise.ac"));
     osg::ref_ptr<Obstacle> o3 = new Obstacle(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
-    Controller* = new controller;
-    TimeHandler* = new  timehandler;
+    Controller* controller = new Controller;
+    TimeHandler* timhandler = new  timhandler;
     
     ModelFactory::getInstance()->add(HELICOPTER_NAME,h.get());
     ModelFactory::getInstance()->add(TERRAIN_NAME,t.get());
@@ -50,7 +50,7 @@ void Game::initialize(){
 	osg::DisplaySettings::instance()->setNumMultiSamples(4);	
 	
     viewer.addEventHandler(controller);
-	viewer.addEventHandler(timehandler);
+	viewer.addEventHandler(timhandler);
 	
 	
 	root->addChild(h.get());

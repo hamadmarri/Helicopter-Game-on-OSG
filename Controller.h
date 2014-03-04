@@ -28,7 +28,7 @@ public:
 	
 	virtual void AddObserver(Observer *observer);
     virtual void RemoveObserver(Observer *observer);
-    virtual void NotifyAll();
+    virtual void NotifyAll(char event);
 	
 private:
 	Joystick joyStick;

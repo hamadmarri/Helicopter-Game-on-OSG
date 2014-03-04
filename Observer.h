@@ -11,7 +11,7 @@
 
 class Observer {
 public:
-    virtual void Observe() = 0;
+    virtual void Observe(char event) = 0;
 };
 
 #endif

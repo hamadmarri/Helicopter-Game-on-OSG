@@ -56,9 +56,9 @@ void Controller::RemoveObserver(Observer *observer) {
 }
 
 
-void Controller::NotifyAll() {
+void Controller::NotifyAll(char event) {
 	for (auto observer = this->observers.begin(); observer != this->observers.end(); observer++) {
-		(*observer)->Observe();
+		(*observer)->Observe(event);
 	}
 }
 

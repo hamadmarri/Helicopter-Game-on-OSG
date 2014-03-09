@@ -9,9 +9,12 @@
 #ifndef testOsg_Observer_h
 #define testOsg_Observer_h
 
+#include "Event.h"
+
+
 class Observer {
 public:
-    virtual void Observe(char event) = 0;
+    virtual void Observe(Event event) = 0;
 };
 
 #endif

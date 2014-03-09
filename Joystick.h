@@ -12,6 +12,10 @@
 #include <cmath>
 #include <osg/Vec3f>
 #include "Observer.h"
+#include "Configuration.h"
+#include "WorldConstants.h"
+
+
 
 class Joystick :public Observer {
 public:
@@ -28,7 +32,7 @@ public:
 	double get_phi() const;
 	double toRadian(double degree);
     
-    void Observe(char event);
+    void Observe(Event event);
     
     
 	osg::Vec3f getForce();

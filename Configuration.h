@@ -7,7 +7,7 @@
 //
 
 
-// Singleton class Configuration has been implemented. 
+// Singleton class Configuration has been implemented.
 
 #ifndef testOsg_Configuration_h
 #define testOsg_Configuration_h
@@ -26,6 +26,23 @@ class Configuration{
 public:
     // static (singelton)
     static Configuration* getInstance();
+    static unsigned int getScreenWidth();
+	static unsigned int getScreenHeight();
+	KeySettings getKeySettings();
+    
+private:
+	Configuration() {};
+	Configuration(const Configuration&);
+	void operator=(const Configuration&);
+	
+	void initialize();
+	void initScreanSizeSettings();
+	void initKeySettings();
+	
+	unsigned int screenWidth;
+	unsigned int screenHeight;
+	
+	KeySettings keySettings;
 
     
 };

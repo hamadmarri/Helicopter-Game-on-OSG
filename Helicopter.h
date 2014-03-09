@@ -14,15 +14,16 @@
 #include "Model.h"
 #include "Observer.h"
 #include "Motion.h"
+#include "WorldConstants.h"
 
 class Helicopter : public Model , public Observer {
 public:
     Helicopter();
-    void Observe(char event);
+    void Observe(Event event);
 
 
     Joystick *joystick;
-    //Rotor *rotor;
+    Rotor *rotor;
     Motion motion;
 };
 

@@ -14,29 +14,24 @@
 #include "Helicopter.h"
 #include "Terrain.h"
 #include "Sky.h"
+#include "Obstacle.h"
 
 
 #define HELICOPTER_NAME "helicopter"
 #define TERRAIN_NAME "terrain"
 #define SKY_NAME "sky"
+#define OBSTACLE_NAME "obstacle"
 
 
 class ModelFactory {
 public:
 	static ModelFactory* getInstance();
-
-	static void add(const std::string name, Model *m);
 	static Model* get(const std::string name);
 	
 private:
-	ModelFactory();
+	ModelFactory() {};
 	ModelFactory(const ModelFactory&);
 	void operator=(const ModelFactory&);
-	
-	static Model* create(const std::string name);
-
-	
-	std::map<std::string, Model*> models;
 };
 
 

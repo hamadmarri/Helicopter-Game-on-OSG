@@ -15,60 +15,57 @@ void Game::initialize(){
     
 	osg::ref_ptr<osgGA::NodeTrackerManipulator> nodeTracker = new osgGA::NodeTrackerManipulator;;
 	osg::ref_ptr<osg::Group> root = new osg::Group();
-	osg::ref_ptr<Helicopter> h = new Helicopter();
-	osg::ref_ptr<Terrain> t = new Terrain();
-	osg::ref_ptr<Sky> s = new Sky();
-    osg::ref_ptr<Obstacle> o1 = new Obstacle(osgDB::readNodeFile("2706/large-residential-highrise-orange.ac"));
-    osg::ref_ptr<Obstacle> o2 = new Obstacle(osgDB::readNodeFile("2705/large-residential-highrise.ac"));
-    osg::ref_ptr<Obstacle> o3 = new Obstacle(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
+	osg::ref_ptr<Helicopter> helicopter = static_cast<Helicopter*>(ModelFactory::getInstance()->get(HELICOPTER_NAME));
+	osg::ref_ptr<Terrain> terrain =	static_cast<Terrain*>(ModelFactory::getInstance()->get(TERRAIN_NAME));
+	osg::ref_ptr<Sky> sky = static_cast<Sky*>(ModelFactory::getInstance()->get(SKY_NAME));
+	osg::ref_ptr<Obstacle> obstacle1 = static_cast<Obstacle*>(ModelFactory::getInstance()->get(OBSTACLE_NAME));
+    osg::ref_ptr<Obstacle> obstacle2 = static_cast<Obstacle*>(ModelFactory::getInstance()->get(OBSTACLE_NAME));
+    osg::ref_ptr<Obstacle> obstacle3 = static_cast<Obstacle*>(ModelFactory::getInstance()->get(OBSTACLE_NAME));
     Controller* controller = new Controller();
     TimeHandler* timhandler = new  TimeHandler();
     
-    ModelFactory::getInstance()->add(HELICOPTER_NAME,h.get());
-    ModelFactory::getInstance()->add(TERRAIN_NAME,t.get());
-    ModelFactory::getInstance()->add(SKY_NAME,s.get());
-    ModelFactory::getInstance()->add("building1",o1.get());
-    ModelFactory::getInstance()->add("building2",o2.get());
-    ModelFactory::getInstance()->add("building3",o3.get());
     
-    
-    
-    
-    o1->setPosistion(osg::Vec3 (0.0f, -3080.0f, -400.0f));
-    o2->setPosistion(osg::Vec3f (500.0f, -3080.0f, -200.0f));
-    o3->setPosistion(osg::Vec3f (200.0f, -3080.0f, -600.0f));
-    
+	obstacle1->set(osgDB::readNodeFile("2706/large-residential-highrise-orange.ac"));
+	obstacle2->set(osgDB::readNodeFile("2705/large-residential-highrise.ac"));
+	obstacle3->set(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
+	
+    obstacle1->setPosistion(osg::Vec3 (0.0f, -3080.0f, -400.0f));
+    obstacle2->setPosistion(osg::Vec3f (500.0f, -3080.0f, -200.0f));
+    obstacle3->setPosistion(osg::Vec3f (200.0f, -3080.0f, -600.0f));
+
+
+
     // add obeservers
-    controller->AddObserver(h.get()->joystick);
-    timhandler->AddObserver(h.get());
+    controller->AddObserver(helicopter.get()->joystick);
+	controller->AddObserver(helicopter.get()->rotor);
+    timhandler->AddObserver(helicopter.get());
     
-    
-    
-    
+     
 	// set node tracker
 	nodeTracker->setHomePosition(osg::Vec3f(0.0f, 7.0f, -35.0f),	//homeEye
 								 osg::Vec3f(),						//homeCenter
 								 osg::Y_AXIS);						//homeUp
-	nodeTracker->setTrackerMode( osgGA::NodeTrackerManipulator::NODE_CENTER_AND_ROTATION );
-    nodeTracker->setRotationMode( osgGA::NodeTrackerManipulator::TRACKBALL );
-	nodeTracker->setTrackNode(h.get());
+	nodeTracker->setTrackerMode(osgGA::NodeTrackerManipulator::NODE_CENTER_AND_ROTATION);
+    nodeTracker->setRotationMode(osgGA::NodeTrackerManipulator::TRACKBALL);
+	nodeTracker->setTrackNode(helicopter.get());
 	
-    
+	
 	// setup viewer
-//	osg::DisplaySettings::instance()->setNumMultiSamples(4);	
-	
-    viewer.addEventHandler(controller);
-	viewer.addEventHandler(timhandler);
-	
-	
-	root->addChild(h.get());
-	root->addChild(t.get());
-	root->addChild(s.get());
-    root->addChild(o1.get());
-    root->addChild(o2.get());
-    root->addChild(o3.get());
-    
-	viewer.setSceneData(root.get());
-    viewer.setCameraManipulator(nodeTracker.get());
-	viewer.run();
+	root->addChild(helicopter.get());
+	root->addChild(terrain.get());
+	root->addChild(sky.get());
+    root->addChild(obstacle1.get());
+	root->addChild(obstacle2.get());
+	root->addChild(obstacle3.get());
+	this->viewer.addEventHandler(controller);
+	this->viewer.addEventHandler(timhandler);
+	this->viewer.setSceneData(root.get());
+    this->viewer.setCameraManipulator(nodeTracker.get());
+	this->viewer.run();
 }
+
+
+
+
+
+

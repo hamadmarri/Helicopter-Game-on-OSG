@@ -1,23 +1,23 @@
 //
 //  TimeHandler.cpp
-//  testOSG
+//  
 //
 //  Created by Hamad Almarri on 3/3/2014.
 //
+//  Modified by Alotaibi, Fares on 3/9/2014
+// NotifyAll (Event event) has been modified here
 
 #include "TimeHandler.h"
 
 
 
 bool TimeHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*) {
-	switch (ea.getEventType()) {
-		case osgGA::GUIEventAdapter::FRAME:
-			NotifyAll('\0');
-			break;
-	}
+	if (ea.getEventType() == osgGA::GUIEventAdapter::FRAME)
+        NotifyAll(Event(EventType::UPDATE_POSITION));
 	
 	return false;
 }
+
 
 
 void TimeHandler::AddObserver(Observer *observer) {
@@ -34,7 +34,7 @@ void TimeHandler::RemoveObserver(Observer *observer) {
 }
 
 
-void TimeHandler::NotifyAll(char event) {
+void TimeHandler::NotifyAll(Event event) {
 	for (auto observer = this->observers.begin(); observer != this->observers.end(); observer++)
 		(*observer)->Observe(event);
 }

@@ -41,6 +41,11 @@ void Model::initializer() {
 }
 
 
+osg::Group* Model::getNode() {
+	return this->node;
+}
+
+
 osg::PositionAttitudeTransform* Model::getPAT() {
 	return this->PAT;
 }
@@ -49,7 +54,6 @@ osg::PositionAttitudeTransform* Model::getPAT() {
 osg::MatrixTransform* Model::getMatrixTransform() {
 	return this->matrixTransform;
 }
-
 
 
 

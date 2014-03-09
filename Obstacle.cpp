@@ -13,13 +13,14 @@ Obstacle::Obstacle():Model(){
     
 }
 
-void Obstacle::set(osg::Node* a){
-	this->node->addChild(a);
-}
+
 
 Obstacle::Obstacle(osg::Node* o){
-    
     set(o);
-    
-    
+}
+
+
+
+void Obstacle::set(osg::Node* a){
+	this->node->addChild(a);
 }

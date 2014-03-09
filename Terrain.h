@@ -10,7 +10,9 @@
 #define testOsg_Terrain_h
 
 #include "Model.h"
-class Terrain : public Model{
+#include "WorldConstants.h"
+
+class Terrain : public Model {
 public:
     Terrain();
 };

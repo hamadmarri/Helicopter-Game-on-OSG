@@ -4,7 +4,9 @@
 //
 //  Created by Hamad Almarri on 3/3/2014.
 //
-
+// Ediated By Alotaibi, Fares on 3/9/2014
+// void NotifyAll(Event event) has been modified from me, and I will modify the
+// implementation for it.
 
 #ifndef __testOSG__TimeHandler__
 #define __testOSG__TimeHandler__
@@ -22,7 +24,7 @@ public:
 	
 	void AddObserver(Observer *observer);
 	void RemoveObserver(Observer *observer);
-	void NotifyAll(char event);
+	void NotifyAll(Event event);
 	
 private:
 	std::vector<Observer*> observers;

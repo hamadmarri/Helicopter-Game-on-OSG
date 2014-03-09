@@ -3,7 +3,11 @@
 //  testOSG
 //
 //  Created by Hamad Almarri on 3/3/2014.
-//
+
+// Edited by Alotaibi, Fares on 3/9/2014 . I have changed the function
+
+// NotifyAll(char event) to NotifyAll ( Event event) . Because Event class
+// previousely.
 
 
 #ifndef __testOSG__Controller__
@@ -14,6 +18,7 @@
 #include <osgGA/GUIEventHandler>
 #include "JoyStick.h"
 #include "Observable.h"
+#include "Configuration.h"
 
 class Controller : public osgGA::GUIEventHandler, public Observable {
 public:
@@ -25,7 +30,7 @@ public:
 	
 	void AddObserver(Observer *observer);
 	void RemoveObserver(Observer *observer);
-	void NotifyAll(char event);
+	void NotifyAll(Event event);
 	
 private:
 	std::vector<Observer*> observers;

@@ -14,7 +14,7 @@
 #include "Observer.h"
 #include "Motion.h"
 
-class Model : public osg::Group{
+class Model : public osg::Group {
 public:
 	// default constructor
 	Model();
@@ -24,12 +24,11 @@ public:
 	
 	void setPosistion(osg::Vec3f newPos);
 	void setScale(osg::Matrix scale);
-   
     
+	osg::Group* getNode();
 	osg::PositionAttitudeTransform* getPAT();
 	osg::MatrixTransform* getMatrixTransform();
 	
-protected:
 	osg::ref_ptr<osg::Group> node;
 	osg::ref_ptr<osg::PositionAttitudeTransform> PAT;
 	osg::ref_ptr<osg::MatrixTransform> matrixTransform;

@@ -16,3 +16,10 @@ Configuration* Configuration::getInstance(){
     }
     return instance;
 }
+
+void Configuration::initialize(){
+    // get screen size
+    initScreanSizeSettings();
+    // get ket settings 
+    initKeySettings();
+}

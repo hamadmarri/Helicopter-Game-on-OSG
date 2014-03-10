@@ -3,7 +3,8 @@
 //  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-03.
-//  Copyright (c) 2014 Fares Alotaibi. All rights reserved.
+//  SID: 200288569
+// some modification has been added to the
 //
 
 #include "Joystick.h"
@@ -52,32 +53,41 @@ osg::Vec3f Joystick:: getForce() {
 }
 
 double Joystick::toRadian(double degree) {
-    return (degree * 3.14159265) / 180;
+    return (degree * WORLD_PI) / 180;
 }
 
 
-// observe function basic implementation 
-void Joystick:: Observe(char event){
+// observe function basic implementation , here the modification of Observe(Event event)
+
+void Joystick:: Observe(Event event){
     
-    
-    switch(event) {
-        case 'a': case 'A':
-            this->set_theta(45.0);
+	float yCartesian = (Configuration::getScreenHeight() / 2) - event.y;
+	float xCartesian = (Configuration::getScreenWidth() / 2) - event.x;
+	float magnitude = int(sqrt((float) (pow(xCartesian, 2.0) + pow(yCartesian, 2.0))) / 100) % 15;
+	
+	
+    switch(event.eventType) {
+		case EventType::MOUSE_MOVEMENT:
+            this->set_theta(magnitude);
+            this->set_phi(atan2(xCartesian, -1 * yCartesian) * 180 / WORLD_PI);
+            break;
+        case EventType::MOVE_LEFT:
+            this->set_theta(15.0);
             this->set_phi(90.0);
             break;
-        case 'w': case 'W':
-            this->set_theta(45.0);
+        case EventType::MOVE_FORWARD:
+            this->set_theta(15.0);
             this->set_phi(0.0);
             break;
-        case 'd': case 'D':
-            this->set_theta(45.0);
+        case EventType::MOVE_RIGHT:
+            this->set_theta(15.0);
             this->set_phi(270);
             break;
-        case 's': case 'S':
-            this->set_theta(45.0);
+        case EventType::MOVE_BACKWARD:
+            this->set_theta(15.0);
             this->set_phi(180.0);
             break;
-        case '0':
+        case EventType::CENTER:
             this->set_theta(0.0);
             this->set_phi(0.0);
             break;
@@ -86,6 +96,6 @@ void Joystick:: Observe(char event){
             
     }
     
-
+    
 }
 

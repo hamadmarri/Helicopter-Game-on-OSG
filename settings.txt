@@ -1,0 +1,5 @@
+c // reset joystick
+0 // reduce the rotor speed to zero
+1 // decrease rotor speed
+2 // increase rotor speed
+3 // set the rotor to neutral mode

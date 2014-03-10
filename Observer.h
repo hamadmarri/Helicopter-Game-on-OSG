@@ -3,15 +3,18 @@
 //  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-03.
-//  Copyright (c) 2014 Fares Alotaibi. All rights reserved.
+//  SID: 200288569
 //
 
 #ifndef testOsg_Observer_h
 #define testOsg_Observer_h
 
+#include "Event.h"
+
+
 class Observer {
 public:
-    virtual void Observe(char event) = 0;
+    virtual void Observe(Event event) = 0;
 };
 
 #endif

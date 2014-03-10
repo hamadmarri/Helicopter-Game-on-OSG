@@ -14,7 +14,7 @@
 #include "Observer.h"
 #include "WorldConstants.h"
 
-class Rotor{
+class Rotor : public Observer {
 public:
     Rotor();
     // I have added Event object in a function call Observe

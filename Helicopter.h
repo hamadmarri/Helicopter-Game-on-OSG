@@ -24,6 +24,8 @@ public:
 
     Joystick *joystick;
     Rotor *rotor;
+	
+private:
     Motion motion;
 };
 

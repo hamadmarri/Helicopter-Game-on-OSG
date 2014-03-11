@@ -8,6 +8,7 @@
 
 #ifndef testOsg_Sky_h
 #define testOsg_Sky_h
+
 #include "Model.h"
 
 class Sky : public Model {

@@ -18,7 +18,11 @@ class Rotor : public Observer {
 public:
     Rotor();
     // I have added Event object in a function call Observe
-    void Observe (Event event);
+    void Update(Event event);
+	
+	float getMgnitude() const;
+	
+private:
     // also the magnitude float type
     float magnitude;
 };

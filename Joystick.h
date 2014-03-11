@@ -17,7 +17,7 @@
 
 
 
-class Joystick :public Observer {
+class Joystick : public Observer {
 public:
 	Joystick();
 	
@@ -26,18 +26,19 @@ public:
 	Joystick(double theta, double phi);
 	
 	void set_theta(double theta);
-	void set_phi(double phi);
-	
 	double get_theta() const;
+	
+	void set_phi(double phi);
 	double get_phi() const;
-	double toRadian(double degree);
-    
-    void Observe(Event event);
-    
-    
-	osg::Vec3f getForce();
-    
+
+    osg::Vec3f getForce();
+	
+	
+    void Update(Event event);
+
 private:
+	double toRadian(double degree);
+	
 	double theta;
 	double phi;
 };

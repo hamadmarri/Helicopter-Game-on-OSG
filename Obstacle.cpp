@@ -7,7 +7,7 @@
 //
 
 #include "Obstacle.h"
-#include "Model.h"
+
 
 Obstacle::Obstacle():Model(){
     
@@ -15,12 +15,12 @@ Obstacle::Obstacle():Model(){
 
 
 
-Obstacle::Obstacle(osg::Node* o){
-    set(o);
+Obstacle::Obstacle(osg::Node* node){
+    set(node);
 }
 
 
 
-void Obstacle::set(osg::Node* a){
-	this->node->addChild(a);
+void Obstacle::set(osg::Node* node){
+	this->node->addChild(node);
 }

@@ -36,6 +36,11 @@ public:
 	Event(EventType eventType, float x, float y);
     
 	
+	EventType getEventType() const;
+	float getX() const;
+	float getY() const;
+	
+private:
 	EventType eventType;
 	float x;
 	float y;

@@ -20,29 +20,30 @@ Configuration* Configuration::getInstance(){
 void Configuration::initialize(){
     // get screen size
     initScreanSizeSettings();
+	
     // get ket settings
     initKeySettings();
 }
 
-// 
+
 
 void Configuration::initScreanSizeSettings() {
-	osg::GraphicsContext::WindowingSystemInterface* wsi =
-	osg::GraphicsContext::getWindowingSystemInterface();
-	if (!wsi) {
-		osg::notify(osg::NOTICE)<<"Error, no WindowSystemInterface available, cannot create windows."<<std::endl;
-	} else {
-		
+	osg::GraphicsContext::WindowingSystemInterface *wsi = osg::GraphicsContext::getWindowingSystemInterface();
+	
+	if (!wsi)
+		osg::notify(osg::NOTICE) << "Error, no WindowSystemInterface available, cannot create windows." << std::endl;
+	else
 		wsi->getScreenResolution(osg::GraphicsContext::ScreenIdentifier(0),
 								 Configuration::getInstance()->screenWidth, Configuration::getInstance()->screenHeight);
-	}
+	
 }
 
 
 
 void Configuration::initKeySettings() {
 	std::ifstream inFile;
-    // open the file we provided 
+	
+    // open the file we provided
 	inFile.open("settings.txt");
 	
 	inFile.get(Configuration::getInstance()->keySettings.resetJoystick);

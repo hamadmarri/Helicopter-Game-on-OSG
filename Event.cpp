@@ -22,3 +22,19 @@ Event::Event(EventType eventType, float x, float y) {
 	this->y = y;
 }
 
+
+EventType Event::getEventType() const {
+	return this->eventType;
+}
+
+
+
+float Event::getX() const {
+	return this->x;
+}
+
+
+
+float Event::getY() const {
+	return this->y;
+}

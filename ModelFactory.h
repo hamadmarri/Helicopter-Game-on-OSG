@@ -40,7 +40,7 @@ public:
 	 
 	 */
 	static ModelFactory* getInstance();
-	static Model* get(ModelsTypes modelType);
+	static Model* create(ModelsTypes modelType);
 	
 private:
 	// empty constructor

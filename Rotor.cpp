@@ -14,9 +14,9 @@ Rotor::Rotor() {
 
 
 
-void Rotor::Observe(Event event){
+void Rotor::Update(Event event){
     
-    switch(event.eventType) {
+    switch(event.getEventType()) {
         case EventType::DECREASE:
 			this->magnitude -= 0.3;
 			break;
@@ -35,3 +35,12 @@ void Rotor::Observe(Event event){
     }
 	
 }
+
+
+
+float Rotor::getMgnitude() const {
+	return this->magnitude;
+}
+
+
+

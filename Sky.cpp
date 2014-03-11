@@ -7,7 +7,7 @@
 //
 
 #include "Sky.h"
-#include "Model.h"
+
 
 // constructor to display the skydome in some position
 Sky::Sky() : Model() {

@@ -20,7 +20,7 @@ ModelFactory* ModelFactory::getInstance() {
 
 
 
-Model* ModelFactory::get(ModelsTypes modelType) {
+Model* ModelFactory::create(ModelsTypes modelType) {
 	
 	if (modelType == ModelsTypes::HELICOPTER)
 		return new Helicopter();
@@ -29,20 +29,17 @@ Model* ModelFactory::get(ModelsTypes modelType) {
 	else if (modelType == ModelsTypes::SKY)
 		return new Sky();
 	else if (modelType == ModelsTypes::EIFFEL_TOUR) {
-		Obstacle *eiffel = new Obstacle();
-		eiffel->set(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
+		Obstacle *eiffel = new Obstacle(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
 		eiffel->setPosistion(osg::Vec3f (200.0f, -3080.0f, -600.0f));
 		return eiffel;
 	}
 	else if (modelType == ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE) {
-		Obstacle *building = new Obstacle();
-		building->set(osgDB::readNodeFile("2705/large-residential-highrise.ac"));
+		Obstacle *building = new Obstacle(osgDB::readNodeFile("2705/large-residential-highrise.ac"));
 		building->setPosistion(osg::Vec3f (500.0f, -3080.0f, -200.0f));
 		return building;
 	}
 	else if (modelType == ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE_ORANGE) {
-		Obstacle *building = new Obstacle();
-		building->set(osgDB::readNodeFile("2706/large-residential-highrise-orange.ac"));
+		Obstacle *building = new Obstacle(osgDB::readNodeFile("2706/large-residential-highrise-orange.ac"));
 		building->setPosistion(osg::Vec3f (0.0f, -3080.0f, -400.0f));
 		return building;
 	}

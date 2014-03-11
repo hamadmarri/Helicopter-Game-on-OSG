@@ -18,9 +18,9 @@ void Game::initialize(){
 	osg::ref_ptr<Helicopter> helicopter = static_cast<Helicopter*>(ModelFactory::getInstance()->get(ModelsTypes::HELICOPTER));
 	osg::ref_ptr<Terrain> terrain =	static_cast<Terrain*>(ModelFactory::getInstance()->get(ModelsTypes::TERRAIN));
 	osg::ref_ptr<Sky> sky = static_cast<Sky*>(ModelFactory::getInstance()->get(ModelsTypes::SKY));
-	osg::ref_ptr<Obstacle> obstacle1 = static_cast<Obstacle*>(ModelFactory::getInstance()->get(ModelsTypes::EIFFEL_TOUR));
-    osg::ref_ptr<Obstacle> obstacle2 = static_cast<Obstacle*>(ModelFactory::getInstance()->get(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE));
-    osg::ref_ptr<Obstacle> obstacle3 = static_cast<Obstacle*>(ModelFactory::getInstance()->get(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE_ORANGE));
+	osg::ref_ptr<Obstacle> eiffelTour = static_cast<Obstacle*>(ModelFactory::getInstance()->get(ModelsTypes::EIFFEL_TOUR));
+    osg::ref_ptr<Obstacle> building1 = static_cast<Obstacle*>(ModelFactory::getInstance()->get(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE));
+    osg::ref_ptr<Obstacle> building2 = static_cast<Obstacle*>(ModelFactory::getInstance()->get(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE_ORANGE));
     Controller* controller = new Controller();
     TimeHandler* timhandler = new  TimeHandler();
     
@@ -40,13 +40,15 @@ void Game::initialize(){
 	nodeTracker->setTrackNode(helicopter.get());
 	
 	
-	// setup viewer
+	// add children nodes to root
 	root->addChild(helicopter.get());
 	root->addChild(terrain.get());
 	root->addChild(sky.get());
-    root->addChild(obstacle1.get());
-	root->addChild(obstacle2.get());
-	root->addChild(obstacle3.get());
+    root->addChild(eiffelTour.get());
+	root->addChild(building1.get());
+	root->addChild(building2.get());
+	
+	// setup viewer
 	this->viewer.addEventHandler(controller);
 	this->viewer.addEventHandler(timhandler);
 	this->viewer.setSceneData(root.get());

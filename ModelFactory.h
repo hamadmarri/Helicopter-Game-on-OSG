@@ -19,8 +19,6 @@
 #include "Obstacle.h"
 
 
-
-
 // enum for model children
 enum class ModelsTypes {
 	HELICOPTER,

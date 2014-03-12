@@ -10,7 +10,7 @@
 #include "Helicopter.h"
 #include "Model.h"
 // constructor of the helicopter from the model class
-
+// here we will display the helicopter to the use once the constructor called.
 Helicopter::Helicopter() : Model() {
     this->joystick = new Joystick();
 	this->rotor = new Rotor();
@@ -24,7 +24,7 @@ void Helicopter:: Observe(Event event){
 	static double t = 0;
 	float viscousResistance = -6 * WORLD_PI * 4;
 
-	
+	// calculating the netForce depends on the joystick and the rotor
 	this->motion.netForce.set(this->joystick->getForce().operator*(this->rotor->magnitude)
 							  + osg::Vec3f(0.0, 0.0, -1).operator*(WORLD_GRAVITY)
 							  + this->motion.lastVelocity.operator*(viscousResistance)
@@ -36,6 +36,7 @@ void Helicopter:: Observe(Event event){
 	
 	
 	
+    // here after calculating the forces and velocity , we have to update the position on the scence 
     
     this->PAT->setPosition(osg::Vec3f(this->PAT->getPosition().x() + nextPosition.y() * cosf(y),
 										   this->PAT->getPosition().y() + nextPosition.z(),

@@ -5,38 +5,39 @@
 //  Created by Fares Alotaibi on 2014-03-03.
 //  SID: 200288569
 // some modification has been added to the
-//
+// This the implementation of joystick class. It will handle the theta and phi by using setter and getter functions.
 
 #include "Joystick.h"
 
-
+// constructor
 Joystick::Joystick() {
     this->theta = 0;
     this->phi = 0;
 }
 
-
+// copy constructor
 Joystick::Joystick(Joystick &B) {
     this->theta = B.theta;
     this->phi = B.phi;
 }
-
+// copy constructor with two parameters
 Joystick::Joystick(double theta, double phi) {
     this->theta = theta;
     this->phi = phi;
 }
-
+// setter , set the theta
 void Joystick::set_theta(double theta) {
     this->theta = theta;
 }
-
+// set the phy
 void Joystick::set_phi(double phi) {
     this->phi = phi;
 }
-
+// getter , get the theta
 double Joystick::get_theta() const {
     return this->theta;
 }
+// get the phi 
 double Joystick:: get_phi() const {
     return this->phi;
 }

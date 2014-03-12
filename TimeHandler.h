@@ -24,6 +24,7 @@ public:
 	
 	void AddObserver(Observer *observer);
 	void RemoveObserver(Observer *observer);
+    // here is the change 
 	void NotifyAll(Event event);
 	
 private:

@@ -8,6 +8,8 @@
 
 #ifndef testOsg_Rotor_h
 #define testOsg_Rotor_h
+
+
 // these libraries have been added 
 #include <cmath>
 #include <osg/Vec3f>

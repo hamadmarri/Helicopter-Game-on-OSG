@@ -8,6 +8,7 @@
 
 #include "Rotor.h"
 
+
 Rotor::Rotor() {
 	this->magnitude = WORLD_GRAVITY;
 }

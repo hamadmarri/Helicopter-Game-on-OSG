@@ -18,8 +18,6 @@
 #include <osgDB/ReadFile>
 #include <osg/PositionAttitudeTransform>
 #include <osg/MatrixTransform>
-#include "Observer.h"
-#include "Motion.h"
 
 class Model : public osg::Group {
 public:

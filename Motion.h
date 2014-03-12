@@ -29,7 +29,6 @@ public:
 	 */
 	osg::Vec3f calculate_position_at(double t);
 	
-	osg::Vec3f calculate_next_position(double dt);
 		
 	// members
 	osg::Vec3f initialPosition;

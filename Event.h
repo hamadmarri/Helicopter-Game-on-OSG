@@ -3,7 +3,7 @@
 //  testOsg (this is the project name that I am working on to test the code forget about it)
 //
 //  Created by Fares Alotaibi 
-//  SID : 200288569
+//  SID : 200288569 
 //
 
 // Event class has been implemented at this point. Also, notice the numeration class has been used and implemented.

@@ -6,6 +6,7 @@
 //	Credit: http://scenemodels.flightgear.org/objectview.php?id=3303278
 //			http://hyperphysics.phy-astr.gsu.edu/hbase/airfri.html
 //
+//
 
 #include "Helicopter.h"
 #include "Model.h"

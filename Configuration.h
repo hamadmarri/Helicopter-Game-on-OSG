@@ -8,6 +8,7 @@
 
 
 // Singleton class Configuration has been implemented.
+// 
 
 #ifndef testOsg_Configuration_h
 #define testOsg_Configuration_h

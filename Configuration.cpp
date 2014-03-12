@@ -4,7 +4,7 @@
 //
 //  Created by Fares Alotaibi on 2014-03-09.
 //  SID: 200288569
-// This is a configuration class to congigure our screen and file data.
+// This is a configuration class to congigure our screen and file data. 
 
 #include "Configuration.h"
 

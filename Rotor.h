@@ -6,6 +6,7 @@
 //  SID: 200288569
 //  some modification on int
 // A Rotor class to handle the rotor in the helicopter. It has been design to be inhertited from an Observer class because we had decide to design an Observer design to observe some events during playing the game.
+//
 
 #ifndef testOsg_Rotor_h
 #define testOsg_Rotor_h

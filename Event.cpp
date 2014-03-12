@@ -4,7 +4,7 @@
 //
 //  Created by Fares Alotaibi on 2014-03-09.
 //  SID: 200288569
-//  Event.cpp has been implemented, it has only two functions
+//  Event.cpp has been implemented, it has only two functions 
 //
 
 #include "Event.h"

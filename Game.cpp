@@ -14,11 +14,11 @@ void Game::initialize(){
     
 	osg::ref_ptr<osg::Group> root = new osg::Group();
 	osg::ref_ptr<Helicopter> helicopter = static_cast<Helicopter*>(ModelFactory::getInstance()->create(ModelsTypes::HELICOPTER));
-	osg::ref_ptr<Terrain> terrain =	static_cast<Terrain*>(ModelFactory::getInstance()->create(ModelsTypes::TERRAIN));
-	osg::ref_ptr<Sky> sky = static_cast<Sky*>(ModelFactory::getInstance()->create(ModelsTypes::SKY));
-	osg::ref_ptr<Obstacle> eiffelTour = static_cast<Obstacle*>(ModelFactory::getInstance()->create(ModelsTypes::EIFFEL_TOUR));
-    osg::ref_ptr<Obstacle> building1 = static_cast<Obstacle*>(ModelFactory::getInstance()->create(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE));
-    osg::ref_ptr<Obstacle> building2 = static_cast<Obstacle*>(ModelFactory::getInstance()->create(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE_ORANGE));
+	osg::ref_ptr<Model> terrain = ModelFactory::getInstance()->create(ModelsTypes::TERRAIN);
+	osg::ref_ptr<Model> sky = ModelFactory::getInstance()->create(ModelsTypes::SKY);
+	osg::ref_ptr<Model> eiffelTour = ModelFactory::getInstance()->create(ModelsTypes::EIFFEL_TOUR);
+    osg::ref_ptr<Model> building1 = ModelFactory::getInstance()->create(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE);
+    osg::ref_ptr<Model> building2 = ModelFactory::getInstance()->create(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE_ORANGE);
     Controller *controller = new Controller();
     TimeHandler *timhandler = new  TimeHandler();
 	osg::ref_ptr<osgGA::NodeTrackerManipulator> nodeTracker = new osgGA::NodeTrackerManipulator;

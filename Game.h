@@ -13,10 +13,7 @@
 #include <osgDB/ReadFile>
 #include <osgGA/NodeTrackerManipulator>
 #include "Helicopter.h"
-#include "Terrain.h"
-#include "Sky.h"
 #include "ModelFactory.h"
-#include "Obstacle.h"
 #include "TimeHandler.h"
 #include "Controller.h"
 // game class created

@@ -30,7 +30,6 @@ void Configuration::initialize(){
 }
 
 
-
 // screen setting
 void Configuration::initScreanSizeSettings() {
 	osg::GraphicsContext::WindowingSystemInterface *wsi = osg::GraphicsContext::getWindowingSystemInterface();

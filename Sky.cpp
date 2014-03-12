@@ -7,7 +7,7 @@
 //  The implelmentation of sky model has been created here. it has only one constructor , whenver an instance created , the sky model will be in the detailed position below directly. 
 
 #include "Sky.h"
-#include "Model.h"
+
 
 // constructor to display the skydome in some position
 Sky::Sky() : Model() {

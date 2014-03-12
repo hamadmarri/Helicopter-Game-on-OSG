@@ -7,7 +7,7 @@
 // Terrain calls implementation has been created to call the model and set the model in some position in our scene. 
 
 #include "Terrain.h"
-#include "Model.h"
+
 
 // constructor for the Terrain class 
 Terrain::Terrain():Model() {

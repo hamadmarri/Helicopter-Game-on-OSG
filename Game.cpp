@@ -38,8 +38,8 @@ void Game::initialize(){
 
 
     // add obeservers
-    controller->AddObserver(helicopter.get()->joystick);
-	controller->AddObserver(helicopter.get()->rotor);
+    controller->AddObserver(helicopter.get()->getJoystick());
+	controller->AddObserver(helicopter.get()->getRotor());
     timhandler->AddObserver(helicopter.get());
     
      
@@ -49,16 +49,18 @@ void Game::initialize(){
 								 osg::Y_AXIS);						//homeUp
 	nodeTracker->setTrackerMode(osgGA::NodeTrackerManipulator::NODE_CENTER_AND_ROTATION);
     nodeTracker->setRotationMode(osgGA::NodeTrackerManipulator::TRACKBALL);
-	nodeTracker->setTrackNode(helicopter.get());
+	nodeTracker->setTrackNode(helicopter.get()->getNode());
 	
 	
-	// setup viewer
+	// add children nodes to root
 	root->addChild(helicopter.get());
 	root->addChild(terrain.get());
 	root->addChild(sky.get());
-    root->addChild(obstacle1.get());
-	root->addChild(obstacle2.get());
-	root->addChild(obstacle3.get());
+    root->addChild(eiffelTour.get());
+	root->addChild(building1.get());
+	root->addChild(building2.get());
+	
+	// setup viewer
 	this->viewer.addEventHandler(controller);
 	this->viewer.addEventHandler(timhandler);
 	this->viewer.setSceneData(root.get());

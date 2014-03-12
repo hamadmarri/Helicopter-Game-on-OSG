@@ -12,7 +12,6 @@
 #define __testOSG__TimeHandler__
 
 #include <osgGA/GUIEventHandler>
-#include "Game.h"
 #include "Observable.h"
 
 

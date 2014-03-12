@@ -9,6 +9,8 @@
 
 #ifndef testOsg_Rotor_h
 #define testOsg_Rotor_h
+
+
 // these libraries have been added 
 #include <cmath>
 #include <osg/Vec3f>
@@ -19,7 +21,11 @@ class Rotor : public Observer {
 public:
     Rotor();
     // I have added Event object in a function call Observe
-    void Observe (Event event);
+    void Update(Event event);
+	
+	float getMgnitude() const;
+	
+private:
     // also the magnitude float type
     float magnitude;
 };

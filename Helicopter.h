@@ -14,18 +14,21 @@
 #include "Rotor.h"
 #include "Model.h"
 #include "Observer.h"
-#include "Motion.h"
+#include "RK4.h"
 #include "WorldConstants.h"
 
-class Helicopter : public Model , public Observer {
+class Helicopter : public Model, public Observer {
 public:
     Helicopter();
-    void Observe(Event event);
-
-
-    Joystick *joystick;
+    void Update(Event event);
+	
+	Joystick* getJoystick();
+	Rotor* getRotor();
+	
+private:
+	Joystick *joystick;
     Rotor *rotor;
-    Motion motion;
+    Motion *motion;
 };
 
 

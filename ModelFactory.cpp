@@ -20,16 +20,29 @@ ModelFactory* ModelFactory::getInstance() {
 
 
 
-Model* ModelFactory::get(const std::string name) {
+Model* ModelFactory::create(ModelsTypes modelType) {
 	
-	if (name == HELICOPTER_NAME)
+	if (modelType == ModelsTypes::HELICOPTER)
 		return new Helicopter();
-	else if (name == TERRAIN_NAME)
+	else if (modelType == ModelsTypes::TERRAIN)
 		return new Terrain();
-	else if (name == SKY_NAME)
+	else if (modelType == ModelsTypes::SKY)
 		return new Sky();
-	else if (name == OBSTACLE_NAME)
-		return new Obstacle();
+	else if (modelType == ModelsTypes::EIFFEL_TOUR) {
+		Obstacle *eiffel = new Obstacle(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
+		eiffel->setPosistion(osg::Vec3f (200.0f, -3080.0f, -600.0f));
+		return eiffel;
+	}
+	else if (modelType == ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE) {
+		Obstacle *building = new Obstacle(osgDB::readNodeFile("2705/large-residential-highrise.ac"));
+		building->setPosistion(osg::Vec3f (500.0f, -3080.0f, -200.0f));
+		return building;
+	}
+	else if (modelType == ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE_ORANGE) {
+		Obstacle *building = new Obstacle(osgDB::readNodeFile("2706/large-residential-highrise-orange.ac"));
+		building->setPosistion(osg::Vec3f (0.0f, -3080.0f, -400.0f));
+		return building;
+	}
 	
 	return nullptr;
 }

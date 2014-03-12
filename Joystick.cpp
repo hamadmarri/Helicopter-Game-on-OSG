@@ -60,14 +60,14 @@ double Joystick::toRadian(double degree) {
 
 // observe function basic implementation , here the modification of Observe(Event event)
 
-void Joystick:: Observe(Event event){
+void Joystick::Update(Event event){
     
-	float yCartesian = (Configuration::getScreenHeight() / 2) - event.y;
-	float xCartesian = (Configuration::getScreenWidth() / 2) - event.x;
+	float yCartesian = (Configuration::getScreenHeight() / 2) - event.getY();
+	float xCartesian = (Configuration::getScreenWidth() / 2) - event.getX();
 	float magnitude = int(sqrt((float) (pow(xCartesian, 2.0) + pow(yCartesian, 2.0))) / 100) % 15;
 	
 	
-    switch(event.eventType) {
+    switch(event.getEventType()) {
 		case EventType::MOUSE_MOVEMENT:
             this->set_theta(magnitude);
             this->set_phi(atan2(xCartesian, -1 * yCartesian) * 180 / WORLD_PI);

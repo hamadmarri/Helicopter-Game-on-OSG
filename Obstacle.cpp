@@ -7,7 +7,7 @@
 //  The implementation of the obstacle class has been created. Each obstacle can have a reference from a node to add it to the osg tree easily and save some line of code by calling these functions. 
 
 #include "Obstacle.h"
-#include "Model.h"
+
 
 
 
@@ -17,12 +17,12 @@ Obstacle::Obstacle():Model(){
 
 
 
-Obstacle::Obstacle(osg::Node* o){
-    set(o);
+Obstacle::Obstacle(osg::Node* node){
+    set(node);
 }
 
 
 
-void Obstacle::set(osg::Node* a){
-	this->node->addChild(a);
+void Obstacle::set(osg::Node* node){
+	this->node->addChild(node);
 }

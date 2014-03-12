@@ -2,35 +2,31 @@
 //  HelicopterMotion.h
 //  Physics
 //
-//	purpose:	this class takes care for motion
+//	purpose:	this abstract class takes care for motion
 //				it gets the net forces and time and
-//				returns the next estimated position
+//				returns the next estimated position.
+//				Need concrete class to implement calculate_position_at function
 //  Created by Hamad Almarri on 1/31/2014.
 //
 
 #ifndef __Physics__Motion__
 #define __Physics__Motion__
 
-#include <iostream>
-#include <cmath>
-//#include "Vector.h"
 #include <osg/Vec3f>
-#include "RK4.h"
-
 
 
 class Motion {
     
 public:
-	Motion();
-	
 	/*
-	 it calculates the position at specific time
+		abstract function to calculate the position at specific time
 	 */
-	osg::Vec3f calculate_position_at(double t);
+	virtual osg::Vec3f calculate_position_at(double t) = 0;
 	
-	osg::Vec3f calculate_next_position(double dt);
-		
+	void setNetForce(osg::Vec3f netForce);
+	osg::Vec3f getCurrentVelocity();
+	
+protected:
 	// members
 	osg::Vec3f initialPosition;
 	osg::Vec3f initialVelocity;
@@ -38,9 +34,6 @@ public:
 	
 	osg::Vec3f lastPosition;
 	osg::Vec3f lastVelocity;
-	
-protected:
-	double lastTime;
 };
 
 

@@ -12,7 +12,10 @@
 
 bool Controller::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*) {
 	
+	// e for event type
 	auto e = ea.getEventType();
+	
+	// k for key 
 	auto k = tolower(ea.getKey());
 	
 	if (e == osgGA::GUIEventAdapter::KEYDOWN) {
@@ -71,7 +74,7 @@ void Controller::RemoveObserver(Observer *observer) {
 
 void Controller::NotifyAll(Event event) {
 	for (auto observer = this->observers.begin(); observer != this->observers.end(); observer++)
-		(*observer)->Observe(event);
+		(*observer)->Update(event);
 }
 
 

@@ -11,12 +11,13 @@
 
 
 #include "Model.h"
+
 // constructing the obstacle class
 class Obstacle : public Model{
 public:
     Obstacle();
-    Obstacle(osg::Node* o);
-    void set(osg::Node* a);
+    Obstacle(osg::Node* node);
+    void set(osg::Node* node);
 };
 
 

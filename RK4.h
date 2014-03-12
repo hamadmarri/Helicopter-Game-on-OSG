@@ -8,9 +8,9 @@
 #ifndef Physics_RK4_h
 #define Physics_RK4_h
 
-//#include "Vector.h"
-//#include <osg/Vec3f>
-
+#include "Motion.h"
+#include <cmath>
+#include <osg/Vec3f>
 
 struct State {
 	double x;
@@ -24,33 +24,22 @@ struct Derivative
 	double dv;          // derivative of velocity: acceleration
 };
 
-class RK4 {
+
+class RK4 : public Motion {
 public:
+	RK4();
 	
-	Derivative evaluate(const State &initial, double t, double dt, const Derivative &d, double force) {
-		State state;
-		state.x = initial.x + d.dx * dt;
-		state.v = initial.v + d.dv * dt;
-		
-		Derivative output;
-		output.dx = state.v;
-		output.dv = force;
-		return output;
-	}
+	/*
+	 it calculates the position at specific time
+	 */
+	osg::Vec3f calculate_position_at(double t);
 	
 	
-	void integrate(State &state, double t, double dt, double force) {
-		Derivative a = evaluate(state, t, 0.0f, Derivative(), force);
-		Derivative b = evaluate(state, t, dt * 0.5f, a, force);
-		Derivative c = evaluate(state, t, dt * 0.5f, b, force);
-		Derivative d = evaluate(state, t, dt, c, force);
-		
-		const double dxdt = 1.0f/6.0f * (a.dx + 2.0f * (b.dx + c.dx) + d.dx);
-		const double dvdt = 1.0f/6.0f * (a.dv + 2.0f * (b.dv + c.dv) + d.dv);
-		
-		state.x = state.x + dxdt * dt * 10;
-		state.v = state.v + dvdt * dt;
-	}
+protected:
+	Derivative evaluate(const State &initial, double t, double dt, const Derivative &d, double force);
+	void integrate(State &state, double t, double dt, double force);
+	
+	double lastTime;
 };
 
 #endif

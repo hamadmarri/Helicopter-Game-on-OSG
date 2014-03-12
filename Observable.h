@@ -11,11 +11,14 @@
 
 #include "Observer.h"
 #include "Event.h"
+
+
 class Observable {
 public:
 	virtual void AddObserver(Observer *observer) = 0;
     virtual void RemoveObserver(Observer *observer) = 0;
     virtual void NotifyAll(Event event) = 0;
 };
+
 
 #endif

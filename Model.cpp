@@ -13,8 +13,10 @@ Model::Model() : osg::Group() {
 }
 
 
+
 Model::Model(const Model &B) {
-	initializer();
+	// TODO:	need to confirm if deep copy will work
+	//			with osg node type
 }
 
 
@@ -30,29 +32,40 @@ void Model::setScale(osg::Matrix scale) {
 }
 
 
+
 void Model::initializer() {
+	// alocating new instances of PAT, matrixTransform, and node
 	this->PAT = new osg::PositionAttitudeTransform();
 	this->matrixTransform = new osg::MatrixTransform();
 	this->node = new osg::Group();
 	
+	// setting the hierarchy by
+	// adding node to matrixTransform
 	this->matrixTransform->addChild(this->node.get());
+	
+	// adding matrixTransform to PAT
 	this->PAT->addChild(this->matrixTransform.get());
+	
+	// adding PAT to this
 	this->addChild(this->PAT.get());
 }
 
 
+
 osg::Group* Model::getNode() {
-	return this->node;
+	return this->node.get();
 }
+
 
 
 osg::PositionAttitudeTransform* Model::getPAT() {
-	return this->PAT;
+	return this->PAT.get();
 }
 
 
+
 osg::MatrixTransform* Model::getMatrixTransform() {
-	return this->matrixTransform;
+	return this->matrixTransform.get();
 }
 
 

@@ -16,14 +16,13 @@
 #include <vector>
 #include <algorithm> // find
 #include <osgGA/GUIEventHandler>
-#include "JoyStick.h"
 #include "Observable.h"
 #include "Configuration.h"
 
+
 class Controller : public osgGA::GUIEventHandler, public Observable {
 public:
-	Controller() {
-	}
+	Controller() {}
 	
 	virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*);
 	

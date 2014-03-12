@@ -36,5 +36,5 @@ void TimeHandler::RemoveObserver(Observer *observer) {
 
 void TimeHandler::NotifyAll(Event event) {
 	for (auto observer = this->observers.begin(); observer != this->observers.end(); observer++)
-		(*observer)->Observe(event);
+		(*observer)->Update(event);
 }

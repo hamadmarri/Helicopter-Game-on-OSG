@@ -13,7 +13,7 @@
 #include "Rotor.h"
 #include "Model.h"
 #include "Observer.h"
-#include "Motion.h"
+#include "RK4.h"
 #include "WorldConstants.h"
 
 class Helicopter : public Model, public Observer {
@@ -27,7 +27,7 @@ public:
 private:
 	Joystick *joystick;
     Rotor *rotor;
-    Motion motion;
+    Motion *motion;
 };
 
 

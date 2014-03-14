@@ -4,11 +4,12 @@
 //  Created by Fares Alotaibi on 2014-03-03.
 //  SID: 200288569
 // some modification has been added to the
+// This the implementation of joystick class. It will handle the theta and phi by using setter and getter functions.
 //
 
 #include "Joystick.h"
 
-
+// constructor
 Joystick::Joystick() {
     this->theta = 0;
     this->phi = 0;

@@ -3,6 +3,7 @@
 //
 //  Created by Fares Alotaibi on 2014-03-02.
 //  SID: 200288569
+//  The implelmentation of sky model has been created here. it has only one constructor , whenver an instance created , the sky model will be in the detailed position below directly.
 //
 
 #include "Sky.h"

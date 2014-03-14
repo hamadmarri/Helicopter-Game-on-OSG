@@ -7,6 +7,7 @@
 
 
 // Singleton class Configuration has been implemented.
+// 
 
 #ifndef __HelicopterProject__Configuration_h__
 #define __HelicopterProject__Configuration_h__

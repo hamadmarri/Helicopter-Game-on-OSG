@@ -3,6 +3,8 @@
 //
 //  Created by Fares Alotaibi on 2014-03-02.
 //  SID: 200288569
+// a Helicopter class inhereted from a Model class and Observer class. The helicopter has joystick, rotor, and offcourse it has
+// a motion.
 //
 
 #ifndef __HelicopterProject__Helicopter_h__

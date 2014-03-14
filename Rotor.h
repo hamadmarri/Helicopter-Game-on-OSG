@@ -4,6 +4,8 @@
 //  Created by Fares Alotaibi on 2014-03-02.
 //  SID: 200288569
 //  some modification on int
+// A Rotor class to handle the rotor in the helicopter. It has been design to be inhertited from an Observer class because we had decide to design an Observer design to observe some events during playing the game.
+//
 
 #ifndef __HelicopterProject__Rotor_h__
 #define __HelicopterProject__Rotor_h__

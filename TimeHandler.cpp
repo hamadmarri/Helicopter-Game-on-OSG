@@ -10,7 +10,7 @@
 #include "TimeHandler.h"
 
 
-
+// we are handling eventyType 
 bool TimeHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*) {
 	if (ea.getEventType() == osgGA::GUIEventAdapter::FRAME)
         NotifyAll(Event(EventType::UPDATE_POSITION));

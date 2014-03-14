@@ -2,7 +2,7 @@
 //  Event.h
 //
 //  Created by Fares Alotaibi 
-//  SID : 200288569
+//  SID : 200288569 
 //
 // Event class has been implemented at this point. Also, notice the numeration class has been used and implemented.
 

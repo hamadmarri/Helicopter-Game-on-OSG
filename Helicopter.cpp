@@ -27,18 +27,20 @@ Helicopter::Helicopter() : Model() {
 
 
 void Helicopter::Update(Event event){
-    static float y = 0;
+	static float y = 0;
 	static double t = 0;
-	float viscousResistance = -6 * WORLD_PI * 4;
-
-	// calculating the netForce depends on the joystick and the rotor
-	this->motion.netForce.set(this->joystick->getForce().operator*(this->rotor->magnitude)
+	osg::Vec3f viscousResistance = this->motion->getCurrentVelocity().operator*(-6 * WORLD_PI * 4);
+	
+	
+	this->motion->setNetForce(
+							  this->joystick->getForce().operator*(this->rotor->getMgnitude())
 							  + osg::Vec3f(0.0, 0.0, -1).operator*(WORLD_GRAVITY)
 							  + viscousResistance
 							  );
 	
 	
-    // here after calculating the forces and velocity , we have to update the position on the scence 
+	t += 0.0166;
+	osg::Vec3f nextPosition = this->motion->calculate_position_at(t);
     
     this->PAT->setPosition(osg::Vec3f(
 									  this->PAT->getPosition().x() + nextPosition.y() * cosf(y),

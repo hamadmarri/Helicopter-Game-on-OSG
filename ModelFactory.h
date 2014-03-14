@@ -1,6 +1,5 @@
 //
 //  ModelFactory.h
-//  HelicopterProject
 //
 //	Purpuse:	this class takes care of creating Model instances to client class.
 //
@@ -53,4 +52,6 @@ private:
 };
 
 
-#endif /* defined(__HelicopterProject__ModelFactory__) */
+#endif
+
+

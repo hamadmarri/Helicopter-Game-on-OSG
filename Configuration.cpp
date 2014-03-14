@@ -9,7 +9,6 @@
 
 
 // singelton design , getInstance function to ensure the only instance we are dealing with
-
 Configuration* Configuration::getInstance(){
     static Configuration *instance = nullptr;
     if(instance == nullptr){
@@ -18,8 +17,10 @@ Configuration* Configuration::getInstance(){
     }
     return instance;
 }
-// we initialize our sceen
 
+
+
+// we initialize our sceen
 void Configuration::initialize(){
     // get screen size
     initScreanSizeSettings();
@@ -27,6 +28,7 @@ void Configuration::initialize(){
     // get ket settings
     initKeySettings();
 }
+
 
 
 // screen setting
@@ -42,8 +44,8 @@ void Configuration::initScreanSizeSettings() {
 }
 
 
-// our key settings will be read from a file called settings.txt. It will read each line on the file
 
+// our key settings will be read from a file called settings.txt. It will read each line on the file
 void Configuration::initKeySettings() {
 	std::ifstream inFile;
 	
@@ -68,8 +70,9 @@ void Configuration::initKeySettings() {
 	inFile.close();
 }
 
-// getter functions of our singelton class 
 
+
+// getter functions of our singelton class 
 unsigned int Configuration::getScreenWidth() {
 	return Configuration::getInstance()->screenWidth;
 }
@@ -79,6 +82,7 @@ unsigned int Configuration::getScreenWidth() {
 unsigned int Configuration::getScreenHeight() {
 	return Configuration::getInstance()->screenHeight;
 }
+
 
 
 KeySettings Configuration::getKeySettings() {

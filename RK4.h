@@ -1,12 +1,11 @@
 //
 //  RK4.h
-//  Physics
 //
 // Credeits: http://gafferongames.com/game-physics/integration-basics/
 //
 
-#ifndef Physics_RK4_h
-#define Physics_RK4_h
+#ifndef __HelicopterProject_RK4_h__
+#define __HelicopterProject_RK4_h__
 
 #include "Motion.h"
 #include <cmath>

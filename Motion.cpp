@@ -1,6 +1,5 @@
 //
 //  HelicopterMotion.cpp
-//  Physics
 //
 //  Created by Hamad Almarri on 1/31/2014.
 //

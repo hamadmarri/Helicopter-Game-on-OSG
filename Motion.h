@@ -1,6 +1,5 @@
 //
 //  HelicopterMotion.h
-//  Physics
 //
 //	purpose:	this abstract class takes care for motion
 //				it gets the net forces and time and
@@ -9,8 +8,8 @@
 //  Created by Hamad Almarri on 1/31/2014.
 //
 
-#ifndef __Physics__Motion__
-#define __Physics__Motion__
+#ifndef __HelicopterProject__Motion__
+#define __HelicopterProject__Motion__
 
 #include <osg/Vec3f>
 

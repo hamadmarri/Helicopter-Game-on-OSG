@@ -16,30 +16,44 @@ Joystick::Joystick() {
 }
 
 
+
 Joystick::Joystick(Joystick &B) {
     this->theta = B.theta;
     this->phi = B.phi;
 }
+
+
 
 Joystick::Joystick(double theta, double phi) {
     this->theta = theta;
     this->phi = phi;
 }
 
+
+
 void Joystick::set_theta(double theta) {
     this->theta = theta;
 }
+
+
 
 void Joystick::set_phi(double phi) {
     this->phi = phi;
 }
 
+
+
 double Joystick::get_theta() const {
     return this->theta;
 }
+
+
+
 double Joystick:: get_phi() const {
     return this->phi;
 }
+
+
 
 /*
  calculate the unit vector from the two angles(theta and phi)
@@ -52,13 +66,15 @@ osg::Vec3f Joystick:: getForce() {
     return F;
 }
 
+
+
 double Joystick::toRadian(double degree) {
     return (degree * WORLD_PI) / 180;
 }
 
 
-// observe function basic implementation , here the modification of Observe(Event event)
 
+// observe function basic implementation , here the modification of Observe(Event event)
 void Joystick::Update(Event event){
     
 	float yCartesian = (Configuration::getScreenHeight() / 2) - event.getY();

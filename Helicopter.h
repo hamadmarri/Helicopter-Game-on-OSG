@@ -1,13 +1,12 @@
 //
 //  Helicopter.h
-//  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-02.
 //  SID: 200288569
 //
 
-#ifndef testOsg_Helicopter_h
-#define testOsg_Helicopter_h
+#ifndef __HelicopterProject__Helicopter_h__
+#define __HelicopterProject__Helicopter_h__
 
 #include "Joystick.h"
 #include "Rotor.h"

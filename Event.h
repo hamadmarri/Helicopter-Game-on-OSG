@@ -1,18 +1,17 @@
 //
 //  Event.h
-//  testOsg (this is the project name that I am working on to test the code forget about it)
 //
 //  Created by Fares Alotaibi 
 //  SID : 200288569
 //
-
 // Event class has been implemented at this point. Also, notice the numeration class has been used and implemented.
 
-#ifndef testOsg_Event_h
-#define testOsg_Event_h
+
+#ifndef __HelicopterProject__Event_h__
+#define __HelicopterProject__Event_h__
+
 
 // EventyType class
-
 enum class EventType {
 	MOVE_LEFT,
 	MOVE_FORWARD,
@@ -28,6 +27,7 @@ enum class EventType {
 	ROTATE_RIGHT,
 	UPDATE_POSITION
 };
+
 
 // Event class
 class Event {

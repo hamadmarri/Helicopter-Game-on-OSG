@@ -1,6 +1,5 @@
 //
 //  Configuration.h
-//  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-09.
 //  SID: 200288569
@@ -9,8 +8,8 @@
 
 // Singleton class Configuration has been implemented.
 
-#ifndef testOsg_Configuration_h
-#define testOsg_Configuration_h
+#ifndef __HelicopterProject__Configuration_h__
+#define __HelicopterProject__Configuration_h__
 
 
 #include <osg/GraphicsContext>

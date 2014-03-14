@@ -1,6 +1,5 @@
 //
 //  Game.cpp
-//  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-03.
 // SID: 200288569

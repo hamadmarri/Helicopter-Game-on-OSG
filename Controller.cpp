@@ -1,12 +1,10 @@
 //
 //  Controller.cpp
-//  testOSG
 //
 //  Created by Hamad Almarri on 3/3/2014.
 //
 // Edited and Modified by Alotaibi, Fares on 3/9/2014
 
-// I have changed the structure now because we are dealing with event class.
 
 #include "Controller.h"
 
@@ -55,26 +53,6 @@ bool Controller::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapte
 	}
     
     return false;
-}
-
-
-void Controller::AddObserver(Observer *observer) {
-	auto it = std::find(this->observers.begin(), this->observers.end(), observer);
-	if (it == this->observers.end())
-		this->observers.push_back(observer);
-}
-
-
-void Controller::RemoveObserver(Observer *observer) {
-	auto it = std::find(this->observers.begin(), this->observers.end(), observer);
-	if (it != this->observers.end())
-		this->observers.erase(it);
-}
-
-
-void Controller::NotifyAll(Event event) {
-	for (auto observer = this->observers.begin(); observer != this->observers.end(); observer++)
-		(*observer)->Update(event);
 }
 
 

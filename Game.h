@@ -1,13 +1,14 @@
 //
 //  Game.h
-//  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-03.
 //  SID: 200288569
 //
 
-#ifndef testOsg_Game_h
-#define testOsg_Game_h
+#ifndef __HelicopterProject__Game_h__
+#define __HelicopterProject__Game_h__
+
+
 #include <osgViewer/Viewer>
 #include <osg/Node>
 #include <osgDB/ReadFile>
@@ -16,8 +17,9 @@
 #include "ModelFactory.h"
 #include "TimeHandler.h"
 #include "Controller.h"
-// game class created
 
+
+// game class created
 class Game  {
 public:
     void initialize();

@@ -1,13 +1,12 @@
 //
 //  Observer.h
-//  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-03.
 //  SID: 200288569
 //
 
-#ifndef testOsg_Observer_h
-#define testOsg_Observer_h
+#ifndef __HelicopterProject__Observer_h__
+#define __HelicopterProject__Observer_h__
 
 #include "Event.h"
 

@@ -1,13 +1,12 @@
 //
 //  Joystick.h
-//  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-02.
 // SID: 200288569
 //
 
-#ifndef testOsg_Joystick_h
-#define testOsg_Joystick_h
+#ifndef __HelicopterProject__Joystick_h__
+#define __HelicopterProject__Joystick_h__
 
 #include <cmath>
 #include <osg/Vec3f>

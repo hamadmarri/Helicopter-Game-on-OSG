@@ -1,13 +1,12 @@
 //
 //  Rotor.h
-//  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-02.
 //  SID: 200288569
 //  some modification on int
 
-#ifndef testOsg_Rotor_h
-#define testOsg_Rotor_h
+#ifndef __HelicopterProject__Rotor_h__
+#define __HelicopterProject__Rotor_h__
 
 
 // these libraries have been added 
@@ -19,13 +18,11 @@
 class Rotor : public Observer {
 public:
     Rotor();
-    // I have added Event object in a function call Observe
     void Update(Event event);
 	
 	float getMgnitude() const;
 	
 private:
-    // also the magnitude float type
     float magnitude;
 };
 

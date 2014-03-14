@@ -1,13 +1,12 @@
 //
 //  Terrain.h
-//  testOsg
 //
 //  Created by Fares Alotaibi on 2014-03-02.
 //  SID: 200288569
 //
 
-#ifndef testOsg_Terrain_h
-#define testOsg_Terrain_h
+#ifndef __HelicopterProject__Terrain_h__
+#define __HelicopterProject__Terrain_h__
 
 #include "Model.h"
 #include "WorldConstants.h"

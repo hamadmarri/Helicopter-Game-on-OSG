@@ -10,8 +10,8 @@
 
 
 
-RK4::RK4() {
-	this->lastTime = 0;
+RK4::RK4(osg::Vec3f initialPosition) : Motion(initialPosition) {
+
 }
 
 
@@ -38,44 +38,35 @@ void RK4::integrate(State &state, double t, double dt, double force) {
 	const double dxdt = 1.0f/6.0f * (a.dx + 2.0f * (b.dx + c.dx) + d.dx);
 	const double dvdt = 1.0f/6.0f * (a.dv + 2.0f * (b.dv + c.dv) + d.dv);
 	
-	state.x = state.x + dxdt * dt * 10;
+	state.x = state.x + dxdt * dt;
 	state.v = state.v + dvdt * dt;
 }
 
 
 
 osg::Vec3f RK4::calculate_position_at(double t) {
-	// using RK4 method
-	RK4 rk4;
 	
 	// state to
 	State st;
-	double dt;
-	
-	// get dt
-	dt = (t - this->lastTime);
-	
-	// set last time to this time
-	this->lastTime = t;
 	
 	// calculate for x coordinate
 	st.x = this->initialPosition.x();
 	st.v = this->initialVelocity.x();
-	rk4.integrate(st, t, dt, netForce.x());
+	this->integrate(st, 0, t, netForce.x());
 	this->lastPosition.x() = st.x;
 	this->lastVelocity.x() = st.v;
 	
 	// calculate for y coordinate
 	st.x = this->initialPosition.y();
 	st.v = this->initialVelocity.y();
-	rk4.integrate(st, t, dt, netForce.y());
+	this->integrate(st, 0, t, netForce.y());
 	this->lastPosition.y() = st.x;
 	this->lastVelocity.y() = st.v;
 	
 	// calculate for z coordinate
 	st.x = this->initialPosition.z();
 	st.v = this->initialVelocity.z();
-	rk4.integrate(st, t, dt, netForce.z());
+	this->integrate(st, 0, t, netForce.z());
 	this->lastPosition.z() = st.x;
 	this->lastVelocity.z() = st.v;
 	

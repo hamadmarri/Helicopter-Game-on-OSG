@@ -26,7 +26,7 @@ struct Derivative
 
 class RK4 : public Motion {
 public:
-	RK4();
+	RK4(osg::Vec3f initialPosition);
 	
 	/*
 	 it calculates the position at specific time
@@ -38,7 +38,7 @@ protected:
 	Derivative evaluate(const State &initial, double t, double dt, const Derivative &d, double force);
 	void integrate(State &state, double t, double dt, double force);
 	
-	double lastTime;
+//	double lastTime;
 };
 
 #endif

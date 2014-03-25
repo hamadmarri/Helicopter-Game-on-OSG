@@ -17,6 +17,11 @@
 class Motion {
     
 public:
+	
+	Motion(osg::Vec3f initialPosition);
+	
+	virtual ~Motion() { };
+	
 	/*
 		abstract function to calculate the position at specific time
 	 */
@@ -33,6 +38,7 @@ protected:
 	
 	osg::Vec3f lastPosition;
 	osg::Vec3f lastVelocity;
+	
 };
 
 

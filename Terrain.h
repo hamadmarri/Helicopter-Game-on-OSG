@@ -15,6 +15,7 @@
 class Terrain : public Model {
 public:
     Terrain();
+    ~Terrain(); // adding deconstructor 
 };
 
 #endif

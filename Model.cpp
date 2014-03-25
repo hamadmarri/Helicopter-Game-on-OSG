@@ -21,18 +21,6 @@ Model::Model(const Model &B) {
 
 
 
-void Model::setPosistion(osg::Vec3f newPos) {
-	this->PAT->setPosition(newPos);
-}
-
-
-
-void Model::setScale(osg::Matrix scale) {
-	this->matrixTransform->setMatrix(scale);
-}
-
-
-
 void Model::initializer() {
 	// alocating new instances of PAT, matrixTransform, and node
 	this->PAT = new osg::PositionAttitudeTransform();
@@ -58,6 +46,24 @@ osg::Group* Model::getNode() {
 
 
 
+void Model::setPosistion(osg::Vec3f newPos) {
+	this->PAT->setPosition(convertToSytemAxis(newPos));
+}
+
+
+
+osg::Vec3f Model::getPosistion() {
+	return convertToRealAxis(this->PAT->getPosition());
+}
+
+
+
+void Model::setScale(osg::Matrix scale) {
+	this->matrixTransform->setMatrix(scale);
+}
+
+
+
 osg::PositionAttitudeTransform* Model::getPAT() {
 	return this->PAT.get();
 }
@@ -67,6 +73,21 @@ osg::PositionAttitudeTransform* Model::getPAT() {
 osg::MatrixTransform* Model::getMatrixTransform() {
 	return this->matrixTransform.get();
 }
+
+
+
+osg::Vec3f Model::convertToSytemAxis(osg::Vec3f aVector) {
+	return (osg::Vec3f(aVector.y(), aVector.z(), aVector.x()));
+}
+
+
+
+osg::Vec3f Model::convertToRealAxis(osg::Vec3f aVector) {
+	return (osg::Vec3f(aVector.z(), aVector.x(), aVector.y()));
+}
+
+
+
 
 
 

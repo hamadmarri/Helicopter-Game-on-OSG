@@ -24,10 +24,13 @@ public:
 	// default constructor
 	Model();
 	
+	virtual ~Model() { };
+	
 	// copy constructor
 	Model(const Model &B);
 	
 	void setPosistion(osg::Vec3f newPos);
+	osg::Vec3f getPosistion();
 	void setScale(osg::Matrix scale);
     
 	osg::Group* getNode();
@@ -35,6 +38,12 @@ public:
 	osg::MatrixTransform* getMatrixTransform();
 	
 protected:
+	// to convert to regular x, y, z axis
+	osg::Vec3f convertToRealAxis(osg::Vec3f aVector);
+	
+	// to convert to system x, y, z axis
+	osg::Vec3f convertToSytemAxis(osg::Vec3f aVector);
+	
 	osg::ref_ptr<osg::Group> node;
 	osg::ref_ptr<osg::PositionAttitudeTransform> PAT;
 	osg::ref_ptr<osg::MatrixTransform> matrixTransform;

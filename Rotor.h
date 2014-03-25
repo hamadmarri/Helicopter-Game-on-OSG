@@ -17,10 +17,16 @@
 #include "Observer.h"
 #include "WorldConstants.h"
 
-class Rotor : public Observer {
+class Rotor{
 public:
     Rotor();
-    void Update(Event event);
+    //void Update(Event event);
+    void setMagnitude(float magnitude);
+    void setMagnitudeInPercentage(float percentage);
+	void decreaseMagnitude();
+	void increaseMagnitude();
+	void setNeutral();
+
 	
 	float getMgnitude() const;
 	

@@ -20,3 +20,8 @@ Sky::Sky() : Model() {
 				   );
 
 }
+
+
+Sky::~Sky(){
+    
+}

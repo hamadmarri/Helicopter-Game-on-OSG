@@ -14,6 +14,7 @@
 class Sky : public Model {
 public:
     Sky();
+    ~Sky();
 };
 
 

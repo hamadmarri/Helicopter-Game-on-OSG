@@ -1,10 +1,3 @@
-//
-//  Invoker.h
-//  HelicopterProject
-//
-//  Created by Hamad Almarri on 2014-03-18.
-//  Copyright (c) 2014 Hamad Almarri. All rights reserved.
-//
 
 #ifndef __HelicopterProject__Invoker__
 #define __HelicopterProject__Invoker__

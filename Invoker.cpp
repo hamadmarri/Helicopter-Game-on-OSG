@@ -1,10 +1,3 @@
-//
-//  Invoker.cpp
-//  HelicopterProject
-//
-//  Created by Hamad Almarri on 2014-03-18.
-//  Copyright (c) 2014 Hamad Almarri. All rights reserved.
-//
 
 #include "Invoker.h"
 

@@ -18,6 +18,7 @@
 #include "RK4.h"
 #include "WorldConstants.h"
 
+
 class Helicopter : public Model, public Observer {
 public:
     Helicopter();

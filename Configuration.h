@@ -25,6 +25,11 @@ public:
     static Configuration* getInstance();
     static unsigned int getScreenWidth();
 	static unsigned int getScreenHeight();
+    // new functions
+    static void activateFriction();
+	static void disactivateFriction();
+	static bool isFrictionActive();
+    
 	KeySettings getKeySettings();
     
 private:
@@ -40,6 +45,7 @@ private:
 	unsigned int screenHeight;
 	
 	KeySettings keySettings;
+    bool friction;
 
     
 };

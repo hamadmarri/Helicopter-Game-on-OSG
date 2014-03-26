@@ -14,6 +14,7 @@ Configuration* Configuration::getInstance(){
     if(instance == nullptr){
         instance = new Configuration();
         instance->initialize();
+        instance->friction=true;
     }
     return instance;
 }
@@ -87,4 +88,22 @@ unsigned int Configuration::getScreenHeight() {
 
 KeySettings Configuration::getKeySettings() {
 	return Configuration::getInstance()->keySettings;
+}
+
+
+// new functions have been implemented 
+void Configuration::activateFriction() {
+	Configuration::getInstance()->friction = true;
+}
+
+
+
+void Configuration::disactivateFriction() {
+	Configuration::getInstance()->friction = false;
+}
+
+
+
+bool Configuration::isFrictionActive() {
+	return Configuration::getInstance()->friction;
 }

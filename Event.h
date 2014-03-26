@@ -13,18 +13,18 @@
 
 // EventyType class
 enum class EventType {
-	MOVE_LEFT,
-	MOVE_FORWARD,
-	MOVE_RIGHT,
-	MOVE_BACKWARD,
-	CENTER,
-	MOUSE_MOVEMENT,
-	DECREASE,
-	INCREASE,
-	STAY_NEUTRAL,
-	SWITCH_OFF,
-	ROTATE_LEFT,
-	ROTATE_RIGHT,
+//	MOVE_LEFT,
+//	MOVE_FORWARD,
+//	MOVE_RIGHT,
+//	MOVE_BACKWARD,
+//	CENTER,
+//	MOUSE_MOVEMENT,
+//	DECREASE,
+//	INCREASE,
+//	STAY_NEUTRAL,
+//	SWITCH_OFF,
+//	ROTATE_LEFT,
+//	ROTATE_RIGHT,
 	UPDATE_POSITION
 };
 
@@ -33,17 +33,15 @@ enum class EventType {
 class Event {
 public:
 	Event(EventType eventType);
-	Event(EventType eventType, float x, float y);
+	Event(EventType eventType, float dt);
     
 	
 	EventType getEventType() const;
-	float getX() const;
-	float getY() const;
-	
+	float dt() const;
 private:
 	EventType eventType;
-	float x;
-	float y;
+	float _dt;
+	
 };
 
 

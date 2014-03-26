@@ -4,7 +4,7 @@
 #define __HelicopterProject__WorldConstants__
 
 
-#define WORLD_GROUND -400
+#define WORLD_GROUND 0
 #define WORLD_GRAVITY 9.8
 #define WORLD_PI 3.14159265359
 

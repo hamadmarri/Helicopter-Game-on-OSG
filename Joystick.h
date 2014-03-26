@@ -15,8 +15,8 @@
 #include "WorldConstants.h"
 
 
-
-class Joystick : public Observer {
+// it is not observer anymore now
+class Joystick{
 public:
 	Joystick();
 	
@@ -33,7 +33,7 @@ public:
     osg::Vec3f getForce();
 	
 	
-    void Update(Event event);
+    
 
 private:
 	double toRadian(double degree);

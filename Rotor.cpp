@@ -12,30 +12,38 @@ Rotor::Rotor() {
 	this->magnitude = WORLD_GRAVITY;
 }
 
-
-// update function to handle the event
-void Rotor::Update(Event event){
-    
-    switch(event.getEventType()) {
-        case EventType::DECREASE:  // if decrease then set the magnituide
-			this->magnitude -= 0.3;
-			break;
-		case EventType::INCREASE:  // if increase
-			this->magnitude += 0.3;
-			break;
-		case EventType::SWITCH_OFF:   // if switch off then 0 
-            this->magnitude = 0;
-            break;
-		case EventType::STAY_NEUTRAL: //case EventType::CENTER:
-            this->magnitude = WORLD_GRAVITY;
-            break;
-        default:
-            break;
-            
-    }
+void Rotor::setMagnitude(float magnitude) {
+	if (magnitude > ((100 - 40) * 0.3) + WORLD_GRAVITY)
+		this->magnitude = ((100 - 40) * 0.3) + WORLD_GRAVITY;
+	else if (magnitude > 0.0)
+		this->magnitude = magnitude;
 }
 
 
+void Rotor::setMagnitudeInPercentage(float percentage) {
+	if (percentage > 100.0)
+		percentage = 100.0;
+	else if (percentage < 0.0)
+		percentage = 0.0;
+	
+	setMagnitude(((percentage - 40) * 0.3) + WORLD_GRAVITY);
+}
+
+
+
+// decrease the magnitude and increase the magnitude
+void Rotor::decreaseMagnitude() {
+	setMagnitude(this->magnitude - 0.3);
+}
+
+void Rotor::increaseMagnitude() {
+	setMagnitude(this->magnitude + 0.3);
+}
+
+// setNeutral to the gravity
+void Rotor::setNeutral() {
+	setMagnitude(WORLD_GRAVITY);
+}
 
 float Rotor::getMgnitude() const {
 	return this->magnitude;

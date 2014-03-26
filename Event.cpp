@@ -4,7 +4,8 @@
 //  Created by Fares Alotaibi on 2014-03-09.
 //  SID: 200288569
 //  Event.cpp has been implemented, it has only two functions 
-//
+//  Modified by Alotaibi, Fares on 25-03-2014
+
 
 
 #include "Event.h"
@@ -16,11 +17,11 @@ Event::Event(EventType eventType) {
 }
 
 
-
-Event::Event(EventType eventType, float x, float y) {
+// some modification has been added , to the copy constructor
+Event::Event(EventType eventType, float dt) {
 	this->eventType = eventType;
-	this->x = x;
-	this->y = y;
+	this->_dt = dt;
+	
 }
 
 
@@ -29,14 +30,7 @@ EventType Event::getEventType() const {
 	return this->eventType;
 }
 
-
-
-float Event::getX() const {
-	return this->x;
-}
-
-
-
-float Event::getY() const {
-	return this->y;
+// new gtter function
+float Event::dt() const {
+	return this->_dt;
 }

@@ -9,6 +9,8 @@
 #define __HelicopterProject__Game_h__
 
 
+#include <vector>
+#include <thread>
 #include <osgViewer/Viewer>
 #include <osg/Node>
 #include <osgDB/ReadFile>
@@ -16,15 +18,30 @@
 #include "Helicopter.h"
 #include "ModelFactory.h"
 #include "TimeHandler.h"
-#include "Controller.h"
+#include "HelicopterController.h"
+#include "ScriptRunner.h"
+#include "Configuration.h"
 
 
 // game class created
 class Game  {
 public:
+	Game();
     void initialize();
     
-    osgViewer::Viewer viewer;
+	void run();
+	void run(const char *fileName);
+	
+	Helicopter* getHelicopter();
+	
+	Configuration* getConfiguration();
+	
+private:
+	static void runScript(const char *fileName, osg::ref_ptr<Helicopter> helicopter);
+	osgViewer::Viewer viewer;
+	
+	// vector of all game models
+	std::vector<Model*> models;
 };
 
 

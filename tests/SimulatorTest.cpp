@@ -1,9 +1,7 @@
 //
 //  SimulatorTest.cpp
-//  HelicopterProject
 //
-//  Created by Hamad Almarri on 2014-03-22.
-//  Copyright (c) 2014 Hamad Almarri. All rights reserved.
+//	See main.cpp file header for credits
 //
 
 #include "SimulatorTest.h"

@@ -5,7 +5,8 @@
 //				it gets the net forces and time and
 //				returns the next estimated position.
 //				Need concrete class to implement calculate_position_at function
-//  Created by Hamad Almarri on 1/31/2014.
+//
+//	See main.cpp file header for credits
 //
 
 #ifndef __HelicopterProject__Motion__

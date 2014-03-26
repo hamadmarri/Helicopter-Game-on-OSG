@@ -1,4 +1,4 @@
-
+//	See main.cpp file header for credits
 
 #ifndef HelicopterProject_JoystickCommands_h
 #define HelicopterProject_JoystickCommands_h

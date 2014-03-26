@@ -1,12 +1,9 @@
 //
 //  Configuration.h
 //
-//  Created by Fares Alotaibi on 2014-03-09.
-//  SID: 200288569
+//	See main.cpp file header for credits
 //
-
-
-// Singleton class Configuration has been implemented.
+//	Singleton class Configuration has been implemented.
 // 
 
 #ifndef __HelicopterProject__Configuration_h__

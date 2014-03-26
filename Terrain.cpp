@@ -1,10 +1,11 @@
 //
 //  Terrain.cpp
 //
-//  Created by Fares Alotaibi on 2014-03-02.
-//  SID: 200288569
-// Terrain calls implementation has been created to call the model and set the model in some position in our scene.
+//	See main.cpp file header for credits
 //
+//	Terrain calls implementation has been created to call the model and set the model in some position in our scene.
+//
+
 
 #include "Terrain.h"
 

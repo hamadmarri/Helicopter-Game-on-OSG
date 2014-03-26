@@ -1,3 +1,5 @@
+//	See main.cpp file header for credits
+
 
 #ifndef TESTS_H
 #define TESTS_H

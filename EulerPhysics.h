@@ -1,9 +1,7 @@
 //
 //  EulerPhysics.h
-//  HelicopterProject
 //
-//  Created by Hamad Almarri on 2014-03-20.
-//  Copyright (c) 2014 Hamad Almarri. All rights reserved.
+//	See main.cpp file header for credits
 //
 
 #ifndef __HelicopterProject__EulerPhysics__

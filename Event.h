@@ -1,10 +1,10 @@
 //
 //  Event.h
 //
-//  Created by Fares Alotaibi 
-//  SID : 200288569 
+//	See main.cpp file header for credits
 //
-// Event class has been implemented at this point. Also, notice the numeration class has been used and implemented.
+//	Event class has been implemented at this point. Also, notice the numeration class has been used and implemented.
+//
 
 
 #ifndef __HelicopterProject__Event_h__

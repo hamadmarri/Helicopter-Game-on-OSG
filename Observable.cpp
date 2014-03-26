@@ -1,7 +1,7 @@
 //
 //  Observable.cpp
 //
-//  Created by Hamad Almarri on 2014-03-14.
+//	See main.cpp file header for credits
 //
 
 #include "Observable.h"

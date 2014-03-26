@@ -1,9 +1,12 @@
 //
 //  Game.cpp
 //
-//  Created by Fares Alotaibi on 2014-03-03.
-// SID: 200288569
-// Here is the main function call in our UI. It will set the scence, helicopters, and other models in some specific locaitons we had decided on. Setting up all things so that the player can play the game.
+//	See main.cpp file header for credits
+//
+//	Here is the main function call in our UI. It will set the scence,
+//	helicopters, and other models in some specific locaitons we had decided on.
+//	Setting up all things so that the player can play the game.
+//
 
 #include "Game.h"
 

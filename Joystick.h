@@ -1,9 +1,13 @@
 //
 //  Joystick.h
 //
-//  Created by Fares Alotaibi on 2014-03-02.
-// SID: 200288569
-// A Joystick class. The joystick class has many functions to set the theta and the phi of it. It inherets the Observer class, as we decided to design Observer design, thus we need any change of event of the joystick will be observed and can be changed directly. This is why we inhereted from Observer. 
+//	See main.cpp file header for credits
+//
+//	A Joystick class. The joystick class has many functions to set the theta
+//	and the phi of it. It inherets the Observer class, as we decided to design
+//	Observer design, thus we need any change of event of the joystick will be
+//	observed and can be changed directly. This is why we inhereted from Observer.
+//
 
 #ifndef __HelicopterProject__Joystick_h__
 #define __HelicopterProject__Joystick_h__

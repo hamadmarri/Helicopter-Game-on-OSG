@@ -1,10 +1,10 @@
 //
 //  Joystick.cpp
 //
-//  Created by Fares Alotaibi on 2014-03-03.
-//  SID: 200288569
-// some modification has been added to the
-// This the implementation of joystick class. It will handle the theta and phi by using setter and getter functions.
+//	See main.cpp file header for credits
+//
+//	This the implementation of joystick class.
+//	It will handle the theta and phi by using setter and getter functions.
 //
 
 #include "Joystick.h"

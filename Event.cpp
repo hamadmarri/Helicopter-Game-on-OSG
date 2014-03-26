@@ -1,11 +1,8 @@
 //
 //  Event.cpp
 //
-//  Created by Fares Alotaibi on 2014-03-09.
-//  SID: 200288569
-//  Event.cpp has been implemented, it has only two functions 
-//  Modified by Alotaibi, Fares on 25-03-2014
-
+//	See main.cpp file header for credits
+//
 
 
 #include "Event.h"

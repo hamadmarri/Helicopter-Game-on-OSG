@@ -1,8 +1,7 @@
 //
 //  ScriptRunner.h
-//  testOsg
 //
-//  Created by Fares Alotaibi on 2014-03-25.
+//	See main.cpp file header for credits
 //
 //  ScriptRunner that will read from a file. 
 

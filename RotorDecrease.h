@@ -1,4 +1,4 @@
-
+//	See main.cpp file header for credits
 
 #ifndef __HelicopterProject__RotorDecrease__
 #define __HelicopterProject__RotorDecrease__

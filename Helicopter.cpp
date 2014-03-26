@@ -1,11 +1,12 @@
 //
 //  Helicopter.cpp
 //
-//  Created by Fares Alotaibi on 2014-03-02.
+//	See main.cpp file header for credits
+//
 //	Credit: http://scenemodels.flightgear.org/objectview.php?id=3303278
 //			http://hyperphysics.phy-astr.gsu.edu/hbase/airfri.html
 //
-//
+
 
 #include "Helicopter.h"
 

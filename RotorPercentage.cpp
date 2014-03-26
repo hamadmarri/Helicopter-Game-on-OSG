@@ -1,4 +1,4 @@
-
+//	See main.cpp file header for credits
 
 #include "RotorPercentage.h"
 

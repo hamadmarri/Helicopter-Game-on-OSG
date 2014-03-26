@@ -1,6 +1,7 @@
 //
 //  Model.h
-//  HelicopterProject
+//
+//	See main.cpp file header for credits
 //
 //	Purpose:	Model class is inherited from osg::Group, it
 //				on top of that some functionalities that is useful
@@ -8,8 +9,6 @@
 //				Also, the most important thing is to encapsulate
 //				the model as one object without caring of the actual
 //				osg nodes' hierarchy within the model object
-//
-//  Created by Hamad Almarri on 3/2/2014.
 //
 
 #ifndef __HelicopterProject__Model__

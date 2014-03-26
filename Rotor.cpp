@@ -1,9 +1,12 @@
 //
 //  Rotor.cpp
 //
-//  Created by Fares Alotaibi on 2014-03-09.
-//  SID : 200288569
-//  The Rotor class implementation. The constructor will initilize the magnitude to the gravity. The update function will handle an event passing to it.
+//	See main.cpp file header for credits
+//
+//  The Rotor class implementation. The constructor will initilize
+//	the magnitude to the gravity. The update function will handle an event passing to it.
+//
+
 
 #include "Rotor.h"
 

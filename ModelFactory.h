@@ -5,7 +5,7 @@
 //
 //	Type:		Singleton
 //
-//  Created by Hamad Almarri on 3/2/2014.
+//	See main.cpp file header for credits
 //
 
 #ifndef __HelicopterProject__ModelFactory__

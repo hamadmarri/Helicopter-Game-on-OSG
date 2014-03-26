@@ -1,7 +1,8 @@
 //
 //  RK4.h
 //
-// Credeits: http://gafferongames.com/game-physics/integration-basics/
+//	Credeits: http://gafferongames.com/game-physics/integration-basics/
+//	See main.cpp file header for credits
 //
 
 #ifndef __HelicopterProject_RK4_h__

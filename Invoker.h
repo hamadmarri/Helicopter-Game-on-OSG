@@ -1,3 +1,4 @@
+//	See main.cpp file header for credits
 
 #ifndef __HelicopterProject__Invoker__
 #define __HelicopterProject__Invoker__

@@ -2,9 +2,8 @@
 //  TimeHandler.cpp
 //  
 //
-//  Created by Hamad Almarri on 3/3/2014.
+//	See main.cpp file header for credits
 //
-//  Modified by Alotaibi, Fares on 3/9/2014
 
 
 #include "TimeHandler.h"

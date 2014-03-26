@@ -1,7 +1,9 @@
 //
 //  main.cpp
 //
-//  Created by Hamad Almarri on 3/2/2014.
+//	Credits:
+//				Editors:			Fares Alotaibi, Hamad Almarri
+//				Original authors:	Brian Schweitzer, Karlee Stein, Tylor Froese, Trevor Douglas
 //
 
 
@@ -11,12 +13,14 @@
 #include "tests/SimulatorTest.h"
 
 
+
 std::string parseArgs(int argc, char** argv, std::string command) {
 	std::string value;
 	osg::ArgumentParser args(&argc, argv);
 	args.read(command, value );
 	return value;
 }
+
 
 
 int main(int argc, char** argv) {

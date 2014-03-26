@@ -1,4 +1,4 @@
-
+//	See main.cpp file header for credits
 
 #ifndef __HelicopterProject__JoystickMoveRight__
 #define __HelicopterProject__JoystickMoveRight__

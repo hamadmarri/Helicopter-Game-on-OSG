@@ -1,9 +1,8 @@
 //
 //  TimeHandler.h
 //
-//  Created by Hamad Almarri on 3/3/2014.
+//	See main.cpp file header for credits
 //
-// Ediated By Alotaibi, Fares on 3/9/2014
 
 
 #ifndef __HelicopterProject__TimeHandler__

@@ -1,3 +1,5 @@
+//	See main.cpp file header for credits
+
 
 #include "Invoker.h"
 

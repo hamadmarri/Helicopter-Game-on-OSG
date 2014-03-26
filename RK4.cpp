@@ -1,8 +1,7 @@
 //
 //  RK4.cpp
-//  HelicopterProject
 //
-//  Created by Hamad Almarri on 2014-03-11.
+//	See main.cpp file header for credits
 //
 
 

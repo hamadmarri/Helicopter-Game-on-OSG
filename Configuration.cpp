@@ -1,9 +1,9 @@
 //
 //  Configuration.cpp
 //
-//  Created by Fares Alotaibi on 2014-03-09.
-//  SID: 200288569
-// This is a configuration class to congigure our screen and file data. 
+//	See main.cpp file header for credits
+//
+//	This is a configuration class to congigure our screen and file data.
 
 #include "Configuration.h"
 

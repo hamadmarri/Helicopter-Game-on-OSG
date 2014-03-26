@@ -1,7 +1,7 @@
 //
 //  HelicopterMotion.cpp
 //
-//  Created by Hamad Almarri on 1/31/2014.
+//	See main.cpp file header for credits
 //
 
 #include "Motion.h"

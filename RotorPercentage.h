@@ -1,4 +1,4 @@
-
+//	See main.cpp file header for credits
 
 #ifndef __HelicopterProject__RotorPercentage__
 #define __HelicopterProject__RotorPercentage__

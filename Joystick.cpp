@@ -30,8 +30,12 @@ Joystick::Joystick(double theta, double phi) {
 }
 
 
-
+// update the set_theta function to 15.0 degree or 0
 void Joystick::set_theta(double theta) {
+    if(theta >15.0)
+        theta = 15.0;
+    if(theta < 0)
+        theta =0;
     this->theta = theta;
 }
 
@@ -72,43 +76,3 @@ double Joystick::toRadian(double degree) {
     return (degree * WORLD_PI) / 180;
 }
 
-
-
-// observe function basic implementation , here the modification of Observe(Event event)
-void Joystick::Update(Event event){
-    
-	float yCartesian = (Configuration::getScreenHeight() / 2) - event.getY();
-	float xCartesian = (Configuration::getScreenWidth() / 2) - event.getX();
-	float magnitude = int(sqrt((float) (pow(xCartesian, 2.0) + pow(yCartesian, 2.0))) / 100) % 15;
-	
-	
-    switch(event.getEventType()) {
-		case EventType::MOUSE_MOVEMENT:
-            this->set_theta(magnitude);
-            this->set_phi(atan2(xCartesian, -1 * yCartesian) * 180 / WORLD_PI);
-            break;
-        case EventType::MOVE_LEFT:
-            this->set_theta(15.0);
-            this->set_phi(90.0);
-            break;
-        case EventType::MOVE_FORWARD:
-            this->set_theta(15.0);
-            this->set_phi(0.0);
-            break;
-        case EventType::MOVE_RIGHT:
-            this->set_theta(15.0);
-            this->set_phi(270);
-            break;
-        case EventType::MOVE_BACKWARD:
-            this->set_theta(15.0);
-            this->set_phi(180.0);
-            break;
-        case EventType::CENTER:
-            this->set_theta(0.0);
-            this->set_phi(0.0);
-            break;
-        default:
-            break;
-            
-    }
-}

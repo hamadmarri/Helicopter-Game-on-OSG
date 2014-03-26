@@ -17,40 +17,85 @@
 Helicopter::Helicopter() : Model() {
 	
 	// using RK4 calculation as concrete class
-	this->motion = new RK4();
+	this->motion = nullptr;
     this->joystick = new Joystick();
 	this->rotor = new Rotor();
 	
     this->node->addChild(osgDB::readNodeFile("3124/EC-135_Douane.ac"));
-	this->PAT->setPosition(osg::Vec3f(-10.0, -3000.0, -2000.0));
+    
+    reset();
+	
+}
+
+Helicopter::~Helicopter() {
+	if (this->motion)
+		delete this->motion;
+	
+	if (this->joystick)
+		delete this->joystick;
+	
+	if (this->rotor)
+		delete this->rotor;
+}
+
+void Helicopter::setPosistion(osg::Vec3f newPos) {
+	Model::setPosistion(newPos);
+	
+	if (this->motion)
+		delete this->motion;
+	// using RK4 calculation as concrete class
+    //	this->motion = new RK4(this->getPosistion());
+	this->motion = new EulerPhysics(this->getPosistion());
 }
 
 
-
-void Helicopter::Update(Event event){
-	static float y = 0;
-	static double t = 0;
-	osg::Vec3f viscousResistance = this->motion->getCurrentVelocity().operator*(-6 * WORLD_PI * 4);
+void Helicopter::Update(Event event) {
 	
+	if (event.getEventType() != EventType::UPDATE_POSITION)
+		return;
+    
+	
+    //	static const double t = (double(1) / double(60));
+	osg::Vec3f viscousResistance = this->motion->getCurrentVelocity().operator*(0);
+	
+	if (Configuration::getInstance()->isFrictionActive()) {
+        //		viscousResistance = this->motion->getCurrentVelocity();
+        //		viscousResistance.operator*(viscousResistance);
+        //		viscousResistance.operator*(0.0006);
+		
+		viscousResistance = this->motion->getCurrentVelocity().operator*(6 * WORLD_PI * 0.001 * 4);
+	}
 	
 	this->motion->setNetForce(
-							  this->joystick->getForce().operator*(this->rotor->getMgnitude())
+							  this->joystick->getForce().operator*(this->rotor->getMagnitude())
 							  + osg::Vec3f(0.0, 0.0, -1).operator*(WORLD_GRAVITY)
-							  + viscousResistance
+							  - viscousResistance
 							  );
 	
 	
-	t += 0.0166;
-	osg::Vec3f nextPosition = this->motion->calculate_position_at(t);
-    
-    this->PAT->setPosition(osg::Vec3f(
-									  this->PAT->getPosition().x() + nextPosition.y() * cosf(y),
-									  this->PAT->getPosition().y() + nextPosition.z(),
-									  this->PAT->getPosition().z() + nextPosition.x() * cosf(y)
-									  )
-						   );
+	osg::Vec3f nextPosition = this->motion->calculate_position_at(event.dt());
+    Model::setPosistion(nextPosition);
     
 }
+
+void Helicopter::reset() {
+	setPosistion(osg::Vec3f(-250, 0.0, 99 + WORLD_GROUND));
+}
+
+
+
+
+osg::Vec3f Helicopter::getVelocity() {
+	return this->motion->getCurrentVelocity();
+}
+
+
+
+osg::Vec3f Helicopter::getAcceleration() {
+	return (this->joystick->getForce().operator*(this->rotor->getMagnitude())
+			+ osg::Vec3f(0.0, 0.0, -1).operator*(WORLD_GRAVITY));
+}
+
 
 
 

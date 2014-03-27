@@ -30,17 +30,17 @@ Model* ModelFactory::create(ModelsTypes modelType) {
 		return new Sky();
 	else if (modelType == ModelsTypes::EIFFEL_TOUR) {
 		Obstacle *eiffel = new Obstacle(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
-		eiffel->setPosistion(osg::Vec3f (200.0f, -3080.0f, -600.0f));
+		eiffel->setPosistion(osg::Vec3f (0.0f, 1500.0f, 90.0f));
 		return eiffel;
 	}
 	else if (modelType == ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE) {
 		Obstacle *building = new Obstacle(osgDB::readNodeFile("2705/large-residential-highrise.ac"));
-		building->setPosistion(osg::Vec3f (500.0f, -3080.0f, -200.0f));
+		building->setPosistion(osg::Vec3f (100.0f, 50.0f, 95.0f));
 		return building;
 	}
 	else if (modelType == ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE_ORANGE) {
 		Obstacle *building = new Obstacle(osgDB::readNodeFile("2706/large-residential-highrise-orange.ac"));
-		building->setPosistion(osg::Vec3f (0.0f, -3080.0f, -400.0f));
+		building->setPosistion(osg::Vec3f (200.0f, 0.0f, 110.0f));
 		return building;
 	}
 	

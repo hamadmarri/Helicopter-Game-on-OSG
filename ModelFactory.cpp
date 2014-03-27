@@ -30,7 +30,7 @@ Model* ModelFactory::create(ModelsTypes modelType) {
 		return new Sky();
 	else if (modelType == ModelsTypes::EIFFEL_TOUR) {
 		Obstacle *eiffel = new Obstacle(osgDB::readNodeFile("320/tour-eiffel-ba.ac"));
-		eiffel->setPosistion(osg::Vec3f (0.0f, 1500.0f, 90.0f));
+		eiffel->setPosistion(osg::Vec3f (0.0f, 150.0f, 90.0f));
 		return eiffel;
 	}
 	else if (modelType == ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE) {

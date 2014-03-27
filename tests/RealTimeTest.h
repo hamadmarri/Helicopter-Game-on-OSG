@@ -1,9 +1,7 @@
 //
 //  RealTimeTest.h
-//  testOsg
 //
-//  Created by Fares Alotaibi on 2014-03-26.
-//
+//	See main.cpp file header for credits//
 //
 
 #ifndef testOsg_RealTimeTest_h

@@ -17,10 +17,14 @@
 
 class RealTimeTest {
 public:
-    
+    void run();
+	
+	static void hover();
+	static void maxSpead();
+
     
 private:
-    
+    static void Assert(float expected, float result, float delta);
     static Game game;
     
 };

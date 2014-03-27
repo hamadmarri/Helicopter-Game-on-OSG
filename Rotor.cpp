@@ -4,7 +4,7 @@
 //	See main.cpp file header for credits
 //
 //  The Rotor class implementation. The constructor will initilize
-//	the magnitude to the gravity. The update function will handle an event passing to it.
+//	the magnitude to the gravity.
 //
 
 

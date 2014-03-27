@@ -48,7 +48,7 @@ void Rotor::setNeutral() {
 	setMagnitude(WORLD_GRAVITY);
 }
 
-float Rotor::getMgnitude() const {
+float Rotor::getMagnitude() const {
 	return this->magnitude;
 }
 

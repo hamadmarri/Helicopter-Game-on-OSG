@@ -30,7 +30,7 @@ public:
 	void setNeutral();
 
 	
-	float getMgnitude() const;
+	float getMagnitude() const;
 	
 private:
     float magnitude;

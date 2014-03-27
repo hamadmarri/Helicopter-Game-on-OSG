@@ -31,6 +31,6 @@ public:
 private:
 	Helicopter *helicopter;
 	Invoker commandsInvoker;
-}
+};
 
 #endif

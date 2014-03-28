@@ -29,7 +29,7 @@
 
 
 // game class created
-class Game  {
+class Game {
 public:
 	Game();
     void initialize();

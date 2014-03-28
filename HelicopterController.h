@@ -21,7 +21,7 @@
 #include "Configuration.h"
 
 
-class HelicopterController : public osgGA::GUIEventHandler{
+class HelicopterController : public osgGA::GUIEventHandler {
 public:
 	
 	HelicopterController(Helicopter *helicopter);

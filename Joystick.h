@@ -18,7 +18,7 @@
 
 
 // it is not observer anymore now
-class Joystick{
+class Joystick {
 public:
 	Joystick();
 	

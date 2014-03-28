@@ -19,7 +19,7 @@
 #include "Observer.h"
 #include "WorldConstants.h"
 
-class Rotor{
+class Rotor {
 public:
     Rotor();
     //void Update(Event event);

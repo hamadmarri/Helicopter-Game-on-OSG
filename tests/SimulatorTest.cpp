@@ -8,6 +8,8 @@
 
 
 SimulatorTest::SimulatorTest() {
+	this->game = new Game();
+	this->game->initialize();
 	this->dt = double(1) / double(60);
 }
 
@@ -24,8 +26,9 @@ void SimulatorTest::run() {
 
 
 void SimulatorTest::setUp() {
-	this->helicopter = static_cast<Helicopter*>(ModelFactory::getInstance()->create(ModelsTypes::HELICOPTER));
-	RotorNeutral rn(helicopter->getRotor());
+	ModelFactory mf(this->game);
+	this->helicopter = static_cast<Helicopter*>(mf.create(ModelsTypes::HELICOPTER));
+	RotorNeutral rn(helicopter->getMainRotor());
 	
 	rn.execute();
 	this->helicopter->reset();
@@ -44,9 +47,11 @@ void SimulatorTest::hover() {
 	std::cout << "\nhover test started:" << std::endl;
 	
 	setUp();
-	Configuration::disactivateFriction();
+	this->game->getConfiguration()->disactivateFriction();
 
-	helicopter->getRotor()->increaseMagnitude();
+	helicopter->getMainRotor()->increaseMagnitude();
+	helicopter->getMainRotor()->increaseMagnitude();
+	helicopter->getMainRotor()->increaseMagnitude();
 	
 	for (int i = 0; i < 10 * 60; i++)
 		helicopter->Update(Event(EventType::UPDATE_POSITION, this->dt));
@@ -82,7 +87,7 @@ void SimulatorTest::maxSpead() {
 	float oldV = 0;
 	float newV = 0;
 	
-	Configuration::activateFriction();
+	this->game->getConfiguration()->activateFriction();
 	jmf.execute();
 	
 	
@@ -116,7 +121,7 @@ void SimulatorTest::someSetOfJoystick_throttle_delayTest() {
 	setUp();
 	
 	// disavtivate friction
-	Configuration::disactivateFriction();
+	this->game->getConfiguration()->disactivateFriction();
 	
 	
 	/*********** phase 1 **********/
@@ -162,8 +167,12 @@ void SimulatorTest::someSetOfJoystick_throttle_delayTest() {
 	/*********** phase 2 **********/
 	std::cout << "\nsomeSetOfJoystick_throttle_delayTest phase 2 test started:" << std::endl;
 	JoystickMoveLeft jml2(helicopter->getJoystick());
-	RotorIncrease ri(helicopter->getRotor());
+	RotorIncrease ri(helicopter->getMainRotor());
 	jml2.execute();
+	ri.execute();
+	ri.execute();
+	ri.execute();
+	ri.execute();
 	ri.execute();
 	ri.execute();
 	
@@ -204,6 +213,8 @@ void SimulatorTest::someSetOfJoystick_throttle_delayTest() {
 	std::cout << "\nsomeSetOfJoystick_throttle_delayTest phase 3 test started:" << std::endl;
 	JoystickMoveRight jmr2(helicopter->getJoystick());
 	jmr2.execute();
+	ri.execute();
+	ri.execute();
 	ri.execute();
 
 	
@@ -252,10 +263,10 @@ void SimulatorTest::returnBackToPositionZero() {
 	setUp();
 	
 	// disavtivate friction
-	Configuration::disactivateFriction();
+	this->game->getConfiguration()->disactivateFriction();
 	
-	RotorIncrease ri(helicopter->getRotor());
-	RotorDecrease rd(helicopter->getRotor());
+	RotorIncrease ri(helicopter->getMainRotor());
+	RotorDecrease rd(helicopter->getMainRotor());
 	
 	ri.execute();
 	

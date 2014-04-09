@@ -13,6 +13,7 @@
 #include "../ModelFactory.h"
 #include "../AllCommands.h"
 #include "../Configuration.h"
+#include "../Game.h"
 
 
 class SimulatorTest {
@@ -33,6 +34,7 @@ private:
 	
 	Helicopter *helicopter;
 	float dt;
+	Game *game;
 };
 
 #endif /* defined(__HelicopterProject__SimulatorTest__) */

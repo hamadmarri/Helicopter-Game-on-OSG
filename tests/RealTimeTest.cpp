@@ -10,8 +10,11 @@ Game RealTimeTest::game;
 
 
 void RealTimeTest::run() {
-	
+
 	game.initialize();
+	game.popupHelpScreen->hide();
+	Hud *testingHud = game.hudsManager->createHud(HudAlignment::RIGHT);
+	testingHud->setText("TESTING...");
 	
 	std::thread startHoverTest(RealTimeTest::hover);
 	std::thread startMaxSpeadTest(RealTimeTest::maxSpead);
@@ -20,6 +23,8 @@ void RealTimeTest::run() {
 	
 	startHoverTest.join();
 	startMaxSpeadTest.join();
+	
+	delete testingHud;
 }
 
 
@@ -32,6 +37,9 @@ void RealTimeTest::Assert(float expected, float result, float delta) {
 
 void RealTimeTest::hover() {
 	
+	Hud *hoverTestingHud = game.hudsManager->createHud(HudAlignment::RIGHT);
+	hoverTestingHud->setText("HOVER TESTING STARTED...");
+	
 	DelayCommand dc(2);
 	DelayCommand wait10s(10);
 	dc.execute();
@@ -43,7 +51,9 @@ void RealTimeTest::hover() {
 	
 	helicopter->reset();
 	helicopter->setPosistion(osg::Vec3f(0, 0, 0));
-	helicopter->getRotor()->increaseMagnitude();
+	helicopter->getMainRotor()->increaseMagnitude();
+	helicopter->getMainRotor()->increaseMagnitude();
+	helicopter->getMainRotor()->increaseMagnitude();
 	
 	wait10s.execute();
 	
@@ -64,16 +74,20 @@ void RealTimeTest::hover() {
 	std::cout << "vz = " << helicopter->getVelocity().z() << std::endl;
 	std::cout << "az = " << helicopter->getAcceleration().z() << std::endl;
     
+	hoverTestingHud->setText("HOVER TESTING PASSED...");
 }
 
 void RealTimeTest::maxSpead() {
     
+	Hud *maxSpeadTestingHud = game.hudsManager->createHud(HudAlignment::RIGHT);
+	maxSpeadTestingHud->setText("MAX SPEAD TESTING STARTED...");
+	
 	DelayCommand dc(15);
 	dc.execute();
 	
 	Helicopter *helicopter = game.getHelicopter();
 	JoystickMoveForward jmf(helicopter->getJoystick());
-	RotorNeutral rn(helicopter->getRotor());
+	RotorNeutral rn(helicopter->getMainRotor());
 	float oldV = 0;
 	float newV = 0;
 	
@@ -81,7 +95,7 @@ void RealTimeTest::maxSpead() {
 	
 	game.getConfiguration()->activateFriction();
 	helicopter->reset();
-	helicopter->setPosistion(osg::Vec3f(0, 0, 0));
+	helicopter->setPosistion(osg::Vec3f(0, 0, 600));
 	jmf.execute();
 	rn.execute();
 	
@@ -105,7 +119,7 @@ void RealTimeTest::maxSpead() {
 	std::cout << "maxSpead test passed" << std::endl;
 	std::cout << "maxSpead test results:" << std::endl;
 	std::cout << "vx = " << helicopter->getVelocity().x() << std::endl;
-    
+    maxSpeadTestingHud->setText("HOVER TESTING PASSED...");
 }
 
 

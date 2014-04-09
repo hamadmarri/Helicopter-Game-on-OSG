@@ -8,15 +8,12 @@
 #include "Configuration.h"
 
 
-// singelton design , getInstance function to ensure the only instance we are dealing with
-Configuration* Configuration::getInstance(){
-    static Configuration *instance = nullptr;
-    if(instance == nullptr){
-        instance = new Configuration();
-        instance->initialize();
-        instance->friction=true;
-    }
-    return instance;
+Configuration::Configuration() {
+	this->mouseControl = true;
+	this->autoCamera = true;
+	this->friction = true;
+	this->missilesWithInitialVelocity = true;
+	initialize();
 }
 
 
@@ -40,7 +37,7 @@ void Configuration::initScreanSizeSettings() {
 		osg::notify(osg::NOTICE) << "Error, no WindowSystemInterface available, cannot create windows." << std::endl;
 	else
 		wsi->getScreenResolution(osg::GraphicsContext::ScreenIdentifier(0),
-								 Configuration::getInstance()->screenWidth, Configuration::getInstance()->screenHeight);
+								 this->screenWidth, this->screenHeight);
 	
 }
 
@@ -49,24 +46,95 @@ void Configuration::initScreanSizeSettings() {
 // our key settings will be read from a file called settings.txt. It will read each line on the file
 void Configuration::initKeySettings() {
 	std::ifstream inFile;
+	std::string inputWord;
 	
     // open the file we provided
 	inFile.open("settings.txt");
-	// read first line
-	inFile.get(Configuration::getInstance()->keySettings.resetJoystick);
+
+	inFile >> inputWord;
 	inFile.ignore(500, '\n');
-    // secon line from the file
+	if (inputWord == "false")
+		this->mouseControl = false;
+	else
+		this->mouseControl = true;
+	
+	inFile >> inputWord;
+	inFile.ignore(500, '\n');
+	if (inputWord == "false")
+		this->autoCamera = false;
+	else
+		this->autoCamera = true;
+	
+	inFile.get(this->keySettings.movingForward);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.movingRight);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.movingLeft);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.movingBackward);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.resetJoystick);
+	inFile.ignore(500, '\n');
     
-	inFile.get(Configuration::getInstance()->keySettings.zeroRotorSpeed);
+	inFile.get(this->keySettings.zeroRotorSpeed);
 	inFile.ignore(500, '\n');
 	
-	inFile.get(Configuration::getInstance()->keySettings.decreaseRotorSpeed);
+	inFile.get(this->keySettings.decreaseRotorSpeed);
 	inFile.ignore(500, '\n');
 	
-	inFile.get(Configuration::getInstance()->keySettings.increaseRotorSpeed);
+	inFile.get(this->keySettings.increaseRotorSpeed);
 	inFile.ignore(500, '\n');
 	
-	inFile.get(Configuration::getInstance()->keySettings.neutralRotorMode);
+	inFile.get(this->keySettings.neutralRotorMode);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.rotateLeft);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.rotateRight);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.fire);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.incrementInclinationAngle);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.decrementInclinationAngle);
+	inFile.ignore(500, '\n');
+	
+	inFile >> inputWord;
+	inFile.ignore(500, '\n');
+	if (inputWord == "false")
+		this->missilesWithInitialVelocity = false;
+	else
+		this->missilesWithInitialVelocity = true;
+	
+	inFile.get(this->keySettings.incrementMissileInitialSpeed);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.decrementMissileInitialSpeed);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.frictionEnable);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.frictionDisable);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.updateKeySettings);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.showPopupHelpScreen);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.hidePopupHelpScreen);
+	inFile.ignore(500, '\n');
+	
 	
 	inFile.close();
 }
@@ -75,35 +143,58 @@ void Configuration::initKeySettings() {
 
 // getter functions of our singelton class 
 unsigned int Configuration::getScreenWidth() {
-	return Configuration::getInstance()->screenWidth;
+	return this->screenWidth;
 }
 
 
 
 unsigned int Configuration::getScreenHeight() {
-	return Configuration::getInstance()->screenHeight;
+	return this->screenHeight;
 }
 
 
 
 KeySettings Configuration::getKeySettings() {
-	return Configuration::getInstance()->keySettings;
+	return this->keySettings;
 }
 
 
-// new functions have been implemented 
+
 void Configuration::activateFriction() {
-	Configuration::getInstance()->friction = true;
+	this->friction = true;
 }
 
 
 
 void Configuration::disactivateFriction() {
-	Configuration::getInstance()->friction = false;
+	this->friction = false;
+}
+
+
+bool Configuration::isMouseControl() {
+	return this->mouseControl;
+}
+
+
+
+bool Configuration::isAutoCamera() {
+	return this->autoCamera;
 }
 
 
 
 bool Configuration::isFrictionActive() {
-	return Configuration::getInstance()->friction;
+	return this->friction;
 }
+
+
+
+bool Configuration::isMissilesWithInitialVelocity() {
+	return this->missilesWithInitialVelocity;
+}
+
+
+
+
+
+

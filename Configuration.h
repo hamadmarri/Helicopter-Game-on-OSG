@@ -14,39 +14,51 @@
 #include <fstream>
 
 struct KeySettings {
-	char resetJoystick, zeroRotorSpeed,
-	decreaseRotorSpeed, increaseRotorSpeed,  neutralRotorMode;
+	char movingForward, movingRight, movingLeft, movingBackward,
+	resetJoystick, zeroRotorSpeed,
+	decreaseRotorSpeed, increaseRotorSpeed, neutralRotorMode,
+	rotateLeft, rotateRight,
+	fire, incrementInclinationAngle, decrementInclinationAngle,
+	incrementMissileInitialSpeed, decrementMissileInitialSpeed,
+	frictionEnable, frictionDisable,
+	updateKeySettings, showPopupHelpScreen, hidePopupHelpScreen;
 };
 
 
 class Configuration{
 public:
-    // static (singelton)
-    static Configuration* getInstance();
-    static unsigned int getScreenWidth();
-	static unsigned int getScreenHeight();
-    // new functions
-    static void activateFriction();
-	static void disactivateFriction();
-	static bool isFrictionActive();
-    
+
+	Configuration();
+	unsigned int getScreenWidth();
+	unsigned int getScreenHeight();
+
+	bool isMouseControl();
+	bool isAutoCamera();
+	void activateFriction();
+	void disactivateFriction();
+	bool isFrictionActive();
+	bool isMissilesWithInitialVelocity();
+	
+	void initKeySettings();
 	KeySettings getKeySettings();
     
 private:
-	Configuration() {};
-	Configuration(const Configuration&);
-	void operator=(const Configuration&);
 	
 	void initialize();
 	void initScreanSizeSettings();
-	void initKeySettings();
 	
 	unsigned int screenWidth;
 	unsigned int screenHeight;
 	
 	KeySettings keySettings;
-    bool friction;
+    
+	
+	bool mouseControl;
+	bool autoCamera;
+	bool friction;
+	
 
+	bool missilesWithInitialVelocity;
     
 };
 

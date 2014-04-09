@@ -12,13 +12,13 @@
 #include "Obstacle.h"
 
 
-Obstacle::Obstacle():Model() {
+Obstacle::Obstacle(Game *game) : Model(game) {
     
 }
 
 
 
-Obstacle::Obstacle(osg::Node* node) {
+Obstacle::Obstacle(Game *game, osg::Node* node) : Model(game) {
     set(node);
 }
 
@@ -27,3 +27,17 @@ Obstacle::Obstacle(osg::Node* node) {
 void Obstacle::set(osg::Node* node) {
 	this->node->addChild(node);
 }
+
+
+
+osg::BoundingSphere Obstacle::getBound() {
+	return osg::BoundingSphere(this->PAT->getBound());
+}
+
+
+
+void Obstacle::collide() {
+}
+
+
+

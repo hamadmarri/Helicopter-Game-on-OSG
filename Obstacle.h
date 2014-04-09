@@ -16,14 +16,20 @@
 
 
 #include "Model.h"
+#include "Collidable.h"
+
+class Game;
+
 
 // constructing the obstacle class
-class Obstacle : public Model {
+class Obstacle : public Model, public Collidable {
 public:
-    Obstacle();
-    Obstacle(osg::Node* node);
+    Obstacle(Game *game);
+    Obstacle(Game *game, osg::Node* node);
     void set(osg::Node* node);
+	osg::BoundingSphere getBound();
+	void collide();
 };
 
-
+#include "Game.h"
 #endif

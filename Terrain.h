@@ -14,10 +14,13 @@
 #include "Model.h"
 #include "WorldConstants.h"
 
+class Game;
+
 class Terrain : public Model {
 public:
-    Terrain();
+    Terrain(Game *game);
     ~Terrain(); // adding deconstructor 
 };
 
+#include "Game.h"
 #endif

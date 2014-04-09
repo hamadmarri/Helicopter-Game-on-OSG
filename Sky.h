@@ -13,11 +13,14 @@
 
 #include "Model.h"
 
+class Game;
+
 class Sky : public Model {
 public:
-    Sky();
+    Sky(Game *game);
     ~Sky();
 };
 
 
+#include "Game.h"
 #endif

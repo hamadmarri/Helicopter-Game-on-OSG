@@ -24,8 +24,7 @@ std::string parseArgs(int argc, char** argv, std::string command) {
 
 
 int main(int argc, char** argv) {
-	
-//	SimulatorTest t;
+//	RealTimeTest t;
 //	
 //	t.run();
 	

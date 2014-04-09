@@ -16,21 +16,24 @@
 #include "Helicopter.h"
 #include "Observable.h"
 #include "Invoker.h"
-#include "JoystickCommands.h"
-#include "RotorCommands.h"
+#include "AllCommands.h"
 #include "Configuration.h"
 
+
+class Game;
 
 class HelicopterController : public osgGA::GUIEventHandler {
 public:
 	
-	HelicopterController(Helicopter *helicopter);
+	HelicopterController(Game *game, Helicopter *helicopter);
 	
 	virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*);
 	
 private:
 	Helicopter *helicopter;
 	Invoker commandsInvoker;
+	Game *game;
 };
 
+#include "Game.h"
 #endif

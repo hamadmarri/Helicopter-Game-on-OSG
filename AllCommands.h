@@ -6,5 +6,6 @@
 #include "DelayCommand.h"
 #include "JoystickCommands.h"
 #include "RotorCommands.h"
+#include "MissileCommand.h"
 
 #endif

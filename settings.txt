@@ -1,5 +1,24 @@
-c // reset joystick
-0 // reduce the rotor speed to zero
-1 // decrease rotor speed
-2 // increase rotor speed
-3 // set the rotor to neutral mode
+true	// allowing mouse to control helicopter movements
+true	// auto camera <= need to
+w		// moving forward
+d		// moving right
+a		// moving left
+x		// moving backward
+c		// reset joystick
+0		// reduce the rotor speed to zero
+1		// decrease rotor speed
+2		// increase rotor speed
+3		// set the rotor to neutral mode
+v		// rotate left
+b		// rotate right
+f		// missile fire
+i		// increment missile Inclination Angle;
+k		// decrement missile Inclination Angle;
+false	// is Missiles With Initial Velocity or by fuel ? (true for Initial Velocity, false for fuel)
+m		// increment missiles initial speed
+n		// decrement missiles initial speed
+7		// friction enable
+8		// friction disable
+u		// update key settings
+s		// show help popup window
+h		// hide help popup window

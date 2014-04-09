@@ -1,0 +1,18 @@
+#set_joystick theta=15.0 bearing=10.0
+
+#initial deley
+delay seconds=1.0
+
+centre_joystick
+
+throttle position=50.0
+delay seconds=3.0
+
+throttle position=30.0
+delay seconds=3.0
+
+throttle position=40.0
+
+#comment starts with a hash
+#delay seconds=3.3 # can have trailing comments
+end

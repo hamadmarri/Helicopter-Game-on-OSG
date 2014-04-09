@@ -7,17 +7,20 @@
 #include "Joystick.h"
 #include "Configuration.h"
 
+class Game;
+
 
 class JoystickMouseMovement : public Command {
 public:
-	JoystickMouseMovement(Joystick *joystick, float xCartesian, float yCartesian);
+	JoystickMouseMovement(Game *game, Joystick *joystick, float xCartesian, float yCartesian);
 	virtual bool execute();
 	
 private:
+	Game *game;
 	Joystick *joystick;
 	float xCartesian;
 	float yCartesian;
 };
 
-
+#include "Game.h"
 #endif /* defined(__HelicopterProject__JoystickMouseMovement__) */

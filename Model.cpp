@@ -7,7 +7,8 @@
 #include "Model.h"
 
 
-Model::Model() : osg::Group() {
+Model::Model(Game *game) : osg::Group() {
+	this->game = game;
 	initializer();
 }
 

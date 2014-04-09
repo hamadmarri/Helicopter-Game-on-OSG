@@ -18,10 +18,14 @@
 #include <osg/PositionAttitudeTransform>
 #include <osg/MatrixTransform>
 
+
+class Game;
+
+
 class Model : public osg::Group {
 public:
 	// default constructor
-	Model();
+	Model(Game *game);
 	
 	virtual ~Model() { };
 	
@@ -47,11 +51,13 @@ protected:
 	osg::ref_ptr<osg::PositionAttitudeTransform> PAT;
 	osg::ref_ptr<osg::MatrixTransform> matrixTransform;
 	
+	Game *game;
 private:
 	void initializer();
 };
 
 
+#include "Game.h"
 #endif /* defined(__HelicopterProject__Model__) */
 
 

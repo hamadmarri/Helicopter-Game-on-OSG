@@ -11,38 +11,82 @@
 #ifndef __HelicopterProject__Helicopter_h__
 #define __HelicopterProject__Helicopter_h__
 
+
+#include <iostream>
+#include <cmath>
+#include <string>
 #include <osgViewer/Viewer>
 #include "Configuration.h"
+#include "Model.h"
 #include "Joystick.h"
 #include "Rotor.h"
-#include "Model.h"
+#include "Missile.h"
 #include "Observer.h"
 #include "RK4.h"
 #include "EulerPhysics.h"
 #include "WorldConstants.h"
+#include "Hud.h"
+#include "Collidable.h"
+#include "Loggable.h"
+
+class Game;
+class Missile;
 
 
-class Helicopter : public Model, public Observer {
+class Helicopter : public Model, public Observer, public Collidable, public Loggable {
 public:
-    Helicopter();
+    Helicopter(Game *game);
     ~Helicopter();
     void Update(Event event);
     
     // override
 	void setPosistion(osg::Vec3f newPos);
 	void reset();
-    
+	
+	void initializeHuds();
+	
+	void addMissile();
+	void fire();
+	
 	osg::Vec3f getVelocity();
 	osg::Vec3f getAcceleration();
 	
 	Joystick* getJoystick();
-	Rotor* getRotor();
+	Rotor* getMainRotor();
+	Rotor* getTailRotor();
+	Missile* getMissile();
+	
+	osg::BoundingSphere getBound();
+	void collide();
+	
+	std::string toString();
 	
 private:
+	void updatePosition(float dt);
+	void updateOrientation();
+	void updateHuds();
+	std::string getBearingSymbol(int degree);
+	void checkIfCrashed();
+	
+	std::string fixPrecision(std::string s);
+	
+	float orientation;
 	Joystick *joystick;
-    Rotor *rotor;
+    Rotor *mainRotor;
+	Rotor *tailRotor;
+	osg::ref_ptr<Missile> missile;
     Motion *motion;
+	
+	Hud *positionHud;
+	Hud *groundSpeedAndBearingHud;
+	Hud *verticalSpeedHud;
+	Hud *liftHud;
+	Hud *thrustAndBearingHud;
+	Hud *helicopterOrientationHud;
+	Hud *missileInclinationHud;
+	Hud *missileInitialSpeedHud;
 };
 
 
+#include "Game.h"
 #endif

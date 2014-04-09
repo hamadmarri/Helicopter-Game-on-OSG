@@ -12,13 +12,14 @@
 
 #include <cmath>
 #include <osg/Vec3f>
+#include <string>
 #include "Observer.h"
 #include "Configuration.h"
 #include "WorldConstants.h"
-
+#include "Loggable.h"
 
 // it is not observer anymore now
-class Joystick {
+class Joystick : public Loggable {
 public:
 	Joystick();
 	
@@ -34,8 +35,7 @@ public:
 
     osg::Vec3f getForce();
 	
-	
-    
+	std::string toString();
 
 private:
 	double toRadian(double degree);

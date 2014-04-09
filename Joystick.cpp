@@ -42,6 +42,11 @@ void Joystick::set_theta(double theta) {
 
 
 void Joystick::set_phi(double phi) {
+	if (phi > 360)
+		phi -= 360;
+	else if (phi < 0)
+		phi += 360;
+	
     this->phi = phi;
 }
 
@@ -75,4 +80,12 @@ osg::Vec3f Joystick:: getForce() {
 double Joystick::toRadian(double degree) {
     return (degree * WORLD_PI) / 180;
 }
+
+
+
+std::string Joystick::toString() {
+	return "Joystick: theta=" + std::to_string(this->theta) + " phi=" + std::to_string(this->phi) + '\n';
+}
+
+
 

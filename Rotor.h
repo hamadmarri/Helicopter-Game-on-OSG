@@ -16,24 +16,29 @@
 // these libraries have been added 
 #include <cmath>
 #include <osg/Vec3f>
+#include <string>
 #include "Observer.h"
 #include "WorldConstants.h"
+#include "Loggable.h"
+
 
 class Rotor {
 public:
     Rotor();
+	Rotor(float unit);
+	
     //void Update(Event event);
     void setMagnitude(float magnitude);
     void setMagnitudeInPercentage(float percentage);
 	void decreaseMagnitude();
 	void increaseMagnitude();
 	void setNeutral();
-
-	
 	float getMagnitude() const;
+	std::string toString();
 	
 private:
     float magnitude;
+	float unit;
 };
 
 #endif

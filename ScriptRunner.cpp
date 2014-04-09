@@ -94,7 +94,7 @@ void ScriptRunner::parse_throttle() {
 	
 	percentage = atof(word.c_str());
 	
-	this->commands.addCommand(new RotorPercentage(this->helicopter->getRotor(), percentage));
+	this->commands.addCommand(new RotorPercentage(this->helicopter->getMainRotor(), percentage));
 }
 
 

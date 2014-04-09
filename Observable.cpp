@@ -14,6 +14,7 @@ void Observable::AddObserver(Observer *observer) {
 }
 
 
+
 void Observable::RemoveObserver(Observer *observer) {
 	auto it = std::find(this->observers.begin(), this->observers.end(), observer);
 	if (it != this->observers.end())
@@ -21,7 +22,11 @@ void Observable::RemoveObserver(Observer *observer) {
 }
 
 
+
 void Observable::NotifyAll(Event event) {
 	for (auto observer = this->observers.begin(); observer != this->observers.end(); observer++)
 		(*observer)->Update(event);
 }
+
+
+

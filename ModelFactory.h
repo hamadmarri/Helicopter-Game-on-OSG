@@ -18,6 +18,8 @@
 #include "Obstacle.h"
 
 
+class Game;
+
 // enum for model children
 enum class ModelsTypes {
 	HELICOPTER,
@@ -25,33 +27,21 @@ enum class ModelsTypes {
 	SKY,
 	EIFFEL_TOUR,
 	LARGE_RESIDENTIAL_HIGHRISE,
-	LARGE_RESIDENTIAL_HIGHRISE_ORANGE
+	LARGE_RESIDENTIAL_HIGHRISE_ORANGE,
+	TARGET
 };
 
 
 class ModelFactory {
 public:
-	
-	/*
-	 it returns an instance of this class
-	 it should be called whenever needs to
-	 use the functionality of ModelFactory
-	 
-	 */
-	static ModelFactory* getInstance();
-	static Model* create(ModelsTypes modelType);
+	ModelFactory(Game *game);
+	Model* create(ModelsTypes modelType);
 	
 private:
-	// empty constructor
-	ModelFactory() {};
-	
-	// these methods are not implemented
-	// in order to satisfy singleton properties
-	ModelFactory(const ModelFactory&);
-	void operator=(const ModelFactory&);
+	Game *game;
 };
 
-
+#include "Game.h"
 #endif
 
 

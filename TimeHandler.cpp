@@ -12,7 +12,7 @@
 #include "TimeHandler.h"
 
 
-// implementation of the constructor passing an instance of a Game to set the previous time, game, and start logging. 
+// implementation of the constructor passing an instance of a Game to set the previous time, game, and start logging.
 TimeHandler::TimeHandler(Game *game) {
 	this->previousTime = std::chrono::high_resolution_clock::now();
 	

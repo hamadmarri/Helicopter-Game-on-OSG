@@ -1,20 +1,21 @@
 //
-//  HelicopterController.cpp
-//  testOsg
+//  GameController.cpp
 //
-//  Created by Fares Alotaibi on 2014-03-26.
+//	See main.cpp file header for credits
 //
 //
 
-#include "HelicopterController.h"
+#include "GameController.h"
 
 
-HelicopterController::HelicopterController(Game *game, Helicopter *helicopter) {
+GameController::GameController(Game *game, Helicopter *helicopter) {
 	this->game = game;
 	this->helicopter = helicopter;
 }
 
-bool HelicopterController::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*) {
+
+
+bool GameController::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*) {
 	
 	// e for event type
 	auto e = ea.getEventType();

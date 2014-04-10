@@ -39,7 +39,7 @@ void Game::initialize() {
 	
 	osg::ref_ptr<Model> target = mf.create(ModelsTypes::TARGET);
 	
-    HelicopterController *helicopterController = new HelicopterController(this, helicopter.get());
+    GameController *helicopterController = new GameController(this, helicopter.get());
 	this->nodeTracker = new osgGA::NodeTrackerManipulator;
 
 	

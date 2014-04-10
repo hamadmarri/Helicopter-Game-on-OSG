@@ -23,7 +23,7 @@
 #include "Helicopter.h"
 #include "ModelFactory.h"
 #include "TimeHandler.h"
-#include "HelicopterController.h"
+#include "GameController.h"
 #include "ScriptRunner.h"
 #include "Configuration/Configuration.h"
 #include "HudsManager.h"

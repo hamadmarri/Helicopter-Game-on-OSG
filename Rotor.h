@@ -3,7 +3,8 @@
 //
 //	See main.cpp file header for credits
 //
-//	A Rotor class to handle the rotor in the helicopter.
+//	A Rotor class to handle the rotor in the helicopter. The main purpose of this class is to setMagnitude,setMagnitude in
+//  in percentage, decrease the magnitude, increase the magnitude, set the neutral.
 //
 //
 // 
@@ -24,10 +25,10 @@
 
 class Rotor {
 public:
-    Rotor();
+    Rotor();            // constructors
 	Rotor(float unit);
 	
-    //void Update(Event event);
+    // member functions
     void setMagnitude(float magnitude);
     void setMagnitudeInPercentage(float percentage);
 	void decreaseMagnitude();
@@ -36,7 +37,7 @@ public:
 	float getMagnitude() const;
 	std::string toString();
 	
-private:
+private:        // two private members float
     float magnitude;
 	float unit;
 };

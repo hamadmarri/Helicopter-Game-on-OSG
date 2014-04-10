@@ -24,11 +24,11 @@ class Game;
 // constructing the obstacle class
 class Obstacle : public Model, public Collidable {
 public:
-    Obstacle(Game *game);
+    Obstacle(Game *game);           //copy construcotrs
     Obstacle(Game *game, osg::Node* node);
-    void set(osg::Node* node);
-	osg::BoundingSphere getBound();
-	void collide();
+    void set(osg::Node* node);    // set the node function
+	osg::BoundingSphere getBound();   // boundry library from th OSG
+	void collide();                     // a void function collide 
 };
 
 #include "Game.h"

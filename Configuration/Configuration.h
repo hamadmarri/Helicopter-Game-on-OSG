@@ -3,8 +3,10 @@
 //
 //	See main.cpp file header for credits
 //
-//	Singleton class Configuration has been implemented.
+//	Configuration saves all game configuration by reading settings.txt file and fill
+//	up KeySettings struct. Configuration gets the screen size also.
 // 
+
 
 #ifndef __HelicopterProject__Configuration_h__
 #define __HelicopterProject__Configuration_h__
@@ -14,6 +16,7 @@
 #include <fstream>
 
 
+// KeySettings struct holds all key settings as chars
 struct KeySettings {
 	char movingForward, movingRight, movingLeft, movingBackward,
 	resetJoystick, zeroRotorSpeed,
@@ -24,6 +27,7 @@ struct KeySettings {
 	frictionEnable, frictionDisable,
 	updateKeySettings, showPopupHelpScreen, hidePopupHelpScreen;
 };
+
 
 
 class Configuration{
@@ -43,6 +47,7 @@ public:
 	void initKeySettings();
 	KeySettings getKeySettings();
     
+	
 private:
 	
 	void initialize();
@@ -53,7 +58,6 @@ private:
 	
 	KeySettings keySettings;
     
-	
 	bool mouseControl;
 	bool autoCamera;
 	bool friction;

@@ -27,7 +27,7 @@
 #include "WorldConstants.h"
 #include "Hud.h"
 #include "Collidable.h"
-#include "Loggable.h"
+#include "Logger/Loggable.h"
 
 class Game;
 class Missile;

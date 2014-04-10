@@ -28,7 +28,7 @@
 #include "Configuration.h"
 #include "HudsManager.h"
 #include "Collision.h"
-#include "Logger.h"
+#include "Logger/Logger.h"
 
 
 class Game {

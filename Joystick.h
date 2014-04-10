@@ -16,7 +16,7 @@
 #include "Observer.h"
 #include "Configuration.h"
 #include "WorldConstants.h"
-#include "Loggable.h"
+#include "Logger/Loggable.h"
 
 // it is not observer anymore now
 class Joystick : public Loggable {

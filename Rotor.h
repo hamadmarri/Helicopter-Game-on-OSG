@@ -19,7 +19,7 @@
 #include <string>
 #include "Observer.h"
 #include "WorldConstants.h"
-#include "Loggable.h"
+#include "Logger/Loggable.h"
 
 
 class Rotor {

@@ -13,6 +13,7 @@
 #include <osg/GraphicsContext>
 #include <fstream>
 
+
 struct KeySettings {
 	char movingForward, movingRight, movingLeft, movingBackward,
 	resetJoystick, zeroRotorSpeed,

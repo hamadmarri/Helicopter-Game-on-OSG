@@ -12,7 +12,7 @@
 #include "../Helicopter.h"
 #include "../ModelFactory.h"
 #include "../AllCommands.h"
-#include "../Configuration.h"
+#include "../Configuration/Configuration.h"
 #include "../Game.h"
 
 

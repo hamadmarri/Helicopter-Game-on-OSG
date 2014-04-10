@@ -18,7 +18,7 @@
 #include <osg/Vec3f>
 #include <string>
 #include "Observer.h"
-#include "WorldConstants.h"
+#include "Configuration/WorldConstants.h"
 #include "Logger/Loggable.h"
 
 

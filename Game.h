@@ -25,7 +25,7 @@
 #include "TimeHandler.h"
 #include "HelicopterController.h"
 #include "ScriptRunner.h"
-#include "Configuration.h"
+#include "Configuration/Configuration.h"
 #include "HudsManager.h"
 #include "Collision.h"
 #include "Logger/Logger.h"

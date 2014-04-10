@@ -12,8 +12,8 @@
 #include "EulerPhysics.h"
 #include "RK4.h"
 #include "Observer.h"
-#include "Configuration.h"
-#include "WorldConstants.h"
+#include "Configuration/Configuration.h"
+#include "Configuration/WorldConstants.h"
 #include "Hud.h"
 #include "Collidable.h"
 

@@ -12,7 +12,7 @@
 #define __HelicopterProject__Terrain_h__
 
 #include "Model.h"
-#include "WorldConstants.h"
+#include "Configuration/WorldConstants.h"
 
 class Game;
 

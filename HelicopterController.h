@@ -17,7 +17,7 @@
 #include "Observable.h"
 #include "Invoker.h"
 #include "AllCommands.h"
-#include "Configuration.h"
+#include "Configuration/Configuration.h"
 
 
 class Game;

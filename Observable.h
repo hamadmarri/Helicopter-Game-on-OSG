@@ -2,7 +2,7 @@
 //  Observable.h
 //
 //	See main.cpp file header for credits
-//
+//  Obserable class to add observer, remove observer, and a main function to notifyall event.
 
 #ifndef __HelicopterProject__Observable_h__
 #define __HelicopterProject__Observable_h__
@@ -14,12 +14,12 @@
 
 class Observable {
 public:
-	void AddObserver(Observer *observer);
-    void RemoveObserver(Observer *observer);
-    void NotifyAll(Event event);
+	void AddObserver(Observer *observer);   // add observer
+    void RemoveObserver(Observer *observer);    // delete observer
+    void NotifyAll(Event event);                // notifyAll fucntion
 
 protected:
-	std::vector<Observer*> observers;
+	std::vector<Observer*> observers;           // a vector of observer class which an abstract class
 };
 
 

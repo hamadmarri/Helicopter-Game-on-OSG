@@ -42,7 +42,7 @@ bool TimeHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapt
 		this->previousTime = this->nowTime;
 		
 		
-		// test logger
+		// log
 		game->logger.log();
 		
 		return true;

@@ -5,8 +5,7 @@
 //
 
 /* TimeHandler class inheritis from GUIEventHandler and Obserable class, to manage events. Events like time, get the current
-   time , previous time, notify all observes classes, check collisions, and calculate the duration, time shifting, and
-   test the logger.
+   time , previous time, notify all observes classes, check collisions, and calculate the duration, time shifting, and logging.
  
  */
 

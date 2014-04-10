@@ -63,9 +63,12 @@ void Logger::endLogging() {
 
 
 void Logger::log() {
+	
+	// if logging is disabled, quit
 	if (!this->loggingEnabled)
 		return;
 	
+	// output the time stamp to log file
 	printTime();
 	
 	// log all loggables
@@ -78,7 +81,10 @@ void Logger::log() {
 void Logger::printTime() {
 	using namespace std::chrono;
 	
+	// take the duration
 	duration<double> elapsedTime = high_resolution_clock::now() - this->startTime;
+	
+	// get microseconds of that duration
 	microseconds us(duration_cast<microseconds>(elapsedTime).count());
 	
 	// split into hours, minutes, seconds, milliseconds, and microseconds
@@ -88,6 +94,7 @@ void Logger::printTime() {
 	milliseconds ms = duration_cast<milliseconds>(us % seconds(1));
 	us = us % milliseconds(1);
 	
+	// output the time
 	this->outFile	<< "[" << h.count() << "::" << m.count() << "::" << s.count()
 					<< "::" << ms.count() << "::" << us.count() << "]" << std::endl;
 }

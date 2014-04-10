@@ -5,6 +5,7 @@
 //
 //	The Terrain class, it has only one constructor to set the position
 //	of our terrain and call a file "model" and set it to the scen in the helicopter game.
+//  Terrain class inherits public from Model class.
 //
 
 
@@ -13,12 +14,12 @@
 
 #include "Model.h"
 #include "Configuration/WorldConstants.h"
-
+// define Game class 
 class Game;
-
+// inheritance from Model public
 class Terrain : public Model {
 public:
-    Terrain(Game *game);
+    Terrain(Game *game); // constructor
     ~Terrain(); // adding deconstructor 
 };
 

@@ -7,5 +7,7 @@
 #include "JoystickCommands.h"
 #include "RotorCommands.h"
 #include "MissileCommand.h"
+#include "FireCommand.h"
+
 
 #endif

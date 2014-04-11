@@ -77,7 +77,7 @@ bool GameController::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAd
 		
 		// if fire key pressed
 		if (k == this->game->getConfiguration()->getKeySettings().fire)
-			this->helicopter->fire();
+			this->commandsInvoker.addCommand(new FireCommand(this->helicopter));
 		
 		// if increment missile's inclination angle key pressed
 		if (k == this->game->getConfiguration()->getKeySettings().incrementInclinationAngle)

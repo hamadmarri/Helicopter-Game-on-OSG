@@ -7,7 +7,6 @@
 #include "Command.h"
 #include "Game.h"
 
-//class Game;
 
 class DeactivateFrictionCommand : public Command {
 public:

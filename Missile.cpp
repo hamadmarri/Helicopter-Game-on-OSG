@@ -94,9 +94,9 @@ void Missile::checkTimeout() {
 	this->endTime = std::chrono::system_clock::now();
 	std::chrono::duration<double> elapsed_seconds = this->endTime - this->startTime;
 	
-	if (elapsed_seconds.count() > 20) {
+	if (elapsed_seconds.count() > 20) {             // check if it is more than 20 seconds
 		game->getHudsManager()->removeHud(this->missileSpeedHud);
-		delete this->missileSpeedHud;
+		delete this->missileSpeedHud;                   // here we remove it from the hud display
 		this->fired = false;
 		this->node->removeChild((unsigned int)0);
 	}
@@ -202,8 +202,7 @@ void Missile::collide() {
 	this->missileShape->setShape(new osg::Sphere(osg::Vec3(0.0f, 0.0f,0.0f), 5.5f));  // here we make it bigger
 	this->missileShape->setColor(osg::Vec4(1.0f,0.0f,0.0f,1.0f));               // set the color red
 	this->fired = false;
-	game->getHudsManager()->removeHud(this->missileSpeedHud);
-//	delete this->missileSpeedHud;
+	game->getHudsManager()->removeHud(this->missileSpeedHud);                // then remove it from the hud display
 }
 
 

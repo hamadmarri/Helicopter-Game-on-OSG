@@ -8,9 +8,9 @@
 #include "Configuration.h"
 
 
-class JoyStickSetManually : public Command {
+class JoystickSetManually : public Command {
 public:
-	JoyStickSetManually(Joystick *joystick, float theta, float phi);
+	JoystickSetManually(Joystick *joystick, float theta, float phi);
 	virtual bool execute();
 	
 private:

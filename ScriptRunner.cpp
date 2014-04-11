@@ -86,7 +86,7 @@ void ScriptRunner::parse_set_joystick() {
     // then we take the value and store it in bearing
 	bearing = -1 * atof(word.c_str());
 	// after that we pass it to the commands that will pass it to the helicopter and set theta and bearing to joystick
-	this->commands.addCommand(new JoyStickSetManually(this->helicopter->getJoystick(), theta, bearing));
+	this->commands.addCommand(new JoystickSetManually(this->helicopter->getJoystick(), theta, bearing));
 }
 
 

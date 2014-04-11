@@ -1,3 +1,4 @@
+//	See main.cpp file header for credits
 
 #ifndef __HelicopterProject__FireCommand_h__
 #define __HelicopterProject__FireCommand_h__
@@ -15,4 +16,4 @@ private:
 	Helicopter *helicopter;
 };
 
-#endif /* defined(__HelicopterProject__FireCommand__) */
+#endif

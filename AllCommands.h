@@ -8,6 +8,6 @@
 #include "RotorCommands.h"
 #include "MissileCommand.h"
 #include "FireCommand.h"
-
+#include "GameCommands.h"
 
 #endif

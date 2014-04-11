@@ -172,7 +172,7 @@ void Configuration::activateFriction() {
 
 
 
-void Configuration::disactivateFriction() {
+void Configuration::deactivateFriction() {
 	this->friction = false;
 }
 

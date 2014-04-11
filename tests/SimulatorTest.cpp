@@ -47,7 +47,7 @@ void SimulatorTest::hover() {
 	std::cout << "\nhover test started:" << std::endl;
 	
 	setUp();
-	this->game->getConfiguration()->disactivateFriction();
+	this->game->getConfiguration()->deactivateFriction();
 
 	helicopter->getMainRotor()->increaseMagnitude();
 	helicopter->getMainRotor()->increaseMagnitude();
@@ -120,8 +120,8 @@ void SimulatorTest::someSetOfJoystick_throttle_delayTest() {
 	
 	setUp();
 	
-	// disavtivate friction
-	this->game->getConfiguration()->disactivateFriction();
+	// deavtivate friction
+	this->game->getConfiguration()->deactivateFriction();
 	
 	
 	/*********** phase 1 **********/
@@ -263,7 +263,7 @@ void SimulatorTest::returnBackToPositionZero() {
 	setUp();
 	
 	// disavtivate friction
-	this->game->getConfiguration()->disactivateFriction();
+	this->game->getConfiguration()->deactivateFriction();
 	
 	RotorIncrease ri(helicopter->getMainRotor());
 	RotorDecrease rd(helicopter->getMainRotor());

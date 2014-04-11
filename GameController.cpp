@@ -101,11 +101,11 @@ bool GameController::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAd
 		
 		// if enable friction key pressed
 		if (k == this->game->getConfiguration()->getKeySettings().frictionEnable)
-			this->game->getConfiguration()->activateFriction();
+			this->commandsInvoker.addCommand(new ActivateFrictionCommand(this->game));
 		
 		// if disable friction key pressed
 		if (k == this->game->getConfiguration()->getKeySettings().frictionDisable)
-			this->game->getConfiguration()->disactivateFriction();
+			this->game->getConfiguration()->deactivateFriction();
 		
 		// if startLogging
 		if (k == this->game->getConfiguration()->getKeySettings().startLogging && !this->game->logger->isLoggingEnabled())

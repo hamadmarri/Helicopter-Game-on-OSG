@@ -41,7 +41,7 @@ public:
 	bool isMouseControl();
 	bool isAutoCamera();
 	void activateFriction();
-	void disactivateFriction();
+	void deactivateFriction();
 	bool isFrictionActive();
 	bool isMissilesWithInitialVelocity();
 	

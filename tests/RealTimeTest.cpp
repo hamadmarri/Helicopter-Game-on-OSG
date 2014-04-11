@@ -46,7 +46,7 @@ void RealTimeTest::hover() {
 	
 	std::cout << "\nhover test started:" << std::endl;
 	
-	game.getConfiguration()->disactivateFriction();
+	game.getConfiguration()->deactivateFriction();
 	Helicopter *helicopter = game.getHelicopter();
 	
 	helicopter->reset();

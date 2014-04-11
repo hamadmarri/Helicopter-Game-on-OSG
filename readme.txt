@@ -7,6 +7,7 @@ After compilation place setting.txt in the same directory of the executable file
 
 
 Run arguments:
+--help
 --log: followed by log file name
 --script: followed by script file name
 --test: followed by r for real time test or s for simulator test

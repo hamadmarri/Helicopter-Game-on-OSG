@@ -1,6 +1,6 @@
 //	See main.cpp file header for credits
 
-#include "JoyStickMoveLeft.h"
+#include "JoystickMoveLeft.h"
 
 
 JoystickMoveLeft::JoystickMoveLeft(Joystick *joystick) {

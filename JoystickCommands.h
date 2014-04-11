@@ -9,6 +9,6 @@
 #include "JoystickMoveBackward.h"
 #include "JoystickCenter.h"
 #include "JoystickMouseMovement.h"
-#include "JoyStickSetManually.h"
+#include "JoystickSetManually.h"
 
 #endif

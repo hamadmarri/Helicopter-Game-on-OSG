@@ -1,6 +1,6 @@
 //	See main.cpp file header for credits
 
-#include "JoyStickSetManually.h"
+#include "JoystickSetManually.h"
 
 
 JoyStickSetManually::JoyStickSetManually(Joystick *joystick, float theta, float phi) {

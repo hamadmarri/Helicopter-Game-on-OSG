@@ -12,7 +12,7 @@ JoystickMoveForward::JoystickMoveForward(Joystick *joystick) {
 }
 
 
-// boolean function to take our passed pointer joystick and set it's theta to 15.0 and it's phi to 0.0 
+// boolean function to take our passed pointer joystick and set it's theta to 15.0 and it's phi to 0.0
 bool JoystickMoveForward::execute() {
 	this->joystick->set_theta(15.0);
 	this->joystick->set_phi(0.0);

@@ -7,7 +7,7 @@
 //	it saves loggable objects in a vector and call toString function of them respectively.
 //	It's also print the time information in form hh::mm::ss::ms::um (i.e. hours, minutes, seconds, milliseconds, and microseconds)
 //
-
+//
 
 
 #ifndef __HelicopterProject__Logger_h__

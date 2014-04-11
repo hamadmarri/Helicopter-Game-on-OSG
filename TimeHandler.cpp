@@ -17,7 +17,7 @@ TimeHandler::TimeHandler(Game *game) {
 	this->previousTime = std::chrono::high_resolution_clock::now();
 	
 	this->game = game;
-	game->logger.startLogging();
+	game->logger->startLogging();
 }
 
 
@@ -41,9 +41,8 @@ bool TimeHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapt
 		// shift time
 		this->previousTime = this->nowTime;
 		
-		
 		// log
-		game->logger.log();
+		game->logger->log();
 		
 		return true;
 	}

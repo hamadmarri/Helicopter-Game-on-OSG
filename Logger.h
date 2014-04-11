@@ -34,6 +34,8 @@ public:
 	// destructor
 	~Logger();
 	
+	// set log file name
+	void setFileName(std::string fileName);
 	
 	// to add logable in loggables vector
 	void addLoggable(Loggable* loggable);

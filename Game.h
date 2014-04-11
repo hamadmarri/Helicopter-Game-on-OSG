@@ -37,8 +37,9 @@ public:
 	Game();
 	~Game();
 	
-    void initialize();
-    
+    void initialize(std::string logFileName);
+	void initialize();
+	
 	void run();
 	void run(const char *fileName);
 	
@@ -62,7 +63,7 @@ public:
 	
 	Collision collision;
 	
-	Logger logger;
+	Logger *logger;
 	
 private:
 	static void runScript(const char *fileName, osg::ref_ptr<Helicopter> helicopter);

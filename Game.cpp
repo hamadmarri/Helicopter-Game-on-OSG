@@ -15,6 +15,7 @@ Game::Game() {
 	this->configuration = new Configuration();
 	this->hudsManager = new HudsManager(this, 0);
 	this->popupHelpScreen = nullptr;
+	this->logger = nullptr;
 }
 
 
@@ -25,10 +26,22 @@ Game::~Game() {
 
 
 
+void Game::initialize(std::string logFileName) {
+	this->logger = new Logger(logFileName);
+	initialize();
+}
+
+
+
 void Game::initialize() {
     
+	// check if log file not set, then set default file name
+	if (this->logger == nullptr)
+		this->logger = new Logger();
+	
+	
+	timeHandler = new TimeHandler(this);
 	ModelFactory mf(this);
-	timeHandler = new  TimeHandler(this);
     root = new osg::Group();
 	osg::ref_ptr<Helicopter> helicopter = static_cast<Helicopter*>(mf.create(ModelsTypes::HELICOPTER));
 	osg::ref_ptr<Model> terrain = mf.create(ModelsTypes::TERRAIN);
@@ -53,8 +66,8 @@ void Game::initialize() {
 	this->models.push_back(building2.get());
 	this->models.push_back(target.get());
 	
-	
-    // add obeservers
+    
+	// add obeservers
     timeHandler->AddObserver(helicopter.get());
 	
 	
@@ -66,7 +79,7 @@ void Game::initialize() {
     
 	
 	// add loggables
-	this->logger.addLoggable(helicopter.get());
+	this->logger->addLoggable(helicopter.get());
 	
 	
 	// initialize popup help screen

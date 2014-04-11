@@ -18,7 +18,7 @@
 
 
 
-bool askForHelp(int argc, char** argv) {
+bool isAskForHelp(int argc, char** argv) {
 	for (int i = 1; i < argc; i++)
 		if (strcmp(argv[1], "--help") == 0)
 			return true;
@@ -28,7 +28,7 @@ bool askForHelp(int argc, char** argv) {
 
 
 
-std::string parseArgs(int argc, char** argv, std::string command) {
+std::string parseArgs(int &argc, char** argv, std::string command) {
 	std::string value;
 	osg::ArgumentParser args(&argc, argv);
 	args.read(command, value );
@@ -37,16 +37,15 @@ std::string parseArgs(int argc, char** argv, std::string command) {
 
 
 
-int main(int argc, char** argv) {
-	
+int startProgram(int argc, char** argv) {
 	// game object
 	Game game;
 	
 	// to hold singe command at a time
 	std::string command = "";
-			
 	
-	if (askForHelp(argc, argv)) {
+	
+	if (isAskForHelp(argc, argv)) {
 		
 		// Print help screen
 		std::cout << "--script: followed by script file name" << std::endl;
@@ -57,8 +56,14 @@ int main(int argc, char** argv) {
 	}
 	
 	
-	// initialize game
-	game.initialize();
+	// check log first
+	if (!(command = parseArgs(argc, argv, "--log")).empty())
+		// initialize game with given log file name
+		game.initialize(command);
+	else
+		// initialize game normally with defaults
+		game.initialize();
+	
 	
 	// check if script
 	if (!(command = parseArgs(argc, argv, "--script")).empty())
@@ -72,9 +77,13 @@ int main(int argc, char** argv) {
 	} else
 		game.run();
 	
-
-	
 	return 0;
+}
+
+
+
+int main(int argc, char** argv) {
+	return startProgram(argc, argv);
 }
 
 

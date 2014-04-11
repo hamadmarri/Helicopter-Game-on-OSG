@@ -23,6 +23,14 @@ Logger::~Logger() {
 
 
 
+void Logger::setFileName(std::string fileName) {
+	closeFile();
+	this->fileName = fileName;
+	openFile();
+}
+
+
+
 void Logger::openFile() {
 	this->outFile.open(this->fileName.c_str());
 }

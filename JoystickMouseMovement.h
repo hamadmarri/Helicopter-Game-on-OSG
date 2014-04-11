@@ -1,11 +1,11 @@
 //	See main.cpp file header for credits
 
-#ifndef __HelicopterProject__JoystickMouseMovement__
-#define __HelicopterProject__JoystickMouseMovement__
+#ifndef __HelicopterProject__JoystickMouseMovement_h__
+#define __HelicopterProject__JoystickMouseMovement_h__
 
 #include "Command.h"
 #include "Joystick.h"
-#include "Configuration/Configuration.h"
+#include "Configuration.h"
 
 class Game;
 
@@ -23,4 +23,4 @@ private:
 };
 
 #include "Game.h"
-#endif /* defined(__HelicopterProject__JoystickMouseMovement__) */
+#endif 

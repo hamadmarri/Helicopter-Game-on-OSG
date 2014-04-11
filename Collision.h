@@ -1,6 +1,6 @@
 
-#ifndef __HelicopterProject__Collision__
-#define __HelicopterProject__Collision__
+#ifndef __HelicopterProject__Collision_h__
+#define __HelicopterProject__Collision_h__
 
 
 #include <vector>

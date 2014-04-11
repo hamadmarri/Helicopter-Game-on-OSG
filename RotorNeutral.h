@@ -2,8 +2,8 @@
 // RotorNaeutral class inherites from Command class. The main purpose of this class is to set the natural variable of
 // a rotor. It has tow main functions, a constructor and a boolean function to set the natural of a rotor and return
 // true or false.
-#ifndef __HelicopterProject__RotorNeutral__
-#define __HelicopterProject__RotorNeutral__
+#ifndef __HelicopterProject__RotorNeutral_h__
+#define __HelicopterProject__RotorNeutral_h__
 
 #include "Command.h"
 #include "Rotor.h"
@@ -18,4 +18,4 @@ private:            // one private member rotor
 	Rotor *rotor;
 };
 
-#endif /* defined(__HelicopterProject__RotorNeutral__) */
+#endif 

@@ -30,7 +30,7 @@ struct KeySettings {
 
 
 
-class Configuration{
+class Configuration {
 public:
 
 	Configuration();

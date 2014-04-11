@@ -1,6 +1,6 @@
 
-#ifndef __HelicopterProject__Missile__
-#define __HelicopterProject__Missile__
+#ifndef __HelicopterProject__Missile_h__
+#define __HelicopterProject__Missile_h__
 
 
 #include <osg/ShapeDrawable>
@@ -12,8 +12,8 @@
 #include "EulerPhysics.h"
 #include "RK4.h"
 #include "Observer.h"
-#include "Configuration/Configuration.h"
-#include "Configuration/WorldConstants.h"
+#include "Configuration.h"
+#include "WorldConstants.h"
 #include "Hud.h"
 #include "Collidable.h"
 
@@ -77,4 +77,6 @@ private:
 
 
 #include "Game.h"
-#endif /* defined(__HelicopterProject__Missile__) */
+#endif 
+
+

@@ -1,7 +1,7 @@
 //	See main.cpp file header for credits
 
-#ifndef __HelicopterProject__Invoker__
-#define __HelicopterProject__Invoker__
+#ifndef __HelicopterProject__Invoker_h__
+#define __HelicopterProject__Invoker_h__
 
 #include <queue>
 #include "Command.h"
@@ -61,4 +61,4 @@ private:
 };
 
 
-#endif /* defined(__HelicopterProject__Invoker__) */
+#endif

@@ -1,7 +1,7 @@
 //	See main.cpp file header for credits
 
-#ifndef __HelicopterProject__DelayCommand__
-#define __HelicopterProject__DelayCommand__
+#ifndef __HelicopterProject__DelayCommand_h__
+#define __HelicopterProject__DelayCommand_h__
 
 #include <thread>         // std::this_thread::sleep_for
 #include <chrono>         // std::chrono::seconds
@@ -17,4 +17,4 @@ private:
 	float seconds;
 };
 
-#endif /* defined(__HelicopterProject__DelayCommand__) */
+#endif

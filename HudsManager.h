@@ -1,6 +1,6 @@
 
-#ifndef __HelicopterProject__HudManager__
-#define __HelicopterProject__HudManager__
+#ifndef __HelicopterProject__HudManager_h__
+#define __HelicopterProject__HudManager_h__
 
 #include <vector>
 #include "Hud.h"
@@ -34,4 +34,4 @@ private:
 
 
 #include "Game.h"
-#endif /* defined(__HelicopterProject__HudManager__) */
+#endif

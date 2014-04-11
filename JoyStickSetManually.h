@@ -1,11 +1,11 @@
 //	See main.cpp file header for credits
 
-#ifndef __HelicopterProject__JoyStickSetManually__
-#define __HelicopterProject__JoyStickSetManually__
+#ifndef __HelicopterProject__JoystickSetManually_h__
+#define __HelicopterProject__JoystickSetManually_h__
 
 #include "Command.h"
 #include "Joystick.h"
-#include "Configuration/Configuration.h"
+#include "Configuration.h"
 
 
 class JoyStickSetManually : public Command {
@@ -20,4 +20,4 @@ private:
 };
 
 
-#endif /* defined(__HelicopterProject__JoyStickSetManually__) */
+#endif

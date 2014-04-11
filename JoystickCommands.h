@@ -1,7 +1,7 @@
 //	See main.cpp file header for credits
 
-#ifndef HelicopterProject_JoystickCommands_h
-#define HelicopterProject_JoystickCommands_h
+#ifndef __HelicopterProject_JoystickCommands_h__
+#define __HelicopterProject_JoystickCommands_h__
 
 #include "JoystickMoveLeft.h"
 #include "JoystickMoveForward.h"

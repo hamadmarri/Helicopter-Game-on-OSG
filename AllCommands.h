@@ -1,7 +1,7 @@
 //	See main.cpp file header for credits
 
-#ifndef HelicopterProject_AllCommands_h
-#define HelicopterProject_AllCommands_h
+#ifndef __HelicopterProject_AllCommands_h__
+#define __HelicopterProject_AllCommands_h__
 
 #include "DelayCommand.h"
 #include "JoystickCommands.h"

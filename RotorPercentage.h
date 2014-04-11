@@ -5,8 +5,8 @@
 // RotorPercentage class inherites from Command classs public.
 
 
-#ifndef __HelicopterProject__RotorPercentage__
-#define __HelicopterProject__RotorPercentage__
+#ifndef __HelicopterProject__RotorPercentage_h__
+#define __HelicopterProject__RotorPercentage_h__
 
 #include "Command.h"
 #include "Rotor.h"
@@ -22,4 +22,4 @@ private:                    // two private parameters
 	float percentage;
 };
 
-#endif /* defined(__HelicopterProject__RotorPercentage__) */
+#endif 

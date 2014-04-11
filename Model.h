@@ -11,8 +11,8 @@
 //				osg nodes' hierarchy within the model object
 //
 
-#ifndef __HelicopterProject__Model__
-#define __HelicopterProject__Model__
+#ifndef __HelicopterProject__Model_h__
+#define __HelicopterProject__Model_h__
 
 #include <osgDB/ReadFile>
 #include <osg/PositionAttitudeTransform>
@@ -58,7 +58,7 @@ private:
 
 
 #include "Game.h"
-#endif /* defined(__HelicopterProject__Model__) */
+#endif
 
 
 

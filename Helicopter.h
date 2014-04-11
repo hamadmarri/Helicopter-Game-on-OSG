@@ -16,7 +16,7 @@
 #include <cmath>
 #include <string>
 #include <osgViewer/Viewer>
-#include "Configuration/Configuration.h"
+#include "Configuration.h"
 #include "Model.h"
 #include "Joystick.h"
 #include "Rotor.h"
@@ -24,10 +24,10 @@
 #include "Observer.h"
 #include "RK4.h"
 #include "EulerPhysics.h"
-#include "Configuration/WorldConstants.h"
+#include "WorldConstants.h"
 #include "Hud.h"
 #include "Collidable.h"
-#include "Logger/Loggable.h"
+#include "Loggable.h"
 
 class Game;
 class Missile;

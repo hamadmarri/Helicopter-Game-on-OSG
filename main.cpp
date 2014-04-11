@@ -4,6 +4,9 @@
 //	Credits:
 //				Authors:			Fares Alotaibi, Hamad Almarri
 //				Incorporated code from heli-alternate project by Krim Naqvi
+//				Models:				http://scenemodels.flightgear.org/objectview.php?id=3303278
+//									http://scenemodels.flightgear.org/modelview.php?id=320
+//				RK4:				http://gafferongames.com/game-physics/integration-basics/
 //				Original authors:	Brian Schweitzer, Karlee Stein, Tylor Froese, Trevor Douglas
 //
 
@@ -46,8 +49,8 @@ int startProgram(int argc, char** argv) {
 	if (isAskForHelp(argc, argv)) {
 		
 		// Print help screen
+		std::cout << "--log: followed by log file name" << std::endl;
 		std::cout << "--script: followed by script file name" << std::endl;
-		std::cout << "--test: followed by r for real time test or s for simulator test" << std::endl;
 		std::cout << "--test: followed by r for real time test or s for simulator test" << std::endl;
 		
 		return 0;

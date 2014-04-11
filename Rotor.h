@@ -17,12 +17,11 @@
 #include <cmath>
 #include <osg/Vec3f>
 #include <string>
-#include "Observer.h"
 #include "WorldConstants.h"
 #include "Loggable.h"
 
 
-class Rotor {
+class Rotor : public Loggable {
 public:
     Rotor();            // constructors
 	Rotor(float unit);

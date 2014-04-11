@@ -1,2 +1,22 @@
-Credit: http://scenemodels.flightgear.org/objectview.php?id=3303278
-http://scenemodels.flightgear.org/modelview.php?id=320
+Rquirements for compilation:
+	- Must installed OSG libraries before compile and set global environment variables for OSG_FILE_PATH and OSG_LIBRARY_PATH.
+	- Must compile with compiler that supports C++11.
+	- It suppose to be compiled successfully on any environment.
+
+After compilation place setting.txt in the same directory of the executable file, otherwise, default settings will be set.
+
+
+Run arguments:
+--log: followed by log file name
+--script: followed by script file name
+--test: followed by r for real time test or s for simulator test
+
+
+Credits:
+				Authors:			Fares Alotaibi, Hamad Almarri
+				Incorporated code from heli-alternate project by Krim Naqvi
+				Models:				http://scenemodels.flightgear.org/objectview.php?id=3303278
+									http://scenemodels.flightgear.org/modelview.php?id=320
+				RK4:				http://gafferongames.com/game-physics/integration-basics/
+				Original authors:	Brian Schweitzer, Karlee Stein, Tylor Froese, Trevor Douglas
+

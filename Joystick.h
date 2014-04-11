@@ -13,7 +13,6 @@
 #include <cmath>
 #include <osg/Vec3f>
 #include <string>
-#include "Observer.h"
 #include "Configuration.h"
 #include "WorldConstants.h"
 #include "Loggable.h"

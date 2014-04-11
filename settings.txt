@@ -19,6 +19,8 @@ m		// increment missiles initial speed
 n		// decrement missiles initial speed
 7		// friction enable
 8		// friction disable
+l		// start logging
+p		// stop logging
 u		// update key settings
 s		// show help popup window
 h		// hide help popup window

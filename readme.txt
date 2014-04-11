@@ -13,11 +13,18 @@ Run arguments:
 --test: followed by r for real time test or s for simulator test
 
 
-Credits:
-				Authors:			Fares Alotaibi, Hamad Almarri
-				Incorporated code from heli-alternate project by Krim Naqvi
-				Models:				http://scenemodels.flightgear.org/objectview.php?id=3303278
-									http://scenemodels.flightgear.org/modelview.php?id=320
-				RK4:				http://gafferongames.com/game-physics/integration-basics/
-				Original authors:	Brian Schweitzer, Karlee Stein, Tylor Froese, Trevor Douglas
+By defaults log is enabled, see setting.txt for more info.
 
+
+Credits:
+	Authors:			Fares Alotaibi, Hamad Almarri
+	Incorporated code from heli-alternate project by Krim Naqvi
+	Models:				http://scenemodels.flightgear.org/objectview.php?id=3303278
+						http://scenemodels.flightgear.org/modelview.php?id=320
+	RK4:				http://gafferongames.com/game-physics/integration-basics/
+	Original authors:	Brian Schweitzer, Karlee Stein, Tylor Froese, Trevor Douglas
+
+
+
+
+read (How to Use the Helicopter Game.pdf)

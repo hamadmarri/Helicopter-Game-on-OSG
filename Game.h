@@ -45,14 +45,29 @@ public:
 	
 	void initializeCamera();
 	
+	void initializeHudsManager();
+	
 	void initializePopupHelpScreen();
+	
+	osg::ref_ptr<osg::Group>& getRoot();
 	
 	Helicopter* getHelicopter();
 	
 	std::vector<Model*> getModels();
 	
+	TimeHandler* getTimeHandler();
+	
 	Configuration* getConfiguration();
 	
+	HudsManager* getHudsManager();
+	
+	HudsManager* getPopupHelpScreen();
+	
+	Collision* getCollision();
+	
+	Logger* getLogger();
+	
+private:
 	TimeHandler *timeHandler;
 	
 	osg::ref_ptr<osg::Group> root;
@@ -61,11 +76,10 @@ public:
 	
 	HudsManager *popupHelpScreen;
 	
-	Collision collision;
+	Collision *collision;
 	
 	Logger *logger;
 	
-private:
 	static void runScript(const char *fileName, osg::ref_ptr<Helicopter> helicopter);
 	
 	Configuration *configuration;

@@ -11,7 +11,7 @@ HideHelpScreenCommand::HideHelpScreenCommand(Game *game) {
 
 
 bool HideHelpScreenCommand::execute() {
-	this->game->popupHelpScreen->hide();
+	this->game->getPopupHelpScreen()->hide();
 	
 	return true;
 }

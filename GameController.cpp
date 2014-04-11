@@ -108,11 +108,11 @@ bool GameController::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAd
 			this->commandsInvoker.addCommand(new DeactivateFrictionCommand(this->game));
 		
 		// if startLogging
-		if (k == this->game->getConfiguration()->getKeySettings().startLogging && !this->game->logger->isLoggingEnabled())
+		if (k == this->game->getConfiguration()->getKeySettings().startLogging && !this->game->getLogger()->isLoggingEnabled())
 			this->commandsInvoker.addCommand(new StartLoggingCommand(this->game));
 		
 		// if stopLogging
-		if (k == this->game->getConfiguration()->getKeySettings().stopLogging && this->game->logger->isLoggingEnabled())
+		if (k == this->game->getConfiguration()->getKeySettings().stopLogging && this->game->getLogger()->isLoggingEnabled())
 			this->commandsInvoker.addCommand(new StopLoggingCommand(this->game));
 		
 		// if update key settings key pressed

@@ -12,10 +12,10 @@ HudsManager::HudsManager(Game *game, unsigned int initial_Y_Position) {
 
 HudsManager::~HudsManager() {
 	for (Hud* h : this->leftHuds)
-		game->root->removeChild(h->getHudCamera());
+		game->getRoot()->removeChild(h->getHudCamera());
 	
 	for (Hud* h : this->rightHuds)
-		game->root->removeChild(h->getHudCamera());
+		game->getRoot()->removeChild(h->getHudCamera());
 }
 
 
@@ -36,7 +36,7 @@ Hud* HudsManager::createHud(HudAlignment hudAlignment) {
 	
 	hud->setText("");
 	osg::Camera *hudCamera = hud->getHudCamera();
-	game->root->addChild(hudCamera);
+	game->getRoot()->addChild(hudCamera);
 	
 	
 	// update huds positions
@@ -62,7 +62,7 @@ void HudsManager::removeHud(Hud* hud) {
 		if (h == hud)
 			this->rightHuds.erase(std::remove(this->rightHuds.begin(), this->rightHuds.end(), hud), this->rightHuds.end());
 	
-	game->root->removeChild(hud->getHudCamera());
+	game->getRoot()->removeChild(hud->getHudCamera());
 }
 
 

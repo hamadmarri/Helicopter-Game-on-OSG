@@ -11,6 +11,6 @@ StartLoggingCommand::StartLoggingCommand(Game *game) {
 
 
 bool StartLoggingCommand::execute() {
-	this->game->logger->startLogging();
+	this->game->getLogger()->startLogging();
 	return true;
 }

@@ -11,7 +11,7 @@ ShowHelpScreenCommand::ShowHelpScreenCommand(Game *game) {
 
 
 bool ShowHelpScreenCommand::execute() {
-	this->game->popupHelpScreen->show();
+	this->game->getPopupHelpScreen()->show();
 	
 	return true;
 }

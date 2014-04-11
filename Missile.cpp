@@ -26,14 +26,14 @@ Missile::Missile(Game *game, Helicopter *helicopterOwenMe) : Model(game) {
 	this->minInitialSpeed = 5;
 	this->initialSpeed = this->maxInitialSpeed = 40;
 	
-	this->missileSpeedHud = game->hudsManager->createHud(HudAlignment::RIGHT);
+	this->missileSpeedHud = game->getHudsManager()->createHud(HudAlignment::RIGHT);
 }
 
 
 
 Missile::~Missile() {
 	if (this->missileSpeedHud) {
-		game->hudsManager->removeHud(this->missileSpeedHud);
+		game->getHudsManager()->removeHud(this->missileSpeedHud);
 //		delete this->missileSpeedHud;
 	}
 }
@@ -93,7 +93,7 @@ void Missile::checkTimeout() {
 	std::chrono::duration<double> elapsed_seconds = this->endTime - this->startTime;
 	
 	if (elapsed_seconds.count() > 20) {
-		game->hudsManager->removeHud(this->missileSpeedHud);
+		game->getHudsManager()->removeHud(this->missileSpeedHud);
 		delete this->missileSpeedHud;
 		this->fired = false;
 		this->node->removeChild((unsigned int)0);
@@ -199,7 +199,7 @@ void Missile::collide() {
 	this->missileShape->setShape(new osg::Sphere(osg::Vec3(0.0f, 0.0f,0.0f), 5.5f));
 	this->missileShape->setColor(osg::Vec4(1.0f,0.0f,0.0f,1.0f));
 	this->fired = false;
-	game->hudsManager->removeHud(this->missileSpeedHud);
+	game->getHudsManager()->removeHud(this->missileSpeedHud);
 //	delete this->missileSpeedHud;
 }
 

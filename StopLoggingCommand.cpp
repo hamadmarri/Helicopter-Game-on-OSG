@@ -11,6 +11,6 @@ StopLoggingCommand::StopLoggingCommand(Game *game) {
 
 
 bool StopLoggingCommand::execute() {
-	this->game->logger->endLogging();
+	this->game->getLogger()->endLogging();
 	return true;
 }

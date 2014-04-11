@@ -13,7 +13,8 @@
 
 Game::Game() {
 	this->configuration = new Configuration();
-	this->hudsManager = new HudsManager(this, 0);
+	this->collision = new Collision();
+	initializeHudsManager();
 	this->popupHelpScreen = nullptr;
 	this->logger = nullptr;
 }
@@ -27,6 +28,8 @@ Game::~Game() {
 
 
 void Game::initialize(std::string logFileName) {
+	
+	// set logger file first and then initialize
 	this->logger = new Logger(logFileName);
 	initialize();
 }
@@ -39,8 +42,11 @@ void Game::initialize() {
 	if (this->logger == nullptr)
 		this->logger = new Logger();
 	
-	
+	// this line needs to be after logger initialization,
+	// and before helicopter initialization
 	timeHandler = new TimeHandler(this);
+	
+	// model factory to supply models
 	ModelFactory mf(this);
     root = new osg::Group();
 	osg::ref_ptr<Helicopter> helicopter = static_cast<Helicopter*>(mf.create(ModelsTypes::HELICOPTER));
@@ -49,13 +55,11 @@ void Game::initialize() {
 	osg::ref_ptr<Model> eiffelTour = mf.create(ModelsTypes::EIFFEL_TOUR);
     osg::ref_ptr<Model> building1 = mf.create(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE);
     osg::ref_ptr<Model> building2 = mf.create(ModelsTypes::LARGE_RESIDENTIAL_HIGHRISE_ORANGE);
-	
 	osg::ref_ptr<Model> target = mf.create(ModelsTypes::TARGET);
 	
     GameController *helicopterController = new GameController(this, helicopter.get());
 	this->nodeTracker = new osgGA::NodeTrackerManipulator;
 
-	
 	
 	// add models to models vector
 	this->models.push_back(helicopter.get());
@@ -72,10 +76,10 @@ void Game::initialize() {
 	
 	
 	// add collidables
-	this->collision.addCollidable(static_cast<Obstacle*>(eiffelTour.get()));
-	this->collision.addCollidable(static_cast<Obstacle*>(building1.get()));
-	this->collision.addCollidable(static_cast<Obstacle*>(building2.get()));
-	this->collision.addCollidable(static_cast<Obstacle*>(target.get()));
+	this->collision->addCollidable(static_cast<Obstacle*>(eiffelTour.get()));
+	this->collision->addCollidable(static_cast<Obstacle*>(building1.get()));
+	this->collision->addCollidable(static_cast<Obstacle*>(building2.get()));
+	this->collision->addCollidable(static_cast<Obstacle*>(target.get()));
     
 	
 	// add loggables
@@ -146,6 +150,15 @@ void Game::run(const char *fileName) {
 void Game::runScript(const char *fileName, osg::ref_ptr<Helicopter> helicopter) {
 	ScriptRunner sr(fileName, helicopter.get());
 	sr.Run();
+}
+
+
+
+void Game::initializeHudsManager() {
+	if (this->hudsManager)
+		delete this->hudsManager;
+	
+	this->hudsManager = new HudsManager(this, 0);
 }
 
 
@@ -249,6 +262,18 @@ void Game::initializePopupHelpScreen() {
 
 
 
+osg::ref_ptr<osg::Group>& Game::getRoot() {
+	return this->root;
+}
+
+
+
+TimeHandler* Game::getTimeHandler() {
+	return this->timeHandler;
+}
+
+
+
 std::vector<Model*> Game::getModels() {
 	return this->models;
 }
@@ -263,6 +288,31 @@ Helicopter* Game::getHelicopter() {
 
 Configuration* Game::getConfiguration() {
 	return this->configuration;
+}
+
+
+
+
+HudsManager* Game::getHudsManager() {
+	return this->hudsManager;
+}
+
+
+
+HudsManager* Game::getPopupHelpScreen() {
+	return this->popupHelpScreen;
+}
+
+
+
+Collision* Game::getCollision() {
+	return this->collision;
+}
+
+
+
+Logger* Game::getLogger() {
+	return this->logger;
 }
 
 

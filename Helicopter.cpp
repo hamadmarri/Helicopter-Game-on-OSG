@@ -37,17 +37,17 @@ Helicopter::Helicopter(Game *game) : Model(game) {
 
 
 void Helicopter::initializeHuds() {
-	this->positionHud = game->hudsManager->createHud(HudAlignment::LEFT);
-	this->groundSpeedAndBearingHud = game->hudsManager->createHud(HudAlignment::LEFT);
-	this->verticalSpeedHud = game->hudsManager->createHud(HudAlignment::LEFT);
-	this->liftHud = game->hudsManager->createHud(HudAlignment::LEFT);
-	this->thrustAndBearingHud = game->hudsManager->createHud(HudAlignment::LEFT);
-	this->helicopterOrientationHud = game->hudsManager->createHud(HudAlignment::LEFT);
-	this->missileInclinationHud = game->hudsManager->createHud(HudAlignment::LEFT);
+	this->positionHud = game->getHudsManager()->createHud(HudAlignment::LEFT);
+	this->groundSpeedAndBearingHud = game->getHudsManager()->createHud(HudAlignment::LEFT);
+	this->verticalSpeedHud = game->getHudsManager()->createHud(HudAlignment::LEFT);
+	this->liftHud = game->getHudsManager()->createHud(HudAlignment::LEFT);
+	this->thrustAndBearingHud = game->getHudsManager()->createHud(HudAlignment::LEFT);
+	this->helicopterOrientationHud = game->getHudsManager()->createHud(HudAlignment::LEFT);
+	this->missileInclinationHud = game->getHudsManager()->createHud(HudAlignment::LEFT);
 	
 	this->missileInitialSpeedHud = nullptr;
 	if (this->game->getConfiguration()->isMissilesWithInitialVelocity())
-		this->missileInitialSpeedHud = game->hudsManager->createHud(HudAlignment::LEFT);
+		this->missileInitialSpeedHud = game->getHudsManager()->createHud(HudAlignment::LEFT);
 }
 
 
@@ -105,7 +105,7 @@ void Helicopter::addMissile() {
 	this->missile.get()->setFuel(700); // 8s
 	this->matrixTransform->addChild(this->missile.get());
 	
-	game->timeHandler->AddObserver(missile.get());
+	game->getTimeHandler()->AddObserver(missile.get());
 }
 
 
@@ -117,10 +117,10 @@ void Helicopter::fire() {
 	pat2.get()->addChild(this->missile.get());
 	this->matrixTransform->removeChild(this->missile.get());
 	
-	game->root->addChild(pat2.get());
+	game->getRoot()->addChild(pat2.get());
 	
 	this->missile->fire();
-	game->collision.addCollidable(this->missile.get());
+	game->getCollision()->addCollidable(this->missile.get());
 	addMissile();
 }
 

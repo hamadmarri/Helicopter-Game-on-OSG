@@ -12,8 +12,8 @@ Game RealTimeTest::game;
 void RealTimeTest::run() {
 
 	game.initialize();
-	game.popupHelpScreen->hide();
-	Hud *testingHud = game.hudsManager->createHud(HudAlignment::RIGHT);
+	game.getPopupHelpScreen()->hide();
+	Hud *testingHud = game.getHudsManager()->createHud(HudAlignment::RIGHT);
 	testingHud->setText("TESTING...");
 	
 	std::thread startHoverTest(RealTimeTest::hover);
@@ -37,7 +37,7 @@ void RealTimeTest::Assert(float expected, float result, float delta) {
 
 void RealTimeTest::hover() {
 	
-	Hud *hoverTestingHud = game.hudsManager->createHud(HudAlignment::RIGHT);
+	Hud *hoverTestingHud = game.getHudsManager()->createHud(HudAlignment::RIGHT);
 	hoverTestingHud->setText("HOVER TESTING STARTED...");
 	
 	DelayCommand dc(2);
@@ -79,7 +79,7 @@ void RealTimeTest::hover() {
 
 void RealTimeTest::maxSpead() {
     
-	Hud *maxSpeadTestingHud = game.hudsManager->createHud(HudAlignment::RIGHT);
+	Hud *maxSpeadTestingHud = game.getHudsManager()->createHud(HudAlignment::RIGHT);
 	maxSpeadTestingHud->setText("MAX SPEAD TESTING STARTED...");
 	
 	DelayCommand dc(15);

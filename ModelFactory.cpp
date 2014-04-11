@@ -8,7 +8,7 @@
 
 #include "ModelFactory.h"
 
-// copy constructor to set the game
+// a constructor to set the game
 ModelFactory::ModelFactory(Game *game) {
 	this->game = game;
 }

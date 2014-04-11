@@ -1,5 +1,5 @@
 Rquirements for compilation:
-	- Must installed OSG libraries before compile and set global environment variables for OSG_FILE_PATH and OSG_LIBRARY_PATH.
+	- Must installed OpenSceneGraph(3.1.10 or above) libraries before compile and set global environment variables for OSG_FILE_PATH and OSG_LIBRARY_PATH.
 	- Must compile with compiler that supports C++11.
 	- It suppose to be compiled successfully on any environment.
 

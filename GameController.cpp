@@ -105,43 +105,27 @@ bool GameController::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAd
 		
 		// if disable friction key pressed
 		if (k == this->game->getConfiguration()->getKeySettings().frictionDisable)
-			this->game->getConfiguration()->deactivateFriction();
+			this->commandsInvoker.addCommand(new DeactivateFrictionCommand(this->game));
 		
 		// if startLogging
 		if (k == this->game->getConfiguration()->getKeySettings().startLogging && !this->game->logger->isLoggingEnabled())
-			this->game->logger->startLogging();
+			this->commandsInvoker.addCommand(new StartLoggingCommand(this->game));
 		
 		// if stopLogging
 		if (k == this->game->getConfiguration()->getKeySettings().stopLogging && this->game->logger->isLoggingEnabled())
-			this->game->logger->endLogging();
+			this->commandsInvoker.addCommand(new StopLoggingCommand(this->game));
 		
 		// if update key settings key pressed
-		if (k == this->game->getConfiguration()->getKeySettings().updateKeySettings) {
-			
-			// re-initialize key settings
-			this->game->getConfiguration()->initKeySettings();
-			
-			// re-initialize pop up help screen
-			game->initializePopupHelpScreen();
-			
-			// re-initialize camera
-			game->initializeCamera();
-			
-			// delete old hudsManager and instanciate new one
-			delete game->hudsManager;
-			game->hudsManager = new HudsManager(game, 0);
-			
-			// re-initialize helicopter huds (in case changing missile from initial speed to fuel mode)
-			helicopter->initializeHuds();
-		}
+		if (k == this->game->getConfiguration()->getKeySettings().updateKeySettings)
+			this->commandsInvoker.addCommand(new UpdateKeySettingsCommand(this->game));
 
 		// if show pop up help screen key pressed
 		if (k == this->game->getConfiguration()->getKeySettings().showPopupHelpScreen)
-			game->popupHelpScreen->show();
+			this->commandsInvoker.addCommand(new ShowHelpScreenCommand(this->game));
 		
 		// if hide pop up help screen key pressed
 		if (k == this->game->getConfiguration()->getKeySettings().hidePopupHelpScreen)
-			game->popupHelpScreen->hide();
+			this->commandsInvoker.addCommand(new HideHelpScreenCommand(this->game));
 	}
 	
 	

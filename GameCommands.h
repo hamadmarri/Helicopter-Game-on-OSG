@@ -5,5 +5,10 @@
 
 #include "ActivateFrictionCommand.h"
 #include "DeactivateFrictionCommand.h"
+#include "StartLoggingCommand.h"
+#include "StopLoggingCommand.h"
+#include "UpdateKeySettingsCommand.h"
+#include "ShowHelpScreenCommand.h"
+#include "HideHelpScreenCommand.h"
 
 #endif

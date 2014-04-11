@@ -18,7 +18,6 @@ Event::Event(EventType eventType) {
 Event::Event(EventType eventType, float dt) {
 	this->eventType = eventType;
 	this->_dt = dt;
-	
 }
 
 
@@ -26,6 +25,7 @@ Event::Event(EventType eventType, float dt) {
 EventType Event::getEventType() const {
 	return this->eventType;
 }
+
 
 // new gtter function
 float Event::dt() const {

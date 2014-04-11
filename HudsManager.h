@@ -1,3 +1,9 @@
+/* 
+ HudsManager is responsible for adding huds display on the screen
+ it arranges huds in left/right alignments
+ and also it can create huds dynamically so the client class doesn't worry about
+ arranging huds on the screen.
+ */
 
 #ifndef __HelicopterProject__HudManager_h__
 #define __HelicopterProject__HudManager_h__

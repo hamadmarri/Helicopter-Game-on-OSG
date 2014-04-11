@@ -14,9 +14,9 @@
 
 class Observable {
 public:
-	void AddObserver(Observer *observer);   // add observer
+	void AddObserver(Observer *observer);		// add observer
     void RemoveObserver(Observer *observer);    // delete observer
-    void NotifyAll(Event event);                // notifyAll fucntion
+    void NotifyAll(Event event);                // notifyAll observers
 
 protected:
 	std::vector<Observer*> observers;           // a vector of observer class which an abstract class

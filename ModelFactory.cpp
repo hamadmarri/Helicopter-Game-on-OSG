@@ -41,7 +41,7 @@ Model* ModelFactory::create(ModelsTypes modelType) {
 	else if (modelType == ModelsTypes::TARGET) {    // check if it a target, then create a sphere model
 		Obstacle *targetMdl = new Obstacle(game);
 		
-		// ********************************************      // creation of a sphere using ShapeDrawable
+		// creation of a sphere using ShapeDrawable
 		osg::ref_ptr<osg::ShapeDrawable> target;
 		target  = new osg::ShapeDrawable;
 		target->setShape(new osg::Sphere(osg::Vec3(0.0f, 0.0f,0.0f), 100.5f));      
@@ -49,7 +49,6 @@ Model* ModelFactory::create(ModelsTypes modelType) {
 		osg::ref_ptr<osg::Geode> targetNode = new osg::Geode;
 		targetNode->addDrawable(target.get());
 		targetMdl->getNode()->addChild(targetNode);
-		// ********************************************
 		
 		targetMdl->setPosistion(osg::Vec3f (1000.0f, -30.0f, 100.0f));
 		return targetMdl;

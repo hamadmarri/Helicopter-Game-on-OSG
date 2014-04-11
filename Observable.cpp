@@ -9,7 +9,7 @@
 
 // adding an observer by looping into the observers vector and push it or add it to our vector class.
 void Observable::AddObserver(Observer *observer) {
-	// due to some problems with compiling find, we rathar decided to omit it
+	// due to some problems with compiling find, we rathar decided to omit it out
 //	auto it = std::find(this->observers.begin(), this->observers.end(), observer);
 //	if (it == this->observers.end())
 	this->observers.push_back(observer);
@@ -18,7 +18,7 @@ void Observable::AddObserver(Observer *observer) {
 
 // removing observers by looping to our  observers vector and find it to delete it
 void Observable::RemoveObserver(Observer *observer) {
-	// due to some problems with compiling find, we rathar decided to omit it
+	// due to some problems with compiling find, we rathar decided to omit it out
 //	auto it = std::find(this->observers.begin(), this->observers.end(), observer);
 //	if (it != this->observers.end())
 //		this->observers.erase(it);

@@ -1,3 +1,10 @@
+/* 
+ Collision is responsible of adding/removing collidable objects
+ and it checks if an intersect happend between them.
+ if intersect happend, it will call collide function for both objects
+ that collided with each other
+ */
+
 
 #ifndef __HelicopterProject__Collision_h__
 #define __HelicopterProject__Collision_h__

@@ -3,10 +3,12 @@
 //
 //	See main.cpp file header for credits
 //
-//  This is an implementation of ScriptRunner class that will read from a file and check if there is set_joystick,centre_joystick, throttle, delay. If these words have been detected, then we process the next word
+//  This is an implementation of ScriptRunner class that will read from a file and check if there is set_joystick,centre_joystick, throttle,
+//	delay. If these words have been detected, then we process the next word
 // beside it and set it to the class related to it, and so one.
 
 #include "ScriptRunner.h"
+
 
 // in the constructor , it will read the passing argument of char, and open that file, if it fails, then display message.
 // also setting our instance of helicopter to the passing argument of Helicopter
@@ -104,7 +106,7 @@ void ScriptRunner::parse_throttle() {
 	word = word.substr(std::string("position=").length());
 	
 	percentage = atof(word.c_str());
-	//
+	
 	this->commands.addCommand(new RotorPercentage(this->helicopter->getMainRotor(), percentage));
 }
 

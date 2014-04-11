@@ -23,7 +23,17 @@ Game::Game() {
 
 
 Game::~Game() {
+	if (this->configuration)
+		delete this->configuration;
 	
+	if (this->collision)
+		delete this->collision;
+	
+	if (this->popupHelpScreen)
+		delete this->popupHelpScreen;
+	
+	if (this->logger)
+		delete this->logger;
 }
 
 

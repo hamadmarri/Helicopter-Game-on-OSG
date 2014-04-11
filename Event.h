@@ -3,7 +3,8 @@
 //
 //	See main.cpp file header for credits
 //
-//	Event class has been implemented at this point. Also, notice the numeration class has been used and implemented.
+//	Event class is used by observable, where observable passes an Event to observers with
+//	certain data such as dt
 //
 
 
@@ -13,18 +14,6 @@
 
 // EventyType class
 enum class EventType {
-//	MOVE_LEFT,
-//	MOVE_FORWARD,
-//	MOVE_RIGHT,
-//	MOVE_BACKWARD,
-//	CENTER,
-//	MOUSE_MOVEMENT,
-//	DECREASE,
-//	INCREASE,
-//	STAY_NEUTRAL,
-//	SWITCH_OFF,
-//	ROTATE_LEFT,
-//	ROTATE_RIGHT,
 	UPDATE_POSITION
 };
 

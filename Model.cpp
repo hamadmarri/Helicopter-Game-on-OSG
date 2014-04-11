@@ -1,8 +1,8 @@
 //
 //  Model.cpp
 //  This is the implementation of Model class. The main purpose of is to initialize the
-//  PAT, matrixTransfrom, node , and to set position , set scale, convert from to real Axis
-//  , convert to system Axis, and some more getter functions to reuturn positins, PAT, node ,matrixTransform.
+//  PAT, matrixTransfrom, node , and to set position, set scale, convert from to real Axis,
+//  convert to system Axis, and some more getter functions to reuturn positins, PAT, node ,matrixTransform.
 //
 //	See main.cpp file header for credits
 //
@@ -41,8 +41,8 @@ void Model::initializer() {
 	this->addChild(this->PAT.get());
 }
 
-// return the node function
 
+// return the node function
 osg::Group* Model::getNode() {
 	return this->node.get();
 }

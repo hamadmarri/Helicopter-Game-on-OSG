@@ -34,10 +34,9 @@ Missile::Missile(Game *game, Helicopter *helicopterOwenMe) : Model(game) {
 
 
 Missile::~Missile() {
-	if (this->missileSpeedHud) {
+	if (this->missileSpeedHud)
 		game->getHudsManager()->removeHud(this->missileSpeedHud);
-//		delete this->missileSpeedHud;
-	}
+
 }
 
 
@@ -88,8 +87,9 @@ void Missile::Update(Event event) {
 	checkTimeout();
 }
 
-// checkTimeout of a missile if it is more than 20 seconds , then remove the missile hud display
 
+
+// checkTimeout of a missile if it is more than 20 seconds , then remove the missile hud display
 void Missile::checkTimeout() {
 	this->endTime = std::chrono::system_clock::now();
 	std::chrono::duration<double> elapsed_seconds = this->endTime - this->startTime;
@@ -109,9 +109,12 @@ void Missile::fire() {
 		this->force = osg::Vec3f(0, 0, 0);
 		this->motion->setInitialVelocity(osg::Vec3f(this->initialSpeed, 0, 0));
 	} else {
+		// starts from helicopter motion
 		this->motion->setInitialVelocity(osg::Vec3f(this->helicopterOwenMe->getVelocity().length(), 0, 0));
 		this->force = osg::Vec3f(cosf(this->getInclinationAngle()), 0, sinf(this->getInclinationAngle())).operator*(29.2);
 	}
+	
+	// make it fully colored
 	this->node->setNodeMask(0x0 - 1);
 	this->fired = true;
 	this->startTime = std::chrono::system_clock::now();
@@ -121,7 +124,8 @@ void Missile::fire() {
 // increment the inclinatin angle by +1
 void Missile::incrementInclinationAngle() {
 	this->inclinationAngle += 1;
-                                        // make sure it is not greater than 80 degree
+    
+	// make sure it is not greater than 80 degree
 	if (this->inclinationAngle > 80)
 		this->inclinationAngle = 80;
 }

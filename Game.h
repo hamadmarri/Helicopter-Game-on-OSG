@@ -3,10 +3,7 @@
 //
 //	See main.cpp file header for credits
 //
-//  The main purpose of this class is just an UI to our helicopter game.
-//	It will have one function and a viewer. From this class the user can
-//	interact with the helicopter. Just call initilize function to set the
-//	scence for the player.
+//  The main purpose of this class core of the helicopter game.
 //	(more details on the documentation in .cpp file of the game class).
 //
 
@@ -35,12 +32,15 @@ class Game {
 public:
 	
 	Game();
+	
 	~Game();
 	
     void initialize(std::string logFileName);
+	
 	void initialize();
 	
 	void run();
+	
 	void run(const char *fileName);
 	
 	void initializeCamera();
@@ -68,6 +68,9 @@ public:
 	Logger* getLogger();
 	
 private:
+	
+	static void runScript(const char *fileName, osg::ref_ptr<Helicopter> helicopter);
+	
 	TimeHandler *timeHandler;
 	
 	osg::ref_ptr<osg::Group> root;
@@ -79,8 +82,6 @@ private:
 	Collision *collision;
 	
 	Logger *logger;
-	
-	static void runScript(const char *fileName, osg::ref_ptr<Helicopter> helicopter);
 	
 	Configuration *configuration;
 	osg::ref_ptr<osgGA::NodeTrackerManipulator> nodeTracker;

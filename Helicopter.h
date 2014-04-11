@@ -3,8 +3,8 @@
 //
 //	See main.cpp file header for credits
 //
-//	a Helicopter class inhereted from a Model class and Observer class.
-//	The helicopter has joystick, rotor, and offcourse it has a motion.
+//	a Helicopter class inhereted from a Model class and implement Observer, collidable, loggable interfaces.
+//	The helicopter has joystick, rotor, and it has a motion.
 //
 
 
@@ -29,6 +29,8 @@
 #include "Collidable.h"
 #include "Loggable.h"
 
+
+// definition of Game and Missiles
 class Game;
 class Missile;
 

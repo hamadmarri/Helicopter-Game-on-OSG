@@ -5,6 +5,7 @@ Rquirements for compilation:
 
 After compilation place setting.txt in the same directory of the executable file, otherwise, default settings will be set.
 
+Place 2705, 2706, 3124, and 320 folders under OSG data directory
 
 Run arguments:
 --help

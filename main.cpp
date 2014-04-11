@@ -8,10 +8,25 @@
 //
 
 
+#include <iostream>
 #include <string>
 #include "Game.h"
 #include "tests/RealTimeTest.h"
 #include "tests/SimulatorTest.h"
+
+
+
+
+
+bool askForHelp(int argc, char** argv) {
+	std::string helpStr = "--help";
+	
+	for (int i = 1; i < argc; i++)
+		if (argv[i] == helpStr.c_str())
+			return true;
+
+	return false;
+}
 
 
 
@@ -32,27 +47,36 @@ int main(int argc, char** argv) {
 	// to hold singe command at a time
 	std::string command = "";
 	
+	
+	if (askForHelp(argc, argv)) {
+		// Print help screen
+		
+		return 0;
+	}
+	
+	
 	// initialize game
 	game.initialize();
 	
-	// check for script
-	command = parseArgs(argc, argv, "--script");
 	
 	// check if script
-	if (!command.empty())
+	if (!(command = parseArgs(argc, argv, "--script")).empty())
 		game.run(command.c_str());
-	else if (parseArgs(argc, argv, "--test") == "r") {
+	else if ( (command = parseArgs(argc, argv, "--test")) == "r") {
 		RealTimeTest realTimeTest;
 		realTimeTest.run();
-	} else if (parseArgs(argc, argv, "--test") == "s") {
+	} else if (command == "s") {
 		SimulatorTest simulatorTest;
 		simulatorTest.run();
-	}
-
-	else
+//	else if ()
+	} else
 		game.run();
 	
 
 	
 	return 0;
 }
+
+
+
+

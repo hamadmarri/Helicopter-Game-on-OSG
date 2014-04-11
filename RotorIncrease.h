@@ -2,8 +2,8 @@
 // RotorIncrease class inheretes from a Command class. The main purpose of this class is to call the increase function
 // of a rotor instance and increase the rotor as a result of that.
 
-#ifndef __HelicopterProject__RotorIncrease__
-#define __HelicopterProject__RotorIncrease__
+#ifndef __HelicopterProject__RotorIncrease_h__
+#define __HelicopterProject__RotorIncrease_h__
 
 #include "Command.h"
 #include "Rotor.h"
@@ -18,4 +18,4 @@ private:                                    // one private member of Rotor insta
 	Rotor *rotor;
 };
 
-#endif /* defined(__HelicopterProject__RotorIncrease__) */
+#endif 

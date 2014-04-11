@@ -9,8 +9,8 @@
 //	See main.cpp file header for credits
 //
 
-#ifndef __HelicopterProject__Motion__
-#define __HelicopterProject__Motion__
+#ifndef __HelicopterProject__Motion_h__
+#define __HelicopterProject__Motion_h__
 
 #include <osg/Vec3f>
 #include <cmath>
@@ -50,7 +50,7 @@ protected:
 
 
 
-#endif /* defined(__Physics__Motion__) */
+#endif
 
 
 

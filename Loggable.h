@@ -10,8 +10,8 @@
 //
 
 
-#ifndef HelicopterProject_Loggable_h
-#define HelicopterProject_Loggable_h
+#ifndef __HelicopterProject_Loggable_h__
+#define __HelicopterProject_Loggable_h__
 
 #include <string>
 

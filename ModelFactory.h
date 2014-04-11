@@ -8,8 +8,8 @@
 //	See main.cpp file header for credits
 //
 
-#ifndef __HelicopterProject__ModelFactory__
-#define __HelicopterProject__ModelFactory__
+#ifndef __HelicopterProject__ModelFactory_h__
+#define __HelicopterProject__ModelFactory_h__
 
 
 #include "Helicopter.h"

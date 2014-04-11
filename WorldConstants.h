@@ -4,8 +4,8 @@
 //	See main.cpp file header for credits
 //
 
-#ifndef __HelicopterProject__WorldConstants__
-#define __HelicopterProject__WorldConstants__
+#ifndef __HelicopterProject__WorldConstants_h__
+#define __HelicopterProject__WorldConstants_h__
 
 
 #define WORLD_GROUND 0
@@ -15,4 +15,4 @@
 #define X_REFERENCE 250
 #define Y_REFERENCE 0
 
-#endif /* defined(__HelicopterProject__WorldConstants__) */
+#endif

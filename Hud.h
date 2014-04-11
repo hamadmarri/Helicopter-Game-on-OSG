@@ -1,8 +1,8 @@
 // Author: Karim Naqvi
 
 
-#ifndef HUD_H
-#define HUD_H
+#ifndef __HelicopterProject__Hud_h__
+#define __HelicopterProject__Hud_h__
 
 #include <osg/Camera>
 #include <osgText/Text>

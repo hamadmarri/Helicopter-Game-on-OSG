@@ -10,8 +10,8 @@
 
 
 
-#ifndef __HelicopterProject__Logger__
-#define __HelicopterProject__Logger__
+#ifndef __HelicopterProject__Logger_h__
+#define __HelicopterProject__Logger_h__
 
 #include <iostream>
 #include <fstream>
@@ -80,4 +80,4 @@ private:
 	std::chrono::time_point<std::chrono::high_resolution_clock> startTime;
 };
 
-#endif /* defined(__HelicopterProject__Logger__) */
+#endif

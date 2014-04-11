@@ -7,8 +7,8 @@
 // depends on the instructions read from the file, the helicopter will set the joystick, throttle.Also, parse
 // a delay.
 
-#ifndef testOsg_ScriptRunner_h
-#define testOsg_ScriptRunner_h
+#ifndef __HelicopterProject__ScriptRunner_h__
+#define __HelicopterProject__ScriptRunner_h__
 #include <fstream>
 #include <string>
 #include <osg/Notify>

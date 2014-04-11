@@ -1,6 +1,6 @@
 
-#ifndef __HelicopterProject__MissleIncrementInclinationAngle__
-#define __HelicopterProject__MissleIncrementInclinationAngle__
+#ifndef __HelicopterProject__MissileCommand_h__
+#define __HelicopterProject__MissileCommand_h__
 
 #include "Command.h"
 #include "Missile.h"
@@ -22,4 +22,4 @@ private:
 	MissileCommandType type;
 };
 
-#endif /* defined(__HelicopterProject__MissleIncrementInclinationAngle__) */
+#endif

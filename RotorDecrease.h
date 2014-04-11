@@ -4,8 +4,8 @@
 // Two main funcitons in the class, a consturctor to pass a rotor instance and a boolean function to
 // call decrease function of our passing rotor instance from the constructor.
 
-#ifndef __HelicopterProject__RotorDecrease__
-#define __HelicopterProject__RotorDecrease__
+#ifndef __HelicopterProject__RotorDecrease_h__
+#define __HelicopterProject__RotorDecrease_h__
 
 #include "Command.h"
 #include "Rotor.h"
@@ -20,4 +20,4 @@ private:                                    // one private member of rotor
 	Rotor *rotor;
 };
 
-#endif /* defined(__HelicopterProject__RotorDecrease__) */
+#endif 

@@ -1,6 +1,6 @@
 
-#ifndef __HelicopterProject__Collidable__
-#define __HelicopterProject__Collidable__
+#ifndef __HelicopterProject__Collidable_h__
+#define __HelicopterProject__Collidable_h__
 
 #include <osg/BoundingSphere>
 
@@ -10,4 +10,4 @@ public:
 	virtual void collide() = 0;
 };
 
-#endif /* defined(__HelicopterProject__Collidable__) */
+#endif 

@@ -1,7 +1,7 @@
 //	See main.cpp file header for credits
 
-#ifndef __HelicopterProject__JoystickMoveBackward__
-#define __HelicopterProject__JoystickMoveBackward__
+#ifndef __HelicopterProject__JoystickMoveBackward_h__
+#define __HelicopterProject__JoystickMoveBackward_h__
 
 #include "Command.h"
 #include "Joystick.h"
@@ -16,4 +16,4 @@ private:
 	Joystick *joystick;
 };
 
-#endif /* defined(__HelicopterProject__JoystickMoveBackward__) */
+#endif 

@@ -3,8 +3,8 @@
 //   RotorSwitchOff class that will switch off the magnitude of a rotor to zero 0.0.
 //   It has only two main fuctions , constructor and boolean functioin.
 
-#ifndef __HelicopterProject__RotorSwitchOff__
-#define __HelicopterProject__RotorSwitchOff__
+#ifndef __HelicopterProject__RotorSwitchOff_h__
+#define __HelicopterProject__RotorSwitchOff_h__
 
 #include "Command.h"
 #include "Rotor.h"
@@ -19,4 +19,4 @@ private:
 	Rotor *rotor;              // rotor 
 };
 
-#endif /* defined(__HelicopterProject__RotorSwitchOff__) */
+#endif 

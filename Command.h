@@ -1,7 +1,7 @@
 //	See main.cpp file header for credits
 
-#ifndef HelicopterProject_Command_h
-#define HelicopterProject_Command_h
+#ifndef __HelicopterProject_Command_h__
+#define __HelicopterProject_Command_h__
 
 class Command {
 public:

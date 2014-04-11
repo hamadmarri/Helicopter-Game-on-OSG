@@ -8,8 +8,8 @@
 //	It gets key, mouse events from GUIEventHandler virtual function handle
 //
 
-#ifndef __HelicopterProject__HelicopterController_h__
-#define __HelicopterProject__HelicopterController_h__
+#ifndef __HelicopterProject__GameController_h__
+#define __HelicopterProject__GameController_h__
 
 
 #include <osgGA/GUIEventHandler> // handle function

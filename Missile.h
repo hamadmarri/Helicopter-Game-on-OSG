@@ -1,6 +1,6 @@
 
-#ifndef __HelicopterProject__Missile__
-#define __HelicopterProject__Missile__
+#ifndef __HelicopterProject__Missile_h__
+#define __HelicopterProject__Missile_h__
 
 
 #include <osg/ShapeDrawable>
@@ -77,4 +77,6 @@ private:
 
 
 #include "Game.h"
-#endif /* defined(__HelicopterProject__Missile__) */
+#endif 
+
+

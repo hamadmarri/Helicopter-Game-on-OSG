@@ -1,7 +1,7 @@
 //	See main.cpp file header for credits
 
-#ifndef HelicopterProject_RotorCommands_h
-#define HelicopterProject_RotorCommands_h
+#ifndef __HelicopterProject_RotorCommands_h__
+#define __HelicopterProject_RotorCommands_h__
 
 #include "RotorSetMagnitude.h"
 #include "RotorDecrease.h"

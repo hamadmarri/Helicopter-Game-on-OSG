@@ -4,8 +4,8 @@
 //	See main.cpp file header for credits
 //
 
-#ifndef __HelicopterProject__EulerPhysics__
-#define __HelicopterProject__EulerPhysics__
+#ifndef __HelicopterProject__EulerPhysics_h__
+#define __HelicopterProject__EulerPhysics_h__
 
 #include "Motion.h"
 #include <cmath>
@@ -26,4 +26,4 @@ private:
 	float calculateVelocity(float v0, float a, float t);
 };
 
-#endif /* defined(__HelicopterProject__EulerPhysics__) */
+#endif

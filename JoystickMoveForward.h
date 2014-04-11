@@ -1,7 +1,7 @@
 //	See main.cpp file header for credits
 
-#ifndef __HelicopterProject__JoystickMoveForward__
-#define __HelicopterProject__JoystickMoveForward__
+#ifndef __HelicopterProject__JoystickMoveForward_h__
+#define __HelicopterProject__JoystickMoveForward_h__
 
 #include "Command.h"
 #include "Joystick.h"
@@ -17,4 +17,4 @@ private:
 };
 
 
-#endif /* defined(__HelicopterProject__JoystickMoveForward__) */
+#endif 

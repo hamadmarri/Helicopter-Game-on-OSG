@@ -5,8 +5,8 @@
 
 
 
-#ifndef __HelicopterProject__RotorSetMagnitude__
-#define __HelicopterProject__RotorSetMagnitude__
+#ifndef __HelicopterProject__RotorSetMagnitude_h__
+#define __HelicopterProject__RotorSetMagnitude_h__
 
 #include "Command.h"
 #include "Rotor.h"
@@ -23,4 +23,4 @@ private:                    // two parameters float, and rotor to set the magnit
 	float magnitude;
 };
 
-#endif /* defined(__HelicopterProject__RotorSetMagnitude__) */
+#endif 

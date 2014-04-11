@@ -10,8 +10,8 @@
  */
 
 
-#ifndef __HelicopterProject__TimeHandler__
-#define __HelicopterProject__TimeHandler__
+#ifndef __HelicopterProject__TimeHandler_h__
+#define __HelicopterProject__TimeHandler_h__
 
 // calling chrono library to measure time spans, like: one minute, two hours, or ten milliseconds.
 #include <chrono>

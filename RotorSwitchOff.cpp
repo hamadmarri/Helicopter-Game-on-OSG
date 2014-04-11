@@ -1,6 +1,10 @@
 //	See main.cpp file header for credits
 //  This is implementation of RotorSwitchOff class. Implementing two main fuctions , the constructor to set the rotor ,and
 // the boolean function to set the magnitude to zero and return true;
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #include "RotorSwitchOff.h"
 

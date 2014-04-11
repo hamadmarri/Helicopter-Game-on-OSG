@@ -6,6 +6,10 @@
 //	Event class is used by observable, where observable passes an Event to observers with
 //	certain data such as dt
 //
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 
 #ifndef __HelicopterProject__Event_h__

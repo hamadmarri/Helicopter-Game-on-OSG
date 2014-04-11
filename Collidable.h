@@ -1,10 +1,12 @@
-/*
- Collidable is an interface for objects that need to be
- considered as collidables. Tow important functions
- 1- get bound of the object
- 2- collide which is the action that is called when intersect happened
- */
-
+//
+// Collidable is an interface for objects that need to be
+// considered as collidables. Tow important functions
+// 1- get bound of the object
+// 2- collide which is the action that is called when intersect happened
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__Collidable_h__
 #define __HelicopterProject__Collidable_h__

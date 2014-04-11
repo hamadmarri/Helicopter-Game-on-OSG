@@ -1,4 +1,7 @@
 //	See main.cpp file header for credits
+//
+//	created by Hamad Almarri
+//
 
 
 #ifndef __HelicopterProject__HideHelpScreenCommand_h__

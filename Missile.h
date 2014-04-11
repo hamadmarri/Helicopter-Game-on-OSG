@@ -5,6 +5,11 @@
 // sphere and it can be two type of firing, firing by fuel or by initial speed velocity. The user can
 // either choose between using a fuel firing or speed firing.
 //
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
+
 
 #ifndef __HelicopterProject__Missile_h__
 #define __HelicopterProject__Missile_h__

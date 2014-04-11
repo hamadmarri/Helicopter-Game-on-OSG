@@ -6,6 +6,10 @@
 //  This is an implementation of ScriptRunner class that will read from a file and check if there is set_joystick,centre_joystick, throttle,
 //	delay. If these words have been detected, then we process the next word
 // beside it and set it to the class related to it, and so one.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #include "ScriptRunner.h"
 

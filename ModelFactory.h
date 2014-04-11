@@ -7,6 +7,10 @@
 //
 //	See main.cpp file header for credits
 //
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #ifndef __HelicopterProject__ModelFactory_h__
 #define __HelicopterProject__ModelFactory_h__

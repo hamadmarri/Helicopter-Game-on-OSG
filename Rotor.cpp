@@ -7,6 +7,9 @@
 //  the main features of a rotor has been implemented below.
 //
 //
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 
 #include "Rotor.h"

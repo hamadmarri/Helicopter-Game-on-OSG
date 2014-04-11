@@ -1,4 +1,11 @@
-
+//
+//  Logger.cpp
+//
+//	See main.cpp file header for credits
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #include "Logger.h"
 

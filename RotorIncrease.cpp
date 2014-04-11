@@ -1,6 +1,11 @@
 //	See main.cpp file header for credits
 // This is the implementation of RotorIncrease class. The implementation is two function , a constructor that will set the passsing rotor instance to our rotor privat member, and the second function is a boolean function return true if the
 // increaseMagnitude has been called or false if not.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
+
 
 #include "RotorIncrease.h"
 

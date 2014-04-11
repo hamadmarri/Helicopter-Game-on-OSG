@@ -2,6 +2,12 @@
 // RotorNaeutral class inherites from Command class. The main purpose of this class is to set the natural variable of
 // a rotor. It has tow main functions, a constructor and a boolean function to set the natural of a rotor and return
 // true or false.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
+
+
 #ifndef __HelicopterProject__RotorNeutral_h__
 #define __HelicopterProject__RotorNeutral_h__
 

@@ -6,6 +6,10 @@
 //	Configuration saves all game configuration by reading settings.txt file and fill
 //	up KeySettings struct. Configuration gets the screen size also.
 // 
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 
 #ifndef __HelicopterProject__Configuration_h__

@@ -2,6 +2,10 @@
 
 //   RotorSwitchOff class that will switch off the magnitude of a rotor to zero 0.0.
 //   It has only two main fuctions , constructor and boolean functioin.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #ifndef __HelicopterProject__RotorSwitchOff_h__
 #define __HelicopterProject__RotorSwitchOff_h__

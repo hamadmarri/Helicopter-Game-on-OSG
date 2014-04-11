@@ -6,6 +6,10 @@
 // done by setting a pointer of a missile instance and a missilecommand type. Then, a function call execute , will be
 // called to determine the type of missile command and execute it by calling funcitons from the missile instance we have
 // it in the class (pointer).
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__MissileCommand_h__
 #define __HelicopterProject__MissileCommand_h__

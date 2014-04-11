@@ -5,6 +5,9 @@
 //
 //	See main.cpp file header for credits
 //
+//
+//	created by Hamad Almarri
+//
 
 #include "Motion.h"
 

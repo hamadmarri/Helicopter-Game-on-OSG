@@ -3,6 +3,10 @@
 // RotorPercentage class. The main purpose of this class is to set any value to the rotor percentage and update
 // the percentage from that value.
 // RotorPercentage class inherites from Command classs public.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 
 #ifndef __HelicopterProject__RotorPercentage_h__

@@ -3,7 +3,11 @@
 //
 //	See main.cpp file header for credits
 //  This is the implementation of Obserable class, it has three mian function, add observer, delete observer , and
-// a functioin to notifyall .
+// a functioin to notifyall.
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #include "Observable.h"
 

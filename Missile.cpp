@@ -1,6 +1,10 @@
 // This is the implementation of Missile class. It has many getter functions and setter funcitons to set initial speed,
 // set fueld, get initial speed, get fuel, checking the time elapsed of a missile, increment and decrement the angle
 // of the missile, get boundary, and determine if the missile has collide or not.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #include "Missile.h"
 

@@ -1,6 +1,11 @@
 //	See main.cpp file header for credits
 // This is the implementation of RotorPercentage class to set the percentage to a rotor instance and a boolean function
 // to return true if that passed valued set.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
+
 
 #include "RotorPercentage.h"
 

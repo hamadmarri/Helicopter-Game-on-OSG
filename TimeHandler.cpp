@@ -4,10 +4,12 @@
 //
 //	See main.cpp file header for credits
 //
-/*
-    This is the implementation for TimeHandler class. Handle events for time, detect collection, calculation duration,
-    notify observes.
- */
+//    This is the implementation for TimeHandler class. Handle events for time, detect collection, calculation duration,
+//    notify observes.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #include "TimeHandler.h"
 

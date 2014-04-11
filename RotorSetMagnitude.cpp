@@ -1,6 +1,11 @@
 // This is an implementation of RotorSetMagnitude class. The implementation of two main functions, a constructor to take
 // a float number and pass it to the rotor magnitude and set it, and a boolean function to return true of the value
 // has been passed.
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
+
 
 #include "RotorSetMagnitude.h"
 

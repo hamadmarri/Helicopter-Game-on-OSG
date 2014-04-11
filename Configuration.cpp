@@ -4,6 +4,11 @@
 //	See main.cpp file header for credits
 //
 //	This is a configuration class to congigure our screen and file data.
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
+
 
 #include "Configuration.h"
 

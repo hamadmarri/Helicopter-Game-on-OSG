@@ -1,6 +1,11 @@
 // This is the implementation of MissileCommand class. It has two main functions to set the command type and the missile.The
 // second function is called execute to execute the command depends on the command passed to it.
 //
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
+
 
 #include "MissileCommand.h"
 

@@ -1,3 +1,7 @@
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #include "HudsManager.h"
 #include "Game.h"

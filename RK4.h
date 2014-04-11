@@ -4,6 +4,9 @@
 //	Credeits: http://gafferongames.com/game-physics/integration-basics/
 //	See main.cpp file header for credits
 //
+//
+//	created by Hamad Almarri
+//
 
 #ifndef __HelicopterProject_RK4_h__
 #define __HelicopterProject_RK4_h__

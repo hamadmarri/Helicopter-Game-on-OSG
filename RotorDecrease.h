@@ -3,6 +3,11 @@
 // decreaseMagnitude function of a rotor class and set a passing rotor in the constructor to do that.
 // Two main funcitons in the class, a consturctor to pass a rotor instance and a boolean function to
 // call decrease function of our passing rotor instance from the constructor.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
+
 
 #ifndef __HelicopterProject__RotorDecrease_h__
 #define __HelicopterProject__RotorDecrease_h__

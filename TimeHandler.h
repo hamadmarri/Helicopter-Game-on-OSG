@@ -3,11 +3,13 @@
 //
 //	See main.cpp file header for credits
 //
+//	TimeHandler class inheritis from GUIEventHandler and Observable class, to manage events. Events like time, get the current
+//   time , previous time, notify all observes classes, check collisions, and calculate the duration, time shifting, and logging.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
-/* TimeHandler class inheritis from GUIEventHandler and Observable class, to manage events. Events like time, get the current
-   time , previous time, notify all observes classes, check collisions, and calculate the duration, time shifting, and logging.
- 
- */
 
 
 #ifndef __HelicopterProject__TimeHandler_h__

@@ -8,7 +8,9 @@
 //	suppose to return a string of information of itself so the Logger class will call toString function
 //	if the object has been added to loggables vector properly
 //
-
+//
+//	created by Hamad Almarri
+//
 
 #ifndef __HelicopterProject_Loggable_h__
 #define __HelicopterProject_Loggable_h__

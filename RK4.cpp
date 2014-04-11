@@ -3,6 +3,9 @@
 //
 //	See main.cpp file header for credits
 //
+//
+//	created by Hamad Almarri
+//
 
 
 #include "RK4.h"

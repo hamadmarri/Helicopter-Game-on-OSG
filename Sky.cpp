@@ -7,7 +7,10 @@
 //	it has only one constructor , whenver an instance created,
 //	the sky model will be in the detailed position below directly.
 //
-
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #include "Sky.h"
 

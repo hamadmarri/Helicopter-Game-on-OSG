@@ -7,6 +7,10 @@
 //	depends on the instructions read from the file, the helicopter will set the joystick, throttle.Also, parse
 //	a delay.
 //
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #ifndef __HelicopterProject__ScriptRunner_h__
 #define __HelicopterProject__ScriptRunner_h__

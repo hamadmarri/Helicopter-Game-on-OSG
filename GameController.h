@@ -7,6 +7,11 @@
 //	hide/show help screen, enable/disable friction, and missile's inclination angle and initial speed
 //	It gets key, mouse events from GUIEventHandler virtual function handle
 //
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
+
 
 #ifndef __HelicopterProject__GameController_h__
 #define __HelicopterProject__GameController_h__

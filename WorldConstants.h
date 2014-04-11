@@ -3,6 +3,9 @@
 //
 //	See main.cpp file header for credits
 //
+//
+//	Created by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__WorldConstants_h__
 #define __HelicopterProject__WorldConstants_h__

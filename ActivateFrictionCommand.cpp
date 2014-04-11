@@ -1,4 +1,6 @@
-
+//
+//	created by Hamad Almarri
+//
 #include "ActivateFrictionCommand.h"
 
 

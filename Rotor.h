@@ -7,7 +7,10 @@
 //  in percentage, decrease the magnitude, increase the magnitude, set the neutral.
 //
 //
-// 
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
+
 
 #ifndef __HelicopterProject__Rotor_h__
 #define __HelicopterProject__Rotor_h__

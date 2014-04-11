@@ -1,5 +1,7 @@
 //	See main.cpp file header for credits
-
+//
+//	created by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__StartLoggingCommand_h__
 #define __HelicopterProject__StartLoggingCommand_h__

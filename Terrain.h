@@ -7,7 +7,10 @@
 //	of our terrain and call a file "model" and set it to the scen in the helicopter game.
 //  Terrain class inherits public from Model class.
 //
-
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__Terrain_h__
 #define __HelicopterProject__Terrain_h__

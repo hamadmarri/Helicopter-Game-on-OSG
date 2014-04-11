@@ -1,4 +1,7 @@
 //	See main.cpp file header for credits
+//
+//	created by Hamad Almarri
+//
 
 #ifndef __HelicopterProject_GameCommands_h__
 #define __HelicopterProject_GameCommands_h__

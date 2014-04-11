@@ -6,6 +6,10 @@
 //	A Joystick class. The joystick class has many functions to set the theta
 //	and the phi of it.
 //
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__Joystick_h__
 #define __HelicopterProject__Joystick_h__

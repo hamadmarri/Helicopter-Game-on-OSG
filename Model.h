@@ -10,6 +10,10 @@
 //				the model as one object without caring of the actual
 //				osg nodes' hierarchy within the model object
 //
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #ifndef __HelicopterProject__Model_h__
 #define __HelicopterProject__Model_h__

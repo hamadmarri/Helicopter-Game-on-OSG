@@ -1,7 +1,10 @@
 // RotorSetMagnitude class. The main purpose of this class is to set any value to the rotor magnitude and update
 // the magnitude from that value.
 // RotorSetMagnitude class inherites from Command classs public.
-
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 
 

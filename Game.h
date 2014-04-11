@@ -6,6 +6,9 @@
 //  The main purpose of this class core of the helicopter game.
 //	(more details on the documentation in .cpp file of the game class).
 //
+//	Created by Fares Alotaibi
+//	Modified by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__Game_h__
 #define __HelicopterProject__Game_h__

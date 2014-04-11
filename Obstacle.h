@@ -9,7 +9,10 @@
 //	thing here, this class can be used in the future if we decided to add some
 //	more models , and it can be done quickly and easily. by just calling the consturctor.
 //
-
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__Obstacle_h__
 #define __HelicopterProject__Obstacle_h__

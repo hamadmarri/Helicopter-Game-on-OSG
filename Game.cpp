@@ -7,6 +7,9 @@
 //	helicopters, and other models in some specific locaitons we had decided on.
 //	Setting up all things so that the player can play the game.
 //
+//	Created by Fares Alotaibi on 2014-03-03.
+//	Modified by Hamad Almarri
+//
 
 #include "Game.h"
 

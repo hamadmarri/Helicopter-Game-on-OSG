@@ -3,6 +3,10 @@
 //
 //	See main.cpp file header for credits
 //  Obserable class to add observer, remove observer, and a main function to notifyall event.
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__Observable_h__
 #define __HelicopterProject__Observable_h__

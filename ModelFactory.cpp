@@ -4,7 +4,10 @@
 //  any model passed to the creation function.
 //	See main.cpp file header for credits
 //
-
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 #include "ModelFactory.h"
 

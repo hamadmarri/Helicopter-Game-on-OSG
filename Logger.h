@@ -8,6 +8,9 @@
 //	It's also print the time information in form hh::mm::ss::ms::um (i.e. hours, minutes, seconds, milliseconds, and microseconds)
 //
 //
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
 
 
 #ifndef __HelicopterProject__Logger_h__

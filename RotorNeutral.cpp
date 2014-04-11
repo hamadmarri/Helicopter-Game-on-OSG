@@ -2,6 +2,12 @@
 // This is an implementation of RotorNeutral class , the implementation is two main functions, a constructor and
 //  a boolean function. The constructor will set the passing instance of a rotor and set it to our private member
 // rotor , and the boolena function will return true if the natural set or false if not.
+//
+//	created by Hamad Almarri
+//	modified by Fares Alotaibi
+//
+
+
 #include "RotorNeutral.h"
 
 // the constructor , passing an instance of a rotor and set it to our private member rotor

@@ -7,7 +7,10 @@
 //	Each obstacle can have a reference from a node to add it to
 //	the osg tree easily and save some line of code by calling these functions.
 //
-
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #include "Obstacle.h"
 

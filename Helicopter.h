@@ -6,7 +6,10 @@
 //	a Helicopter class inhereted from a Model class and implement Observer, collidable, loggable interfaces.
 //	The helicopter has joystick, rotor, and it has a motion.
 //
-
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #ifndef __HelicopterProject__Helicopter_h__
 #define __HelicopterProject__Helicopter_h__

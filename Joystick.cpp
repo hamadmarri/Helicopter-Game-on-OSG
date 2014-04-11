@@ -6,6 +6,10 @@
 //	This the implementation of joystick class.
 //	It will handle the theta and phi by using setter and getter functions.
 //
+//
+//	created by Fares Alotaibi
+//	modified by Hamad Almarri
+//
 
 #include "Joystick.h"
 

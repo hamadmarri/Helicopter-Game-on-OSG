@@ -6,6 +6,8 @@
 //	pure abstract class Observer . This class mostly will be used as an abstract
 //	class to observe events from other class. Thedesign we had decided to choose is observer design.
 //
+//	created by Fares Alotaibi
+//
 
 #ifndef __HelicopterProject__Observer_h__
 #define __HelicopterProject__Observer_h__

@@ -1,4 +1,6 @@
 //	See main.cpp file header for credits
+//  The joystickMouseMovement class. 
+//  
 
 #ifndef __HelicopterProject__JoystickMouseMovement_h__
 #define __HelicopterProject__JoystickMouseMovement_h__

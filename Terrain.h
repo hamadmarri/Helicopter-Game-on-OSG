@@ -13,7 +13,7 @@
 #define __HelicopterProject__Terrain_h__
 
 #include "Model.h"
-#include "Configuration/WorldConstants.h"
+#include "WorldConstants.h"
 // define Game class 
 class Game;
 // inheritance from Model public

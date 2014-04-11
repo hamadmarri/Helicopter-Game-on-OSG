@@ -14,9 +14,9 @@
 #include <osg/Vec3f>
 #include <string>
 #include "Observer.h"
-#include "Configuration/Configuration.h"
-#include "Configuration/WorldConstants.h"
-#include "Logger/Loggable.h"
+#include "Configuration.h"
+#include "WorldConstants.h"
+#include "Loggable.h"
 
 // it is not observer anymore now
 class Joystick : public Loggable {

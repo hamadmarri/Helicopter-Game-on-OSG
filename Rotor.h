@@ -19,8 +19,8 @@
 #include <osg/Vec3f>
 #include <string>
 #include "Observer.h"
-#include "Configuration/WorldConstants.h"
-#include "Logger/Loggable.h"
+#include "WorldConstants.h"
+#include "Loggable.h"
 
 
 class Rotor {

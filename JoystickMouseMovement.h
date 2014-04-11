@@ -5,7 +5,7 @@
 
 #include "Command.h"
 #include "Joystick.h"
-#include "Configuration/Configuration.h"
+#include "Configuration.h"
 
 class Game;
 

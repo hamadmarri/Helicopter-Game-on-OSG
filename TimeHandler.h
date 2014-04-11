@@ -4,7 +4,7 @@
 //	See main.cpp file header for credits
 //
 
-/* TimeHandler class inheritis from GUIEventHandler and Obserable class, to manage events. Events like time, get the current
+/* TimeHandler class inheritis from GUIEventHandler and Observable class, to manage events. Events like time, get the current
    time , previous time, notify all observes classes, check collisions, and calculate the duration, time shifting, and logging.
  
  */
@@ -21,6 +21,7 @@
 
 // define Game
 class Game;
+
 // inheritance public from GUIEventHandler and Observable
 class TimeHandler : public osgGA::GUIEventHandler, public Observable {
 public:
@@ -37,5 +38,7 @@ private:
 };
 
 
+// since interdependent header includes,
+// including Game.h should be after GameController class
 #include "Game.h"
 #endif

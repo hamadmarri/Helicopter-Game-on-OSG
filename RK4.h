@@ -18,8 +18,7 @@ struct State {
 };
 
 
-struct Derivative
-{
+struct Derivative {
 	double dx;          // derivative of position: velocity
 	double dv;          // derivative of velocity: acceleration
 };
@@ -38,8 +37,6 @@ public:
 protected:
 	Derivative evaluate(const State &initial, double t, double dt, const Derivative &d, double force);
 	void integrate(State &state, double t, double dt, double force);
-	
-//	double lastTime;
 };
 
 #endif

@@ -12,6 +12,7 @@ Invoker::Invoker() {
 
 
 Invoker::~Invoker() {
+	// clear the queue if not empty
 	while (!this->commands.empty()) {
 		delete this->commands.front();
 		this->commands.pop();
@@ -21,6 +22,7 @@ Invoker::~Invoker() {
 
 
 void Invoker::addCommand(Command *cmd) {
+	// push to the queue
 	this->commands.push(cmd);
 }
 
@@ -34,14 +36,20 @@ bool Invoker::addAndExecuteCommand(Command *cmd) {
 
 
 bool Invoker::execute() {
+	
+	// get command from queue's top
 	Command *cmd = this->commands.front();
 	
+	// executed
 	if (!cmd->execute())
 		return false;
 	
+	// delete it
 	delete cmd;
 	
+	// pop its pointer from queue
 	this->commands.pop();
+	
 	return true;
 }
 

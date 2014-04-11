@@ -6,6 +6,7 @@
 //				returns the next estimated position.
 //				Need concrete class to implement calculate_position_at function
 //
+//	Pattern:	Strategy
 //	See main.cpp file header for credits
 //
 

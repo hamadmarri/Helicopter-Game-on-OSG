@@ -14,6 +14,7 @@
 Game::Game() {
 	this->configuration = new Configuration();
 	this->collision = new Collision();
+	this->hudsManager = nullptr;
 	initializeHudsManager();
 	this->popupHelpScreen = nullptr;
 	this->logger = nullptr;

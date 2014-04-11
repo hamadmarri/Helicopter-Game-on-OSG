@@ -14,7 +14,6 @@
 
 #include <osgGA/GUIEventHandler> // handle function
 #include "Helicopter.h"
-#include "Observable.h"
 #include "Invoker.h"
 #include "AllCommands.h"
 #include "Configuration.h"

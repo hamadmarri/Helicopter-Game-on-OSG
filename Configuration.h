@@ -54,6 +54,7 @@ private:
 	void initialize();
 	void initScreanSizeSettings();
 	
+	void initDefaultKeySettings();
 	unsigned int screenWidth;
 	unsigned int screenHeight;
 	

@@ -51,6 +51,12 @@ void Configuration::initKeySettings() {
     // open the file we provided
 	inFile.open("settings.txt");
 
+	// if settings.txt not found, then load the defaults
+	if (inFile.fail()) {
+		initDefaultKeySettings();
+		return;
+	}
+	
 	inFile >> inputWord;
 	inFile.ignore(500, '\n');
 	if (inputWord == "false")
@@ -143,6 +149,38 @@ void Configuration::initKeySettings() {
 	
 	
 	inFile.close();
+}
+
+
+
+void Configuration::initDefaultKeySettings() {
+
+	this->mouseControl = true;
+	this->autoCamera = true;
+	this->keySettings.movingForward = 'w';
+	this->keySettings.movingRight = 'd';
+	this->keySettings.movingLeft= 'a';
+	this->keySettings.movingBackward = 'x';
+	this->keySettings.resetJoystick = 'c';
+	this->keySettings.zeroRotorSpeed = '0';
+	this->keySettings.decreaseRotorSpeed = '1';
+	this->keySettings.increaseRotorSpeed = '2';
+	this->keySettings.neutralRotorMode = '3';
+	this->keySettings.rotateLeft = 'v';
+	this->keySettings.rotateRight = 'b';
+	this->keySettings.fire = 'f';
+	this->keySettings.incrementInclinationAngle = 'i';
+	this->keySettings.decrementInclinationAngle = 'k';
+	this->missilesWithInitialVelocity = true;
+	this->keySettings.incrementMissileInitialSpeed = 'm';
+	this->keySettings.decrementMissileInitialSpeed = 'n';
+	this->keySettings.frictionEnable = '7';
+	this->keySettings.frictionDisable = '8';
+	this->keySettings.startLogging = 'l';
+	this->keySettings.stopLogging = 'p';
+	this->keySettings.updateKeySettings = 'u';
+	this->keySettings.showPopupHelpScreen = 's';
+	this->keySettings.hidePopupHelpScreen = 'h';
 }
 
 

@@ -3,7 +3,7 @@
 //
 //	Purpuse:	this class takes care of creating Model instances to client class.
 //
-//	Type:		Singleton
+//
 //
 //	See main.cpp file header for credits
 //
@@ -17,7 +17,7 @@
 #include "Sky.h"
 #include "Obstacle.h"
 
-
+// define a game
 class Game;
 
 // enum for model children
@@ -34,8 +34,8 @@ enum class ModelsTypes {
 
 class ModelFactory {
 public:
-	ModelFactory(Game *game);
-	Model* create(ModelsTypes modelType);
+	ModelFactory(Game *game);           // copy constructor passing a pointer of a game instance
+	Model* create(ModelsTypes modelType);           // model creatinon function 
 	
 private:
 	Game *game;

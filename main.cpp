@@ -2,7 +2,8 @@
 //  main.cpp
 //
 //	Credits:
-//				Editors:			Fares Alotaibi, Hamad Almarri
+//				Authors:			Fares Alotaibi, Hamad Almarri
+//				Incorporated code from heli-alternate project by Krim Naqvi
 //				Original authors:	Brian Schweitzer, Karlee Stein, Tylor Froese, Trevor Douglas
 //
 
@@ -24,15 +25,32 @@ std::string parseArgs(int argc, char** argv, std::string command) {
 
 
 int main(int argc, char** argv) {
-//	RealTimeTest t;
-//	
-//	t.run();
 	
+	// game object
 	Game game;
 	
+	// to hold singe command at a time
+	std::string command = "";
+	
+	// initialize game
 	game.initialize();
-//	game.run(parseArgs(argc, argv, "--script").c_str());
-	game.run();
+	
+	// check for script
+	command = parseArgs(argc, argv, "--script");
+	
+	// check if script
+	if (!command.empty())
+		game.run(command.c_str());
+	else if (parseArgs(argc, argv, "--test") == "r") {
+		RealTimeTest realTimeTest;
+		realTimeTest.run();
+	} else if (parseArgs(argc, argv, "--test") == "s") {
+		SimulatorTest simulatorTest;
+		simulatorTest.run();
+	}
+
+	else
+		game.run();
 	
 
 	

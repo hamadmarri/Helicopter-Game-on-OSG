@@ -126,6 +126,12 @@ void Configuration::initKeySettings() {
 	inFile.get(this->keySettings.frictionDisable);
 	inFile.ignore(500, '\n');
 	
+	inFile.get(this->keySettings.startLogging);
+	inFile.ignore(500, '\n');
+	
+	inFile.get(this->keySettings.stopLogging);
+	inFile.ignore(500, '\n');
+	
 	inFile.get(this->keySettings.updateKeySettings);
 	inFile.ignore(500, '\n');
 	

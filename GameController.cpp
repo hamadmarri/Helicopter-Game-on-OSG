@@ -107,6 +107,14 @@ bool GameController::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAd
 		if (k == this->game->getConfiguration()->getKeySettings().frictionDisable)
 			this->game->getConfiguration()->disactivateFriction();
 		
+		// if startLogging
+		if (k == this->game->getConfiguration()->getKeySettings().startLogging && !this->game->logger->isLoggingEnabled())
+			this->game->logger->startLogging();
+		
+		// if stopLogging
+		if (k == this->game->getConfiguration()->getKeySettings().stopLogging && this->game->logger->isLoggingEnabled())
+			this->game->logger->endLogging();
+		
 		// if update key settings key pressed
 		if (k == this->game->getConfiguration()->getKeySettings().updateKeySettings) {
 			

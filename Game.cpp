@@ -175,6 +175,8 @@ void Game::initializePopupHelpScreen() {
 	Hud *increment_decrementInclinationAngleHud = popupHelpScreen->createHud(HudAlignment::LEFT);
 	Hud *increment_decrementMissileInitialSpeedHud = popupHelpScreen->createHud(HudAlignment::LEFT);
 	Hud *frictionEnable_DisableHud = popupHelpScreen->createHud(HudAlignment::LEFT);
+	Hud *startLoggingHud = popupHelpScreen->createHud(HudAlignment::LEFT);
+	Hud *stopLoggingHud = popupHelpScreen->createHud(HudAlignment::LEFT);
 	Hud *updateHud = popupHelpScreen->createHud(HudAlignment::LEFT);
 	Hud *showHelpHud = popupHelpScreen->createHud(HudAlignment::LEFT);
 	Hud *hideHelpHud = popupHelpScreen->createHud(HudAlignment::LEFT);
@@ -228,6 +230,12 @@ void Game::initializePopupHelpScreen() {
 			std::string(1, this->configuration->getKeySettings().frictionEnable) + "/" +
 			std::string(1, this->configuration->getKeySettings().frictionDisable) +
 									   + ": enable/disable friction");
+	
+	startLoggingHud->setText(
+					   std::string(1, this->configuration->getKeySettings().startLogging) + ": start logging");
+	
+	stopLoggingHud->setText(
+					   std::string(1, this->configuration->getKeySettings().stopLogging) + ": stop logging");
 	
 	updateHud->setText(
 			std::string(1, this->configuration->getKeySettings().updateKeySettings) + ": updste key settings");

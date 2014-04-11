@@ -109,5 +109,8 @@ void Logger::printTime() {
 
 
 
+bool Logger::isLoggingEnabled() {
+	return this->loggingEnabled;
+}
 
 

@@ -55,6 +55,9 @@ public:
 	// log all loggables
 	void log();
 	
+	// return true if startLogging already, false if stopped
+	bool isLoggingEnabled();
+	
 private:
 	
 	// open log file

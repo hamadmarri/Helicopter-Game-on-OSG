@@ -25,6 +25,7 @@ struct KeySettings {
 	fire, incrementInclinationAngle, decrementInclinationAngle,
 	incrementMissileInitialSpeed, decrementMissileInitialSpeed,
 	frictionEnable, frictionDisable,
+	startLogging, stopLogging,
 	updateKeySettings, showPopupHelpScreen, hidePopupHelpScreen;
 };
 

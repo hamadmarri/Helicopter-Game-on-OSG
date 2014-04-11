@@ -1,4 +1,8 @@
-
+// This is Missile class inheritaed from Model class, Observer, and Collidable class.
+// Purpose : The main purpose of this class is handle the firing from a helicopter. The firing
+// has some constrains in angles and speed. The shape of the firring has been initialized as a
+// sphere and it can be two type of firing, firing by fule or by it's speed velocity. The client can
+// either choose between using a fuel firing or speed firing. 
 #ifndef __HelicopterProject__Missile_h__
 #define __HelicopterProject__Missile_h__
 
@@ -17,17 +21,17 @@
 #include "Hud.h"
 #include "Collidable.h"
 
-
+// define game class, Helicopter class
 class Game;
 class Helicopter;
-
+// inhertitance public from Model, Observer, Collidable
 class Missile : public Model, public Observer, public Collidable {
 public:
 	
-	Missile(Game *game, Helicopter *helicopterOwenMe);
-	~Missile();
-	
-	void Update(Event event);
+	Missile(Game *game, Helicopter *helicopterOwenMe);          // constructor
+	~Missile();                                                 // deconstructor
+	// member function
+	void Update(Event event);               // handling events if fire or not and other events
 	
 	void fire();
 	void incrementInclinationAngle();
@@ -43,10 +47,10 @@ public:
 	osg::BoundingSphere getBound();
 	void collide();
 	
-private:
+private:                // private members
 	void checkTimeout();
 	
-	std::chrono::time_point<std::chrono::system_clock> startTime;
+	std::chrono::time_point<std::chrono::system_clock> startTime;           // chrono librirary to get startTime , endTime 
 	std::chrono::time_point<std::chrono::system_clock> endTime;
 	
 	
